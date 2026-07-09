@@ -1,0 +1,139 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(7, 27, 58, 0.08);
+}
+
+.navbar {
+  width: min(100% - 32px, var(--max-width));
+  margin: 0 auto;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+}
+
+.logo-mark {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.logo-text {
+  font-size: 1rem;
+  max-width: 150px;
+  line-height: 1.15;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(7, 27, 58, 0.82);
+}
+
+.nav-links a.active {
+  color: var(--color-gold);
+}
+
+.nav-cta {
+  background: var(--color-navy);
+  color: var(--color-white) !important;
+  padding: 12px 18px;
+  border-radius: 999px;
+}
+
+.menu-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(7, 27, 58, 0.14);
+  border-radius: 14px;
+  background: var(--color-white);
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 5px auto;
+  background: var(--color-navy);
+  border-radius: 999px;
+}
+
+@media (max-width: 920px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 82px;
+    left: 16px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px;
+    background: var(--color-white);
+    border: 1px solid rgba(7, 27, 58, 0.1);
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 14px 16px;
+    border-radius: 14px;
+  }
+
+  .nav-links a:hover {
+    background: var(--color-cream);
+  }
+
+  .nav-cta {
+    text-align: center;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 520px) {
+  .logo-text {
+    display: none;
+  }
+
+  .navbar {
+    min-height: 74px;
+  }
+
+  .nav-links {
+    top: 74px;
+  }
+}
