@@ -6,6 +6,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Sermons from "./pages/Sermons";
+import SermonDetail from "./pages/SermonDetail";
 import Media from "./pages/Media";
 import Ministries from "./pages/Ministries";
 import Booking from "./pages/Booking";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/sermons" element={<Sermons />} />
+          <Route path="/sermons/:slug" element={<SermonDetail />} />
           <Route path="/media" element={<Media />} />
           <Route path="/ministries" element={<Ministries />} />
           <Route path="/booking" element={<Booking />} />
