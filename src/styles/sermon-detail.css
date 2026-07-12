@@ -1,0 +1,140 @@
+/* ================================
+   Sermon Detail Page - Main Media
+================================ */
+
+.sermon-detail-media-section {
+  padding-top: 20px;
+}
+
+.sermon-detail-main-media {
+  min-height: 540px;
+}
+
+/* ================================
+   Sermon Detail Page - Message Sections
+================================ */
+
+.sermon-message-section {
+  padding-top: 60px;
+}
+
+.message-section-heading {
+  max-width: 880px;
+  margin-bottom: 30px;
+}
+
+.message-section-heading h2 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.2rem, 4vw, 4.4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.message-section-heading p {
+  color: var(--color-muted);
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+.message-body-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.full-notes-card {
+  padding: 28px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.full-notes-card h3 {
+  margin: 0 0 16px;
+  color: var(--color-navy);
+}
+
+.full-notes-card p {
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+/* ================================
+   Sermon Detail Page - Prophet Message
+================================ */
+
+.prophet-message-section {
+  border-radius: var(--radius-lg);
+  background: var(--color-cream);
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.prophet-message-section .full-notes-card {
+  background: var(--color-white);
+}
+
+.prayer-points-card {
+  background: var(--color-navy);
+}
+
+.prayer-points-card h3,
+.prayer-points-card li {
+  color: var(--color-white);
+}
+
+.wide-notes-card {
+  grid-column: 1 / -1;
+}
+
+/* ================================
+   Sermon Detail Page - Service Gallery
+================================ */
+
+.service-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gallery-placeholder {
+  min-height: 230px;
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+/* ================================
+   Sermon Detail Page - Responsive
+================================ */
+
+@media (max-width: 1100px) {
+  .message-body-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sermon-detail-main-media {
+    min-height: 320px;
+  }
+
+  .prophet-message-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .service-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-placeholder {
+    min-height: 210px;
+  }
+}
