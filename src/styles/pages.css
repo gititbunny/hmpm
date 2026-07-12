@@ -1,0 +1,181 @@
+/* ================================
+   Shared Page Layout
+================================ */
+
+.page-hero {
+  width: min(100% - 32px, var(--max-width));
+  margin: 0 auto;
+  padding: 110px 0 70px;
+}
+
+.page-hero div {
+  max-width: 900px;
+}
+
+.page-hero h1 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 6.4rem);
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+  color: var(--color-navy);
+}
+
+.page-hero p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 24px 0 0;
+  color: var(--color-muted);
+  font-size: 1.16rem;
+  line-height: 1.8;
+}
+
+.content-section {
+  width: min(100% - 32px, var(--max-width));
+  margin: 0 auto;
+  padding: 78px 0;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.2rem, 4vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.section-heading p {
+  color: var(--color-muted);
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+/* ================================
+   Shared CTA Section
+================================ */
+
+.page-cta {
+  margin-bottom: 80px;
+  padding: 42px;
+  border-radius: var(--radius-lg);
+  background: var(--color-cream);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+
+.page-cta div:first-child {
+  max-width: 760px;
+}
+
+.page-cta h2 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.2rem, 4vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.page-cta p:not(.eyebrow) {
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* ================================
+   Shared Card Styles
+================================ */
+
+.dark-card {
+  background:
+    linear-gradient(135deg, rgba(214, 165, 54, 0.24), transparent),
+    var(--color-navy);
+}
+
+.dark-card h2,
+.dark-card p {
+  color: var(--color-white);
+}
+
+.dark-card p {
+  opacity: 0.78;
+}
+
+.dark-card span {
+  background: var(--color-gold);
+  color: var(--color-navy);
+}
+
+.light-card {
+  background: var(--color-cream);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+}
+
+.light-card span {
+  background: var(--color-navy);
+  color: var(--color-gold);
+}
+
+/* ================================
+   Shared Media Placeholder
+================================ */
+
+.media-placeholder {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top left, rgba(244, 210, 122, 0.24), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(185, 28, 28, 0.18), transparent 35%),
+    var(--color-navy);
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 900;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+/* ================================
+   Shared Responsive Styles
+================================ */
+
+@media (max-width: 980px) {
+  .page-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero {
+    padding: 76px 0 40px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.7rem, 15vw, 4.2rem);
+  }
+
+  .content-section {
+    padding: 58px 0;
+  }
+
+  .page-cta {
+    padding: 26px;
+    margin-bottom: 56px;
+  }
+
+  .cta-actions,
+  .cta-actions .btn {
+    width: 100%;
+  }
+}
