@@ -1,0 +1,86 @@
+/* ================================
+   Not Found Page
+================================ */
+
+.not-found-page {
+  width: min(100% - 32px, var(--max-width));
+  margin: 0 auto;
+  min-height: calc(100vh - 82px);
+  padding: 90px 0;
+  display: grid;
+  place-items: center;
+}
+
+.not-found-card {
+  width: min(100%, 900px);
+  padding: 56px;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(214, 165, 54, 0.2), transparent),
+    var(--color-navy);
+  color: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.not-found-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 22px;
+  margin-bottom: 24px;
+  border-radius: 999px;
+  background: var(--color-gold);
+  color: var(--color-navy);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.not-found-card h1 {
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.not-found-card p {
+  max-width: 640px;
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.not-found-actions {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.not-found-actions .btn-outline {
+  border-color: rgba(255, 255, 255, 0.28);
+  color: var(--color-white);
+}
+
+/* ================================
+   Not Found Page - Responsive
+================================ */
+
+@media (max-width: 640px) {
+  .not-found-page {
+    padding: 64px 0;
+  }
+
+  .not-found-card {
+    padding: 34px 22px;
+  }
+
+  .not-found-actions,
+  .not-found-actions .btn {
+    width: 100%;
+  }
+}
