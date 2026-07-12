@@ -1,0 +1,101 @@
+/* ================================
+   Success Page
+================================ */
+
+.success-page {
+  width: min(100% - 32px, var(--max-width));
+  margin: 0 auto;
+  min-height: calc(100vh - 82px);
+  padding: 90px 0;
+  display: grid;
+  place-items: center;
+}
+
+.success-card {
+  width: min(100%, 820px);
+  padding: 56px;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(214, 165, 54, 0.18), transparent),
+    var(--color-cream);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.success-icon {
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.success-card h1 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.6rem, 6vw, 5.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.success-card p {
+  max-width: 640px;
+  margin: 22px auto 0;
+  color: var(--color-muted);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.success-actions {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.success-help-links {
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(7, 27, 58, 0.1);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.success-help-links a {
+  color: var(--color-navy);
+  font-weight: 900;
+  border-bottom: 2px solid var(--color-gold);
+}
+
+/* ================================
+   Success Page - Responsive
+================================ */
+
+@media (max-width: 640px) {
+  .success-page {
+    padding: 64px 0;
+  }
+
+  .success-card {
+    padding: 32px 22px;
+  }
+
+  .success-actions,
+  .success-actions .btn {
+    width: 100%;
+  }
+
+  .success-help-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
