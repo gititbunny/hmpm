@@ -1,0 +1,152 @@
+/* ================================
+   Ministries Page - Ministry Cards
+================================ */
+
+.ministry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.ministry-card {
+  min-height: 260px;
+  padding: 26px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.ministry-card span {
+  width: 46px;
+  height: 46px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-cream);
+  color: var(--color-gold);
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+
+.ministry-card h3 {
+  margin: 0 0 10px;
+  color: var(--color-navy);
+  font-size: 1.28rem;
+}
+
+.ministry-card p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+/* ================================
+   Ministries Page - Serve Section
+================================ */
+
+.serve-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 54px;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(214, 165, 54, 0.18), transparent),
+    var(--color-navy);
+}
+
+.serve-content h2 {
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(2.2rem, 4vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.serve-content p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+.serve-points {
+  display: grid;
+  gap: 16px;
+}
+
+.serve-points div {
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.serve-points strong {
+  display: block;
+  color: var(--color-gold-light);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.serve-points p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.7;
+}
+
+/* ================================
+   Ministries Page - Form Layout
+================================ */
+
+.form-section {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 42px;
+  align-items: start;
+}
+
+.form-intro h2 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.2rem, 4vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.form-intro p {
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+/* ================================
+   Ministries Page - Responsive
+================================ */
+
+@media (max-width: 1100px) {
+  .ministry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-section,
+  .serve-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .ministry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .serve-section {
+    padding: 28px;
+  }
+
+  .ministry-card {
+    min-height: auto;
+  }
+}
