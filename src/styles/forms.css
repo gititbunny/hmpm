@@ -1,0 +1,84 @@
+.church-form {
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: var(--color-cream);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+  box-shadow: var(--shadow-card);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.church-form label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: var(--color-navy);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.church-form input,
+.church-form select,
+.church-form textarea {
+  width: 100%;
+  border: 1px solid rgba(7, 27, 58, 0.14);
+  border-radius: 14px;
+  padding: 14px 15px;
+  background: var(--color-white);
+  color: var(--color-navy);
+  outline: none;
+}
+
+.church-form input:focus,
+.church-form select:focus,
+.church-form textarea:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 4px rgba(214, 165, 54, 0.18);
+}
+
+.church-form textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.checkbox-label {
+  display: flex !important;
+  align-items: flex-start;
+  grid-template-columns: auto 1fr;
+  gap: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.6;
+}
+
+.checkbox-label input {
+  width: auto;
+  margin-top: 5px;
+}
+
+.hidden-field {
+  display: none;
+}
+
+.church-form .btn {
+  width: fit-content;
+  border: none;
+}
+
+@media (max-width: 720px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .church-form {
+    padding: 22px;
+  }
+
+  .church-form .btn {
+    width: 100%;
+  }
+}
