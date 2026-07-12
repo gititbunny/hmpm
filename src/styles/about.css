@@ -1,0 +1,168 @@
+/* ================================
+   About Page
+================================ */
+
+.two-column-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.two-column-section h2,
+.mission-card h2 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.2rem, 4vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.text-stack p {
+  margin-top: 0;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+/* ================================
+   About Page - Mission & Vision
+================================ */
+
+.mission-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.mission-card {
+  min-height: 390px;
+  padding: 34px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.mission-card span {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.mission-card p {
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+/* ================================
+   About Page - Beliefs
+================================ */
+
+.belief-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.belief-card {
+  padding: 28px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.belief-card h3 {
+  margin: 0 0 10px;
+  color: var(--color-navy);
+  font-size: 1.35rem;
+}
+
+.belief-card p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+/* ================================
+   About Page - Leadership
+================================ */
+
+.leadership-section {
+  padding-top: 40px;
+}
+
+.leader-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.leader-card {
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  background: var(--color-cream);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+}
+
+.leader-image-placeholder {
+  min-height: 290px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(214, 165, 54, 0.24), transparent 34%),
+    var(--color-navy);
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 900;
+}
+
+.leader-card h3 {
+  margin: 18px 0 4px;
+  color: var(--color-navy);
+  font-size: 1.2rem;
+}
+
+.leader-card p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* ================================
+   About Page - Responsive
+================================ */
+
+@media (max-width: 980px) {
+  .two-column-section,
+  .mission-section {
+    grid-template-columns: 1fr;
+  }
+
+  .belief-grid,
+  .leader-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .belief-grid,
+  .leader-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-card {
+    min-height: 320px;
+    padding: 26px;
+  }
+
+  .leader-image-placeholder {
+    min-height: 230px;
+  }
+}
