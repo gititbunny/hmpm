@@ -1,0 +1,258 @@
+/* ================================
+   Outreach Page - Intro
+================================ */
+
+.outreach-intro-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.outreach-intro-visual {
+  min-height: 520px;
+  border-radius: var(--radius-lg);
+}
+
+.outreach-intro-content h2 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.outreach-intro-content p {
+  color: var(--color-muted);
+  line-height: 1.8;
+  font-size: 1.06rem;
+}
+
+.outreach-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.outreach-stat {
+  padding: 18px;
+  border-radius: var(--radius-md);
+  background: var(--color-cream);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+}
+
+.outreach-stat strong {
+  display: block;
+  color: var(--color-navy);
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.outreach-stat span {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* ================================
+   Outreach Page - Focus Areas
+================================ */
+
+.outreach-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.outreach-focus-card {
+  min-height: 260px;
+  padding: 26px;
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(135deg, rgba(214, 165, 54, 0.18), transparent),
+    var(--color-navy);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: var(--shadow-card);
+}
+
+.outreach-focus-card span {
+  width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
+  margin-bottom: auto;
+  border-radius: 50%;
+  background: var(--color-gold);
+  color: var(--color-navy);
+  font-weight: 900;
+}
+
+.outreach-focus-card h3 {
+  margin: 26px 0 10px;
+  color: var(--color-white);
+  font-size: 1.22rem;
+}
+
+.outreach-focus-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.65;
+}
+
+/* ================================
+   Outreach Page - Projects
+================================ */
+
+.outreach-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.outreach-project-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.outreach-project-media {
+  min-height: 280px;
+  border-radius: 0;
+}
+
+.outreach-project-content {
+  padding: 24px;
+}
+
+.outreach-project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.outreach-project-meta span {
+  display: inline-flex;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--color-cream);
+  color: var(--color-navy);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.outreach-project-card h3 {
+  margin: 0 0 10px;
+  color: var(--color-navy);
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.outreach-project-card p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+/* ================================
+   Outreach Page - Impact Section
+================================ */
+
+.outreach-impact-section {
+  padding: 54px;
+  border-radius: var(--radius-lg);
+  background: var(--color-cream);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.outreach-impact-content h2 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.2rem, 4vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.outreach-impact-content p {
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.impact-list {
+  display: grid;
+  gap: 14px;
+}
+
+.impact-list article {
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+}
+
+.impact-list strong {
+  display: block;
+  color: var(--color-navy);
+  margin-bottom: 6px;
+}
+
+.impact-list p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+/* ================================
+   Outreach Page - Responsive
+================================ */
+
+@media (max-width: 1100px) {
+  .outreach-focus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .outreach-project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 980px) {
+  .outreach-intro-section,
+  .outreach-impact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .outreach-intro-visual {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .outreach-focus-grid,
+  .outreach-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .outreach-intro-visual {
+    min-height: 320px;
+  }
+
+  .outreach-impact-section {
+    padding: 26px;
+  }
+
+  .outreach-project-media {
+    min-height: 220px;
+  }
+}
