@@ -1,3 +1,22 @@
+import sundayFaithImage from "../assets/images/sermons/sunday-faith.jpg";
+import wednesdayDirectionImage from "../assets/images/sermons/wednesday-direction.jpg";
+import sundayWorshipImage from "../assets/images/sermons/sunday-worship.jpg";
+
+import sundayFaithMainImage from "../assets/images/sermons/sunday-faith-main.jpg";
+import sundayFaithGalleryOne from "../assets/images/sermons/sunday-faith-gallery-01.jpg";
+import sundayFaithGalleryTwo from "../assets/images/sermons/sunday-faith-gallery-02.jpg";
+import sundayFaithGalleryThree from "../assets/images/sermons/sunday-faith-gallery-03.jpg";
+
+import wednesdayDirectionMainImage from "../assets/images/sermons/wednesday-direction-main.jpg";
+import wednesdayDirectionGalleryOne from "../assets/images/sermons/wednesday-direction-gallery-01.jpg";
+import wednesdayDirectionGalleryTwo from "../assets/images/sermons/wednesday-direction-gallery-02.jpg";
+import wednesdayDirectionGalleryThree from "../assets/images/sermons/wednesday-direction-gallery-03.jpg";
+
+import sundayWorshipMainImage from "../assets/images/sermons/sunday-worship-main.jpg";
+import sundayWorshipGalleryOne from "../assets/images/sermons/sunday-worship-gallery-01.jpg";
+import sundayWorshipGalleryTwo from "../assets/images/sermons/sunday-worship-gallery-02.jpg";
+import sundayWorshipGalleryThree from "../assets/images/sermons/sunday-worship-gallery-03.jpg";
+
 export const sermons = [
   {
     id: 1,
@@ -9,6 +28,8 @@ export const sermons = [
     summary:
       "A service focused on faith, prayer, spiritual growth, and trusting God for breakthrough.",
     mediaLabel: "Latest Sunday Service Photo / Video",
+    image: sundayFaithImage,
+    mainImage: sundayFaithMainImage,
 
     pastorMessage: {
       title: "Preparing Your Heart for Breakthrough",
@@ -53,23 +74,22 @@ export const sermons = [
     },
 
     gallery: [
-      {
-        type: "image",
-        label: "Service worship photo",
-      },
-      {
-        type: "image",
-        label: "Congregation photo",
-      },
-      {
-        type: "video",
-        label: "Short service video clip",
-      },
-      {
-        type: "image",
-        label: "Prayer moment photo",
-      },
-    ],
+  {
+    type: "image",
+    label: "Service worship photo",
+    src: sundayFaithGalleryOne,
+  },
+  {
+    type: "image",
+    label: "Congregation prayer moment",
+    src: sundayFaithGalleryTwo,
+  },
+  {
+    type: "image",
+    label: "Prophetic service moment",
+    src: sundayFaithGalleryThree,
+  },
+],
   },
 
   {
@@ -82,6 +102,8 @@ export const sermons = [
     summary:
       "A midweek service focused on seeking God’s direction, prayer, and spiritual guidance.",
     mediaLabel: "Wednesday Service Photo / Video",
+    image: wednesdayDirectionImage,
+    mainImage: wednesdayDirectionMainImage,
 
     pastorMessage: {
       title: "Trusting God During the Week",
@@ -124,20 +146,23 @@ export const sermons = [
       ],
     },
 
-    gallery: [
-      {
-        type: "image",
-        label: "Wednesday worship photo",
-      },
-      {
-        type: "image",
-        label: "Midweek service photo",
-      },
-      {
-        type: "video",
-        label: "Wednesday service video clip",
-      },
-    ],
+gallery: [
+  {
+    type: "image",
+    label: "Wednesday worship photo",
+    src: wednesdayDirectionGalleryOne,
+  },
+  {
+    type: "image",
+    label: "Midweek service photo",
+    src: wednesdayDirectionGalleryTwo,
+  },
+  {
+    type: "image",
+    label: "Prayer and teaching moment",
+    src: wednesdayDirectionGalleryThree,
+  },
+],
   },
 
   {
@@ -150,6 +175,8 @@ export const sermons = [
     summary:
       "A Sunday service focused on worship, surrender, and honouring God in spirit and truth.",
     mediaLabel: "Sunday Service Gallery",
+    image: sundayWorshipImage,
+    mainImage: sundayWorshipMainImage,
 
     pastorMessage: {
       title: "Entering His Presence With Thanksgiving",
@@ -193,18 +220,21 @@ export const sermons = [
     },
 
     gallery: [
-      {
-        type: "image",
-        label: "Worship team photo",
-      },
-      {
-        type: "image",
-        label: "Congregation worship photo",
-      },
-      {
-        type: "video",
-        label: "Worship video clip",
-      },
-    ],
+  {
+    type: "image",
+    label: "Worship team photo",
+    src: sundayWorshipGalleryOne,
+  },
+  {
+    type: "image",
+    label: "Congregation worship photo",
+    src: sundayWorshipGalleryTwo,
+  },
+  {
+    type: "image",
+    label: "Worship service moment",
+    src: sundayWorshipGalleryThree,
+  },
+],
   },
 ];
