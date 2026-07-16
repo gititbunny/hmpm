@@ -1,49 +1,18 @@
 import { Link } from "react-router-dom";
+import HeroCarousel from "../components/HeroCarousel";
+
+import latestServiceImage from "../assets/images/home/latest-service.jpg";
+import ministryWorshipImage from "../assets/images/home/ministry-worship.jpg";
+import ministryYouthImage from "../assets/images/home/ministry-youth.jpg";
+import ministryMediaImage from "../assets/images/home/ministry-media.jpg";
+import ministryOutreachImage from "../assets/images/home/ministry-outreach.jpg";
+import outreachPreviewImage from "../assets/images/home/outreach-preview.jpg";
+import visitPreviewImage from "../assets/images/home/visit-preview.jpg";
 
 function Home() {
   return (
     <>
-      <section className="home-hero">
-        <div className="hero-content">
-          <p className="eyebrow">Welcome to House Of Miracles Prophetic Ministries</p>
-
-          <h1>A place of prayer, worship, prophecy, and transformation.</h1>
-
-          <p className="hero-text">
-            Join us as we gather in faith for Sunday services, prayer,
-            spiritual guidance, and community outreach.
-          </p>
-
-          <div className="hero-actions">
-            <Link className="btn btn-primary" to="/contact">
-              Join Us This Sunday
-            </Link>
-
-            <Link className="btn btn-outline hero-outline" to="/booking">
-              Book One-on-One
-            </Link>
-          </div>
-
-          <div className="hero-service-card">
-            <span>Sunday Service</span>
-            <strong>Every Sunday from 11:30 AM</strong>
-            <p>Come worship with us and experience a life-changing service.</p>
-          </div>
-        </div>
-
-        <div className="hero-visual" aria-label="Church worship service preview">
-          <div className="hero-image-card">
-            <div className="hero-image-placeholder">
-              <span>Church Photo / Service Image</span>
-            </div>
-          </div>
-
-          <div className="floating-card">
-            <span>One-on-One Sessions</span>
-            <strong>Weekends by appointment</strong>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel />
 
       <section className="home-section latest-service">
         <div className="section-heading">
@@ -55,8 +24,16 @@ function Home() {
           </p>
         </div>
 
-        <div className="latest-card">
-          <div>
+        <div className="latest-card latest-card-with-media">
+          <div className="latest-card-image-wrap">
+            <img
+              className="latest-card-image"
+              src={latestServiceImage}
+              alt="House Of Miracles Sunday service highlight"
+            />
+          </div>
+
+          <div className="latest-card-content">
             <span className="card-label">Recent Message</span>
             <h3>Faith, Prayer, and Spiritual Breakthrough</h3>
             <p>
@@ -64,15 +41,15 @@ function Home() {
               Sunday service, including key scriptures, prayer points, and
               service highlights.
             </p>
-          </div>
 
-          <div className="latest-actions">
-            <Link className="btn btn-secondary" to="/sermons">
-              View Sermons
-            </Link>
-            <Link className="btn btn-outline" to="/media">
-              View Gallery
-            </Link>
+            <div className="latest-actions">
+              <Link className="btn btn-secondary" to="/sermons">
+                View Sermons
+              </Link>
+              <Link className="btn btn-outline" to="/media">
+                View Gallery
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -129,43 +106,76 @@ function Home() {
           </Link>
         </div>
 
-        <div className="split-card-list">
-          <div className="mini-card">Praise & Worship</div>
-          <div className="mini-card">Youth Ministry</div>
-          <div className="mini-card">Media Team</div>
-          <div className="mini-card">Outreach & Charity</div>
+        <div className="split-card-list media-card-list">
+          <div className="mini-card media-mini-card">
+            <img src={ministryWorshipImage} alt="Praise and worship ministry" />
+            <span>Praise & Worship</span>
+          </div>
+
+          <div className="mini-card media-mini-card">
+            <img src={ministryYouthImage} alt="Youth ministry gathering" />
+            <span>Youth Ministry</span>
+          </div>
+
+          <div className="mini-card media-mini-card">
+            <img src={ministryMediaImage} alt="Church media team" />
+            <span>Media Team</span>
+          </div>
+
+          <div className="mini-card media-mini-card">
+            <img src={ministryOutreachImage} alt="Outreach and charity ministry" />
+            <span>Outreach & Charity</span>
+          </div>
         </div>
       </section>
 
-      <section className="home-section outreach-preview">
-        <div className="section-heading">
-          <p className="eyebrow">Outreach</p>
-          <h2>Serving the community with love and compassion.</h2>
-          <p>
-            See the ministry’s charity work, outreach moments, and community
-            impact stories.
-          </p>
-        </div>
+      <section className="home-section outreach-preview media-background-section">
+        <img
+          className="media-background-image"
+          src={outreachPreviewImage}
+          alt="House Of Miracles outreach and charity work"
+        />
 
-        <Link className="btn btn-secondary" to="/outreach">
-          View Outreach Work
-        </Link>
+        <div className="media-background-overlay"></div>
+
+        <div className="media-background-content">
+          <div className="section-heading">
+            <p className="eyebrow">Outreach</p>
+            <h2>Serving the community with love and compassion.</h2>
+            <p>
+              See the ministry’s charity work, outreach moments, and community
+              impact stories.
+            </p>
+          </div>
+
+          <Link className="btn btn-primary" to="/outreach">
+            View Outreach Work
+          </Link>
+        </div>
       </section>
 
       <section className="home-section visit-preview">
-        <div className="visit-card">
-          <div>
+        <div className="visit-card visit-card-with-media">
+          <div className="visit-card-content">
             <p className="eyebrow">Visit Us</p>
             <h2>Plan your visit to House Of Miracles Prophetic Ministries.</h2>
             <p>
               Find our service times, location, prayer line, and contact details
               before your visit.
             </p>
+
+            <Link className="btn btn-primary" to="/contact">
+              Get Directions
+            </Link>
           </div>
 
-          <Link className="btn btn-primary" to="/contact">
-            Get Directions
-          </Link>
+          <div className="visit-card-image-wrap">
+            <img
+              className="visit-card-image"
+              src={visitPreviewImage}
+              alt="Church visit and location preview"
+            />
+          </div>
         </div>
       </section>
     </>
