@@ -1,43 +1,61 @@
 import { Link } from "react-router-dom";
 
+import ministryPraiseImage from "../assets/images/ministries/ministry-praise.jpg";
+import ministryUsheringImage from "../assets/images/ministries/ministry-ushering.jpg";
+import ministryYouthImage from "../assets/images/ministries/ministry-youth.jpg";
+import ministryPrayerImage from "../assets/images/ministries/ministry-prayer.jpg";
+import ministryMediaImage from "../assets/images/ministries/ministry-media.jpg";
+import ministryOutreachImage from "../assets/images/ministries/ministry-outreach.jpg";
+import ministryChildrenImage from "../assets/images/ministries/ministry-children.jpg";
+import ministryHospitalityImage from "../assets/images/ministries/ministry-hospitality.jpg";
+import servePreviewImage from "../assets/images/ministries/serve-preview.jpg";
+
 const ministries = [
   {
     title: "Praise & Worship",
+    image: ministryPraiseImage,
     description:
       "Serve through worship, singing, instruments, and helping lead the congregation into a meaningful worship experience.",
   },
   {
     title: "Ushering & Protocol",
+    image: ministryUsheringImage,
     description:
       "Welcome visitors, guide members, support order during services, and help create a respectful church environment.",
   },
   {
     title: "Youth Ministry",
+    image: ministryYouthImage,
     description:
       "Support young people through faith-based encouragement, fellowship, mentorship, and spiritual growth.",
   },
   {
     title: "Prayer & Intercession",
+    image: ministryPrayerImage,
     description:
       "Stand in prayer for the church, families, visitors, one-on-one requests, and community needs.",
   },
   {
     title: "Media Team",
+    image: ministryMediaImage,
     description:
       "Help capture photos, videos, service highlights, livestream support, editing, and online ministry content.",
   },
   {
     title: "Outreach & Charity",
+    image: ministryOutreachImage,
     description:
       "Serve the community through giving, charity projects, visits, support drives, and acts of compassion.",
   },
   {
     title: "Children’s Ministry",
+    image: ministryChildrenImage,
     description:
       "Create a safe and caring space for children to learn, grow, and participate in church life.",
   },
   {
     title: "Cleaning & Hospitality",
+    image: ministryHospitalityImage,
     description:
       "Help keep the church welcoming, clean, organized, and prepared before, during, and after services.",
   },
@@ -68,18 +86,36 @@ function Ministries() {
           </p>
         </div>
 
-        <div className="ministry-grid">
+        <div className="ministry-grid ministry-media-grid">
           {ministries.map((ministry, index) => (
-            <article className="ministry-card" key={ministry.title}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <h3>{ministry.title}</h3>
-              <p>{ministry.description}</p>
+            <article className="ministry-card ministry-card-with-media" key={ministry.title}>
+              <div className="ministry-card-image-wrap">
+                <img
+                  className="ministry-card-image"
+                  src={ministry.image}
+                  alt={`${ministry.title} at House Of Miracles`}
+                />
+              </div>
+
+              <div className="ministry-card-content">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{ministry.title}</h3>
+                <p>{ministry.description}</p>
+              </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="content-section serve-section">
+      <section className="content-section serve-section serve-section-with-media">
+        <img
+          className="serve-section-image"
+          src={servePreviewImage}
+          alt="Church members serving in ministry"
+        />
+
+        <div className="serve-section-overlay"></div>
+
         <div className="serve-content">
           <p className="eyebrow">Why Serve?</p>
           <h2>Serving helps build the church and strengthen the community.</h2>
