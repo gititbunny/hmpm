@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
 
+import churchStoryImage from "../assets/images/about/church-story.jpg";
+import missionImage from "../assets/images/about/mission.jpg";
+import visionImage from "../assets/images/about/vision.jpg";
+import leaderProphetImage from "../assets/images/about/leader-prophet.jpg";
+import leaderPastorImage from "../assets/images/about/leader-pastor.jpg";
+import leaderTeamImage from "../assets/images/about/leader-team.jpg";
+
 function About() {
   return (
     <>
@@ -14,10 +21,18 @@ function About() {
         </div>
       </section>
 
-      <section className="content-section two-column-section">
+      <section className="content-section two-column-section about-story-section">
         <div>
           <p className="eyebrow">Our Story</p>
           <h2>A place where people gather in faith and expectation.</h2>
+
+          <div className="about-story-image-wrap">
+            <img
+              className="about-story-image"
+              src={churchStoryImage}
+              alt="House Of Miracles church gathering"
+            />
+          </div>
         </div>
 
         <div className="text-stack">
@@ -42,23 +57,33 @@ function About() {
         </div>
       </section>
 
-      <section className="content-section mission-section">
-        <div className="mission-card dark-card">
-          <span>Mission</span>
-          <h2>To lead people into prayer, worship, faith, and spiritual growth.</h2>
-          <p>
-            Our mission is to serve people through the Word of God, prayer,
-            spiritual guidance, compassion, and community support.
-          </p>
+      <section className="content-section mission-section mission-media-section">
+        <div className="mission-card dark-card mission-card-with-image">
+          <img src={missionImage} alt="Church mission and worship moment" />
+          <div className="mission-card-overlay"></div>
+
+          <div className="mission-card-content">
+            <span>Mission</span>
+            <h2>To lead people into prayer, worship, faith, and spiritual growth.</h2>
+            <p>
+              Our mission is to serve people through the Word of God, prayer,
+              spiritual guidance, compassion, and community support.
+            </p>
+          </div>
         </div>
 
-        <div className="mission-card light-card">
-          <span>Vision</span>
-          <h2>To see lives transformed through faith, healing, and restoration.</h2>
-          <p>
-            Our vision is to be a ministry where people experience hope,
-            direction, breakthrough, and a deeper relationship with God.
-          </p>
+        <div className="mission-card light-card mission-card-with-image">
+          <img src={visionImage} alt="Church vision and community gathering" />
+          <div className="mission-card-overlay light-overlay"></div>
+
+          <div className="mission-card-content">
+            <span>Vision</span>
+            <h2>To see lives transformed through faith, healing, and restoration.</h2>
+            <p>
+              Our vision is to be a ministry where people experience hope,
+              direction, breakthrough, and a deeper relationship with God.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -128,27 +153,45 @@ function About() {
           <p className="eyebrow">Leadership</p>
           <h2>Meet the leadership of House Of Miracles Prophetic Ministries.</h2>
           <p>
-            Add real leadership names, photos, and roles here when the church
-            provides the final information.
+            Add final leadership names, roles, and photos here when the church
+            provides the official details.
           </p>
         </div>
 
         <div className="leader-grid">
           <article className="leader-card">
-            <div className="leader-image-placeholder">Photo</div>
-            <h3>Prophet / Founder Name</h3>
-            <p>Founder & Senior Leader</p>
+            <div className="leader-image-wrap">
+              <img
+                className="leader-image"
+                src={leaderProphetImage}
+                alt="Prophet and senior leader"
+              />
+            </div>
+            <h3>Prophet VK Ngobeni</h3>
+            <p>Founder & Prophet</p>
           </article>
 
           <article className="leader-card">
-            <div className="leader-image-placeholder">Photo</div>
-            <h3>Pastor Name</h3>
-            <p>Pastor / Ministry Leader</p>
+            <div className="leader-image-wrap">
+              <img
+                className="leader-image"
+                src={leaderPastorImage}
+                alt="Pastor or ministry leader"
+              />
+            </div>
+            <h3>Apostle Mashele</h3>
+            <p>Apostle / Lead Pastor</p>
           </article>
 
           <article className="leader-card">
-            <div className="leader-image-placeholder">Photo</div>
-            <h3>Ministry Leader Name</h3>
+            <div className="leader-image-wrap">
+              <img
+                className="leader-image"
+                src={leaderTeamImage}
+                alt="House Of Miracles leadership team"
+              />
+            </div>
+            <h3>Mr Nkuna</h3>
             <p>Church Leadership Team</p>
           </article>
         </div>
