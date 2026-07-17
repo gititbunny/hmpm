@@ -7,17 +7,6 @@ function Media() {
 
   return (
     <>
-      <section className="page-hero media-hero">
-        <div>
-          <p className="eyebrow">Media Gallery</p>
-          <h1>Photos, videos, and highlights from the ministry.</h1>
-          <p>
-            Browse worship moments, sermon highlights, outreach work, special
-            events, and service memories from House Of Miracles Prophetic
-            Ministries.
-          </p>
-        </div>
-      </section>
 
       <section className="content-section featured-media-section">
         <div className="featured-media-card">
