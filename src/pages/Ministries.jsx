@@ -64,18 +64,6 @@ const ministries = [
 function Ministries() {
   return (
     <>
-      <section className="page-hero">
-        <div>
-          <p className="eyebrow">Ministries</p>
-          <h1>Serve, grow, and belong through ministry.</h1>
-          <p>
-            There are many ways to be part of House Of Miracles Prophetic
-            Ministries, from worship and prayer to outreach, media, hospitality,
-            and youth support.
-          </p>
-        </div>
-      </section>
-
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">Where You Can Serve</p>
