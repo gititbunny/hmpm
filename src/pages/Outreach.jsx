@@ -4,18 +4,6 @@ import { outreachFocusAreas, outreachProjects } from "../data/outreach";
 function Outreach() {
   return (
     <>
-      <section className="page-hero">
-        <div>
-          <p className="eyebrow">Outreach & Charity</p>
-          <h1>Serving the community with faith, love, and compassion.</h1>
-          <p>
-            House Of Miracles Prophetic Ministries is committed to supporting
-            people through prayer, charity, encouragement, and practical acts of
-            care.
-          </p>
-        </div>
-      </section>
-
       <section className="content-section outreach-intro-section">
         <div className="outreach-intro-content">
           <p className="eyebrow">Community Impact</p>
