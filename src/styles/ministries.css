@@ -150,3 +150,92 @@
     min-height: auto;
   }
 }
+
+/* ================================
+   Ministries Page - Media Cards
+================================ */
+
+.ministry-media-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.ministry-card-with-media {
+  padding: 0;
+  overflow: hidden;
+  min-height: auto;
+}
+
+.ministry-card-image-wrap {
+  min-height: 190px;
+  overflow: hidden;
+  background: var(--color-navy);
+}
+
+.ministry-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.ministry-card-content {
+  padding: 24px;
+}
+
+.ministry-card-with-media:hover .ministry-card-image {
+  transform: scale(1.06);
+}
+
+/* ================================
+   Ministries Page - Serve Section Media
+================================ */
+
+.serve-section-with-media {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.serve-section-image,
+.serve-section-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.serve-section-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.serve-section-overlay {
+  background:
+    linear-gradient(135deg, rgba(7, 27, 58, 0.92), rgba(7, 27, 58, 0.68)),
+    linear-gradient(0deg, rgba(7, 27, 58, 0.55), transparent);
+  z-index: -1;
+}
+
+/* ================================
+   Ministries Page - Media Responsive
+================================ */
+
+@media (max-width: 1100px) {
+  .ministry-media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ministry-card-image-wrap {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ministry-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ministry-card-image-wrap {
+    min-height: 230px;
+  }
+}
