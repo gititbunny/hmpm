@@ -10,17 +10,6 @@ import leaderTeamImage from "../assets/images/about/leader-team.jpg";
 function About() {
   return (
     <>
-      <section className="page-hero about-hero">
-        <div>
-          <p className="eyebrow">About The Ministry</p>
-          <h1>House Of Miracles Prophetic Ministries</h1>
-          <p>
-            A prophetic ministry dedicated to prayer, worship, spiritual
-            guidance, healing, deliverance, and community transformation.
-          </p>
-        </div>
-      </section>
-
       <section className="content-section two-column-section about-story-section">
         <div>
           <p className="eyebrow">Our Story</p>
