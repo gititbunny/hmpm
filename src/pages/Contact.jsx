@@ -3,16 +3,6 @@ import { Link } from "react-router-dom";
 function Contact() {
   return (
     <>
-      <section className="page-hero">
-        <div>
-          <p className="eyebrow">Visit & Contact Us</p>
-          <h1>Plan your visit to House Of Miracles Prophetic Ministries.</h1>
-          <p>
-            Find service times, one-on-one session information, prayer contact
-            details, location guidance, and ways to connect with the ministry.
-          </p>
-        </div>
-      </section>
 
       <section className="content-section contact-overview-section">
         <div className="contact-info-panel">
