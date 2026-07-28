@@ -29,7 +29,7 @@ function Home() {
             <img
               className="latest-card-image"
               src={latestServiceImage}
-              alt="House Of Miracles Sunday service highlight"
+              alt="House Of Miracles Sunday Service Highlight"
             />
           </div>
 
