@@ -192,7 +192,7 @@ function About() {
           <h2>Join us this Sunday or request a one-on-one prayer session.</h2>
           <p>
             Whether you are visiting for the first time or looking for prayer
-            and spiritual guidance, you are welcome to connect with the ministry.
+            and spiritual guidance, you are welcome to connect with the ministry. 
           </p>  
         </div>
 
