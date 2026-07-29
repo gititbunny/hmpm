@@ -220,7 +220,7 @@ function Booking() {
           </label>
 
           <button className="btn btn-primary" type="submit">
-            Submit Booking Request
+            Submit Booking Request 
           </button>
         </form>
       </section>
