@@ -159,7 +159,7 @@ function SermonDetail() {
           <h2>Join the next service or request a one-on-one session.</h2>
           <p>
             You can visit the church, contact the prayer line, or request a
-            private prayer and guidance session.
+            private prayer and guidance session. 
           </p>
         </div>
 
