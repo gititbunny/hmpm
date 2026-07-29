@@ -10,7 +10,7 @@ function Contact() {
           <h2>Join us for worship, prayer, and the Word.</h2>
           <p>
             Visitors are welcome to attend services and connect with the church
-            team for prayer, guidance, and support.
+            team for prayer, guidance, and support. 
           </p>
 
           <div className="service-time-list">
