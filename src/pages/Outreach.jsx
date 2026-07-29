@@ -12,7 +12,7 @@ function Outreach() {
             Outreach helps the ministry care for people beyond the church
             building. Through giving, prayer, visits, and community support, the
             church can be a source of hope for families and individuals.
-          </p>
+          </p> 
 
           <p>
             This page can be updated with real outreach stories, photos, dates,
