@@ -10,7 +10,7 @@ function NotFound() {
 
         <p>
           The page you are looking for may have been moved, renamed, or does not
-          exist. You can return home or continue exploring the ministry website.
+          exist. You can return home or continue exploring the ministry website. 
         </p>
 
         <div className="not-found-actions">
