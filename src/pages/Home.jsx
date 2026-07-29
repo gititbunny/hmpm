@@ -161,7 +161,7 @@ function Home() {
             <h2>Plan your visit to House Of Miracles Prophetic Ministries.</h2>
             <p>
               Find our service times, location, prayer line, and contact details
-              before your visit.
+              before your visit. 
             </p>
 
             <Link className="btn btn-primary" to="/contact">
