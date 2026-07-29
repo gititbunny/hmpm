@@ -193,7 +193,7 @@ function About() {
           <p>
             Whether you are visiting for the first time or looking for prayer
             and spiritual guidance, you are welcome to connect with the ministry.
-          </p>
+          </p>  
         </div>
 
         <div className="cta-actions">
