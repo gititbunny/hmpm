@@ -62,7 +62,7 @@ function Media() {
           <h2>Recent photos and highlights.</h2>
           <p>
             Replace or expand these items as more church photos, videos, and
-            edited highlights become available.
+            edited highlights become available. 
           </p>
         </div>
 
