@@ -1,20 +1,51 @@
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 function Success() {
+  const [searchParams] = useSearchParams();
+
+  const type = searchParams.get("type");
+  const bookingReference = searchParams.get("ref");
+
+  const isBookingSuccess = type === "booking" && bookingReference;
+
   return (
     <section className="success-page">
       <div className="success-card">
         <div className="success-icon">✓</div>
 
-        <p className="eyebrow">Form Submitted</p>
-
-        <h1>Thank you for reaching out.</h1>
-
-        <p>
-          Your request has been received. The church team will review your
-          message and contact you as soon as possible using the details you
-          provided.
+        <p className="eyebrow">
+          {isBookingSuccess ? "Booking Submitted" : "Form Submitted"}
         </p>
+
+        <h1>
+          {isBookingSuccess
+            ? "Your booking request was received."
+            : "Thank you for reaching out."}
+        </h1>
+
+        {isBookingSuccess ? (
+          <>
+            <p>
+              Please save this reference number. The church team will use it to
+              identify your one-on-one booking.
+            </p>
+
+            <div className="success-reference-box">
+              <span>Your Booking Reference</span>
+              <strong>{bookingReference}</strong>
+            </div>
+
+            <p className="success-small-note">
+              Bookings are handled in the order they are received by email. The
+              church team may contact you to confirm final session details.
+            </p>
+          </>
+        ) : (
+          <p>
+            Your request has been received. The church team will review your
+            message and contact you using the details you provided.
+          </p>
+        )}
 
         <div className="success-actions">
           <Link className="btn btn-primary" to="/">
