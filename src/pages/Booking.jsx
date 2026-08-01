@@ -16,6 +16,23 @@ const allowedDayMap = {
   },
 };
 
+function formatDateValue(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+}
+
+function formatDateLabel(date) {
+  return new Intl.DateTimeFormat("en-ZA", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(date);
+}
+
 function Booking() {
   const [preferredDay, setPreferredDay] = useState("");
   const [preferredDate, setPreferredDate] = useState("");
@@ -23,7 +40,31 @@ function Booking() {
     String(Math.floor(1000 + Math.random() * 9000))
   );
 
-  const today = new Date().toISOString().split("T")[0];
+  const availableDates = useMemo(() => {
+    if (!preferredDay) {
+      return [];
+    }
+
+    const selectedDay = allowedDayMap[preferredDay];
+    const dates = [];
+    const currentDate = new Date();
+
+    currentDate.setHours(12, 0, 0, 0);
+
+    for (let index = 0; dates.length < 18 && index < 140; index += 1) {
+      const possibleDate = new Date(currentDate);
+      possibleDate.setDate(currentDate.getDate() + index);
+
+      if (possibleDate.getDay() === selectedDay.dayIndex) {
+        dates.push({
+          value: formatDateValue(possibleDate),
+          label: formatDateLabel(possibleDate),
+        });
+      }
+    }
+
+    return dates;
+  }, [preferredDay]);
 
   const bookingReference = useMemo(() => {
     if (!preferredDay || !preferredDate) {
@@ -36,18 +77,14 @@ function Booking() {
     return `${dayCode}-${cleanDate}-${randomCode}`;
   }, [preferredDay, preferredDate, randomCode]);
 
-  const dateMatchesSelectedDay = useMemo(() => {
-    if (!preferredDay || !preferredDate) {
-      return true;
-    }
-
-    const selectedDate = new Date(`${preferredDate}T12:00:00`);
-    return selectedDate.getDay() === allowedDayMap[preferredDay]?.dayIndex;
-  }, [preferredDay, preferredDate]);
-
   const successAction = bookingReference
     ? `/success?type=booking&ref=${encodeURIComponent(bookingReference)}`
     : "/success";
+
+  const handlePreferredDayChange = (event) => {
+    setPreferredDay(event.target.value);
+    setPreferredDate("");
+  };
 
   return (
     <>
@@ -86,10 +123,12 @@ function Booking() {
         </div>
 
         <div className="booking-privacy-card">
-          <strong>Privacy note</strong>
+          <span className="privacy-card-label">Private Booking</span>
+          <h3>No personal story needed.</h3>
           <p>
-            You do not need to explain your situation on this form. The form is
-            only for booking and contact purposes.
+            You do not need to explain your situation on this form. This booking
+            only helps the church team prepare your one-on-one session and
+            identify your reference number on arrival.
           </p>
         </div>
       </section>
@@ -134,7 +173,7 @@ function Booking() {
                   name="preferredDay"
                   required
                   value={preferredDay}
-                  onChange={(event) => setPreferredDay(event.target.value)}
+                  onChange={handlePreferredDayChange}
                 >
                   <option value="" disabled>
                     Select a day
@@ -146,15 +185,26 @@ function Booking() {
               </label>
 
               <label>
-                Preferred Date
-                <input
-                  type="date"
+                Available Date
+                <select
                   name="preferredDate"
-                  min={today}
                   required
                   value={preferredDate}
                   onChange={(event) => setPreferredDate(event.target.value)}
-                />
+                  disabled={!preferredDay}
+                >
+                  <option value="" disabled>
+                    {preferredDay
+                      ? `Select an available ${preferredDay}`
+                      : "Choose a day first"}
+                  </option>
+
+                  {availableDates.map((date) => (
+                    <option key={date.value} value={date.value}>
+                      {date.label}
+                    </option>
+                  ))}
+                </select>
               </label>
 
               <label>
@@ -231,13 +281,6 @@ function Booking() {
               </label>
             </div>
 
-            {!dateMatchesSelectedDay && (
-              <div className="booking-warning">
-                The date you selected does not match the preferred day. Please
-                choose a matching date.
-              </div>
-            )}
-
             <div className="booking-reference-box">
               <span>Your Booking Reference</span>
               <strong>{bookingReference || "Choose a day and date first"}</strong>
@@ -266,7 +309,7 @@ function Booking() {
             <button
               className="btn btn-primary"
               type="submit"
-              disabled={!dateMatchesSelectedDay}
+              disabled={!bookingReference}
             >
               Submit Booking
             </button>
