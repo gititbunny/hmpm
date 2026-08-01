@@ -26,8 +26,8 @@ function Success() {
         {isBookingSuccess ? (
           <>
             <p>
-              Please save this reference number. The church team will use it to
-              identify your one-on-one booking.
+              Thank you for your booking. The church team will review your request and
+              contact you to confirm your one-on-one session.
             </p>
 
             <div className="success-reference-box">
@@ -36,8 +36,8 @@ function Success() {
             </div>
 
             <p className="success-small-note">
-              Bookings are handled in the order they are received by email. The
-              church team may contact you to confirm final session details.
+              Please keep this reference number safe. You will need it on the day of your
+              one-on-one session.
             </p>
           </>
         ) : (
