@@ -88,48 +88,29 @@ function Booking() {
 
   return (
     <>
-      <section className="booking-page-header">
-        <div>
-          <p className="eyebrow">One-on-One Booking</p>
-          <h1>Book a private prophetic one-on-one session.</h1>
-          <p>
-            Choose your preferred day, leave your contact number, and keep your
-            reference number for arrival.
-          </p>
-        </div>
-      </section>
+      <section className="booking-intro">
+        <p className="eyebrow">One-on-One Booking</p>
+        <h1>Book your private one-on-one session.</h1>
+        <p>
+          Choose an available day, submit your contact details, and save your
+          booking reference number.
+        </p>
 
-      <section className="content-section booking-simple-grid">
-        <div className="booking-quick-info">
-          <p className="eyebrow">How It Works</p>
-          <h2>Simple, private, and straight to the point.</h2>
+        <div className="booking-how-it-works">
+          <article>
+            <span>01</span>
+            <p>Choose Wednesday, Saturday, or Sunday.</p>
+          </article>
 
-          <div className="booking-step-list">
-            <article>
-              <span>01</span>
-              <p>Choose Wednesday, Saturday, or Sunday.</p>
-            </article>
+          <article>
+            <span>02</span>
+            <p>No personal story is needed on the form.</p>
+          </article>
 
-            <article>
-              <span>02</span>
-              <p>Submit your phone number and attendance details.</p>
-            </article>
-
-            <article>
-              <span>03</span>
-              <p>Save your booking reference number.</p>
-            </article>
-          </div>
-        </div>
-
-        <div className="booking-privacy-card">
-          <span className="privacy-card-label">Private Booking</span>
-          <h3>No personal story needed.</h3>
-          <p>
-            You do not need to explain your situation on this form. This booking
-            only helps the church team prepare your one-on-one session and
-            identify your reference number on arrival.
-          </p>
+          <article>
+            <span>03</span>
+            <p>Use your reference number on arrival.</p>
+          </article>
         </div>
       </section>
 
