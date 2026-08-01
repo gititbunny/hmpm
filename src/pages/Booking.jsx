@@ -266,8 +266,7 @@ function Booking() {
               <span>Your Booking Reference</span>
               <strong>{bookingReference || "Choose a day and date first"}</strong>
               <p>
-                Format: day, date, and a private 4-digit code. Example:
-                WED-20260730-1437.
+                  Please keep this reference number safe. You will need it when you arrive for your one-on-one session.
               </p>
             </div>
 
