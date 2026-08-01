@@ -33,7 +33,7 @@
 
 .booking-simple-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.05fr 0.95fr;
   gap: 24px;
   align-items: stretch;
 }
@@ -90,24 +90,49 @@
   line-height: 1.6;
 }
 
+/* ================================
+   Booking Page - Privacy Card
+================================ */
+
 .booking-privacy-card {
-  padding: 34px;
+  min-height: 100%;
+  padding: 38px;
   border-radius: var(--radius-lg);
-  background: var(--color-cream);
+  background:
+    linear-gradient(135deg, rgba(214, 165, 54, 0.2), transparent),
+    var(--color-cream);
   border: 1px solid rgba(7, 27, 58, 0.08);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
-.booking-privacy-card strong {
+.privacy-card-label {
+  width: fit-content;
+  display: inline-flex;
+  margin-bottom: 22px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--color-navy);
+  color: var(--color-gold-light);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.booking-privacy-card h3 {
+  margin: 0;
   color: var(--color-navy);
-  font-size: 1.5rem;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
 }
 
 .booking-privacy-card p {
-  margin: 14px 0 0;
+  margin: 18px 0 0;
   color: var(--color-muted);
+  font-size: 1.05rem;
   line-height: 1.75;
 }
 
@@ -128,16 +153,6 @@
 
 .booking-form {
   margin-top: 0;
-}
-
-.booking-warning {
-  margin-top: 18px;
-  padding: 14px 16px;
-  border-radius: var(--radius-sm);
-  background: rgba(185, 28, 28, 0.08);
-  border: 1px solid rgba(185, 28, 28, 0.18);
-  color: #8a1f1f;
-  font-weight: 800;
 }
 
 .booking-reference-box {
@@ -173,6 +188,11 @@
   line-height: 1.6;
 }
 
+.booking-form button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 /* ================================
    Booking Page - Final CTA
 ================================ */
@@ -182,6 +202,7 @@
   justify-content: space-between;
   gap: 24px;
   align-items: center;
+  margin-bottom: 80px;
   padding: 34px;
   border-radius: var(--radius-lg);
   background: var(--color-navy);
@@ -234,6 +255,7 @@
   .booking-final-cta {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 56px;
   }
 
   .booking-final-cta .btn,
