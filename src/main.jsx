@@ -13,7 +13,7 @@ import "./styles/ministries.css";
 import "./styles/booking.css";
 import "./styles/sermons.css";
 import "./styles/sermon-detail.css";
-import "./styles/media.css";
+import "./styles/testimonies.css";
 import "./styles/outreach.css";
 import "./styles/contact.css";
 import "./styles/success.css";
