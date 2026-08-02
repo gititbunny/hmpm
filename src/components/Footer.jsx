@@ -9,8 +9,7 @@ function Footer() {
         <div>
           <h2>House Of Miracles Prophetic Ministries</h2>
           <p>
-            A place of prayer, worship, spiritual guidance, and community
-            transformation.
+            Prayer, worship, testimonies, sermons, and spiritual guidance.
           </p>
         </div>
 
@@ -18,14 +17,14 @@ function Footer() {
           <h3>Quick Links</h3>
           <Link to="/about">About</Link>
           <Link to="/sermons">Sermons</Link>
-          <Link to="/media">Media</Link>
+          <Link to="/testimonies">Testimonies</Link>
           <Link to="/booking">One-on-One Booking</Link>
         </div>
 
         <div>
           <h3>Visit Us</h3>
           <p>Sunday Service: 11:30 AM</p>
-          <p>One-on-One Sessions: Weekends by appointment</p>
+          <p>One-on-One Sessions: Wednesday, Saturday, and Sunday</p>
           <p>Location details coming soon.</p>
         </div>
 
@@ -38,7 +37,10 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© {currentYear} House Of Miracles Prophetic Ministries. All rights reserved.</p>
+        <p>
+          © {currentYear} House Of Miracles Prophetic Ministries. All rights
+          reserved.
+        </p>
       </div>
     </footer>
   );
