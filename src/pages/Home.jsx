@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import HeroCarousel from "../components/HeroCarousel";
+import { testimonies } from "../data/testimonies";
 
 import latestServiceImage from "../assets/images/home/latest-service.jpg";
 import ministryWorshipImage from "../assets/images/home/ministry-worship.jpg";
@@ -10,6 +11,8 @@ import outreachPreviewImage from "../assets/images/home/outreach-preview.jpg";
 import visitPreviewImage from "../assets/images/home/visit-preview.jpg";
 
 function Home() {
+  const recentTestimonies = testimonies.slice(0, 3);
+
   return (
     <>
       <HeroCarousel />
@@ -19,8 +22,7 @@ function Home() {
           <p className="eyebrow">Latest Service</p>
           <h2>Sunday Service Highlight</h2>
           <p>
-            Sermon notes, photos, and service highlights will be shared here so
-            members and visitors can stay connected throughout the week.
+            Catch up on the latest sermon, scriptures, and service highlights.
           </p>
         </div>
 
@@ -29,7 +31,7 @@ function Home() {
             <img
               className="latest-card-image"
               src={latestServiceImage}
-              alt="House Of Miracles Sunday Service Highlight"
+              alt="House Of Miracles Sunday service highlight"
             />
           </div>
 
@@ -37,20 +39,51 @@ function Home() {
             <span className="card-label">Recent Message</span>
             <h3>Faith, Prayer, and Spiritual Breakthrough</h3>
             <p>
-              This section will feature the latest message preached during
-              Sunday service, including key scriptures, prayer points, and
-              service highlights.
+              Read the latest message, key scriptures, prayer points, and notes
+              from Sunday service.
             </p>
 
             <div className="latest-actions">
               <Link className="btn btn-secondary" to="/sermons">
                 View Sermons
               </Link>
-              <Link className="btn btn-outline" to="/media">
-                View Gallery
+              <Link className="btn btn-outline" to="/testimonies">
+                Read Testimonies
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="home-section home-testimony-section">
+        <div className="section-heading">
+          <p className="eyebrow">Testimonies</p>
+          <h2>Stories of faith, prayer, and breakthrough.</h2>
+          <p>
+            Read what God has done in the lives of people through prayer,
+            worship, and spiritual guidance.
+          </p>
+        </div>
+
+        <div className="home-testimony-grid">
+          {recentTestimonies.map((testimony) => (
+            <article className="home-testimony-card" key={testimony.id}>
+              <span>{testimony.category}</span>
+              <h3>{testimony.title}</h3>
+              <p>{testimony.testimony}</p>
+
+              <div className="home-testimony-meta">
+                <strong>{testimony.name}</strong>
+                <small>{testimony.date}</small>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="home-section-action">
+          <Link className="btn btn-primary" to="/testimonies">
+            View All Testimonies
+          </Link>
         </div>
       </section>
 
@@ -85,10 +118,9 @@ function Home() {
             <span>03</span>
             <h3>Book One-on-One</h3>
             <p>
-              Request a private prayer and guidance session. Our team will
-              contact you to confirm availability.
+              Book a private one-on-one session and keep your reference number.
             </p>
-            <Link to="/booking">Request appointment</Link>
+            <Link to="/booking">Book now</Link>
           </article>
         </div>
       </section>
@@ -98,8 +130,8 @@ function Home() {
           <p className="eyebrow">Ministries</p>
           <h2>Serve, grow, and connect through ministry.</h2>
           <p>
-            From praise and worship to ushering, media, outreach, and prayer
-            support, there are many ways to serve and grow within the church.
+            From praise and worship to media, outreach, and prayer support,
+            there are many ways to serve.
           </p>
           <Link className="btn btn-primary" to="/ministries">
             Explore Ministries
@@ -123,7 +155,10 @@ function Home() {
           </div>
 
           <div className="mini-card media-mini-card">
-            <img src={ministryOutreachImage} alt="Outreach and charity ministry" />
+            <img
+              src={ministryOutreachImage}
+              alt="Outreach and charity ministry"
+            />
             <span>Outreach & Charity</span>
           </div>
         </div>
@@ -160,8 +195,8 @@ function Home() {
             <p className="eyebrow">Visit Us</p>
             <h2>Plan your visit to House Of Miracles Prophetic Ministries.</h2>
             <p>
-              Find our service times, location, prayer line, and contact details
-              before your visit. 
+              Find service times, location details, prayer line information, and
+              directions before your visit.
             </p>
 
             <Link className="btn btn-primary" to="/contact">
