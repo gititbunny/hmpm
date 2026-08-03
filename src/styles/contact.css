@@ -1,25 +1,4 @@
 /* ================================
-   Contact Page - Start
-================================ */
-
-.contact-start {
-  padding-top: 70px;
-  padding-bottom: 20px;
-}
-
-.contact-heading {
-  max-width: 760px;
-}
-
-.contact-heading h1 {
-  margin: 0;
-  color: var(--color-navy);
-  font-size: clamp(2.4rem, 6vw, 4.8rem);
-  line-height: 0.95;
-  letter-spacing: -0.06em;
-}
-
-/* ================================
    Contact Page - Main Contact
 ================================ */
 
