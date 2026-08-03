@@ -237,4 +237,77 @@ gallery: [
   },
 ],
   },
+  {
+  id: 4,
+  slug: "wednesday-prayer-and-restoration",
+  serviceType: "Wednesday Service",
+  date: "Wednesday, 24 June 2026",
+  theme: "Prayer and Restoration",
+  mainScripture: "Jeremiah 30:17",
+  summary:
+    "A midweek message focused on prayer, restoration, healing, and trusting God through difficult seasons.",
+  mediaLabel: "Wednesday Service Gallery",
+  image: wednesdayDirectionImage,
+  mainImage: wednesdayDirectionMainImage,
+
+  pastorMessage: {
+    title: "God Restores Strength",
+    speaker: "Pastor Name",
+    scripture: "Isaiah 40:31",
+    summary:
+      "The opening message encouraged the church to wait on God and trust Him for renewed strength.",
+    keyPoints: [
+      "God gives strength to those who wait on Him.",
+      "Prayer helps the heart remain steady.",
+      "Restoration begins with faith and surrender.",
+    ],
+    fullNotes: [
+      "The pastor encouraged the congregation to remain prayerful during difficult seasons.",
+      "The message reminded the church that God is able to restore strength, peace, and hope.",
+      "Members were encouraged to trust God even when answers take time.",
+    ],
+  },
+
+  prophetMessage: {
+    title: "Prayer and Restoration",
+    speaker: "Prophet / Speaker Name",
+    scripture: "Jeremiah 30:17",
+    summary:
+      "The main message focused on trusting God for restoration, healing, and spiritual renewal.",
+    keyPoints: [
+      "God is able to restore what has been broken.",
+      "Prayer opens the heart to healing and direction.",
+      "Restoration requires faith, patience, and obedience.",
+    ],
+    prayerPoints: [
+      "Pray for restoration in your life and family.",
+      "Pray for healing and renewed strength.",
+      "Pray for faith to continue trusting God.",
+    ],
+    fullNotes: [
+      "The prophet taught that restoration is part of God’s work in the lives of His people.",
+      "The message encouraged the congregation not to give up during difficult seasons.",
+      "The church was reminded that prayer, faith, and obedience help people remain connected to God.",
+      "The sermon ended with prayer for restoration, healing, and spiritual strength.",
+    ],
+  },
+
+  gallery: [
+    {
+      type: "image",
+      label: "Wednesday prayer moment",
+      src: wednesdayDirectionGalleryOne,
+    },
+    {
+      type: "image",
+      label: "Restoration service photo",
+      src: wednesdayDirectionGalleryTwo,
+    },
+    {
+      type: "image",
+      label: "Midweek teaching moment",
+      src: wednesdayDirectionGalleryThree,
+    },
+  ],
+},
 ];
