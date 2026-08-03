@@ -1,6 +1,35 @@
 /* ================================
-   Ministries Page - Ministry Cards
+   Ministries Page - Intro
 ================================ */
+
+.ministries-intro {
+  padding-top: 70px;
+}
+
+.ministries-intro h1 {
+  max-width: 900px;
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.8rem, 7vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+}
+
+.ministries-intro p:not(.eyebrow) {
+  max-width: 620px;
+  margin-top: 18px;
+  color: var(--color-muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+/* ================================
+   Ministries Page - Cards
+================================ */
+
+.ministries-grid-section {
+  padding-top: 34px;
+}
 
 .ministry-grid {
   display: grid;
@@ -9,164 +38,15 @@
 }
 
 .ministry-card {
-  min-height: 260px;
-  padding: 26px;
+  overflow: hidden;
   border-radius: var(--radius-md);
   background: var(--color-white);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
-  display: flex;
-  flex-direction: column;
-}
-
-.ministry-card span {
-  width: 46px;
-  height: 46px;
-  display: inline-grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--color-cream);
-  color: var(--color-gold);
-  font-weight: 900;
-  margin-bottom: 22px;
-}
-
-.ministry-card h3 {
-  margin: 0 0 10px;
-  color: var(--color-navy);
-  font-size: 1.28rem;
-}
-
-.ministry-card p {
-  margin: 0;
-  color: var(--color-muted);
-  line-height: 1.7;
-}
-
-/* ================================
-   Ministries Page - Serve Section
-================================ */
-
-.serve-section {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 40px;
-  align-items: center;
-  padding: 54px;
-  border-radius: var(--radius-lg);
-  background:
-    linear-gradient(135deg, rgba(214, 165, 54, 0.18), transparent),
-    var(--color-navy);
-}
-
-.serve-content h2 {
-  margin: 0;
-  color: var(--color-white);
-  font-size: clamp(2.2rem, 4vw, 4.2rem);
-  line-height: 1;
-  letter-spacing: -0.05em;
-}
-
-.serve-content p {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1.06rem;
-  line-height: 1.75;
-}
-
-.serve-points {
-  display: grid;
-  gap: 16px;
-}
-
-.serve-points div {
-  padding: 24px;
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.serve-points strong {
-  display: block;
-  color: var(--color-gold-light);
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-}
-
-.serve-points p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.76);
-  line-height: 1.7;
-}
-
-/* ================================
-   Ministries Page - Form Layout
-================================ */
-
-.form-section {
-  display: grid;
-  grid-template-columns: 0.78fr 1.22fr;
-  gap: 42px;
-  align-items: start;
-}
-
-.form-intro h2 {
-  margin: 0;
-  color: var(--color-navy);
-  font-size: clamp(2.2rem, 4vw, 4.2rem);
-  line-height: 1;
-  letter-spacing: -0.05em;
-}
-
-.form-intro p {
-  color: var(--color-muted);
-  line-height: 1.75;
-}
-
-/* ================================
-   Ministries Page - Responsive
-================================ */
-
-@media (max-width: 1100px) {
-  .ministry-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .form-section,
-  .serve-section {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .ministry-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .serve-section {
-    padding: 28px;
-  }
-
-  .ministry-card {
-    min-height: auto;
-  }
-}
-
-/* ================================
-   Ministries Page - Media Cards
-================================ */
-
-.ministry-media-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.ministry-card-with-media {
-  padding: 0;
-  overflow: hidden;
-  min-height: auto;
 }
 
 .ministry-card-image-wrap {
-  min-height: 190px;
+  height: 210px;
   overflow: hidden;
   background: var(--color-navy);
 }
@@ -178,22 +58,40 @@
   transition: transform 0.35s ease;
 }
 
-.ministry-card-content {
-  padding: 24px;
-}
-
-.ministry-card-with-media:hover .ministry-card-image {
+.ministry-card:hover .ministry-card-image {
   transform: scale(1.06);
 }
 
+.ministry-card-content {
+  padding: 22px;
+}
+
+.ministry-card-content h3 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.ministry-card-content p {
+  margin: 10px 0 0;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
 /* ================================
-   Ministries Page - Serve Section Media
+   Ministries Page - Serve Section
 ================================ */
 
-.serve-section-with-media {
+.serve-section {
   position: relative;
+  min-height: 440px;
   overflow: hidden;
-  isolation: isolate;
+  display: grid;
+  align-items: end;
+  border-radius: var(--radius-lg);
+  background: var(--color-navy);
+  color: var(--color-white);
 }
 
 .serve-section-image,
@@ -206,36 +104,136 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -2;
 }
 
 .serve-section-overlay {
   background:
-    linear-gradient(135deg, rgba(7, 27, 58, 0.92), rgba(7, 27, 58, 0.68)),
-    linear-gradient(0deg, rgba(7, 27, 58, 0.55), transparent);
-  z-index: -1;
+    linear-gradient(90deg, rgba(7, 27, 58, 0.92), rgba(7, 27, 58, 0.64)),
+    linear-gradient(0deg, rgba(7, 27, 58, 0.65), transparent);
+}
+
+.serve-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 38px;
+}
+
+.serve-content h2 {
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.serve-content p:not(.eyebrow) {
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.75;
 }
 
 /* ================================
-   Ministries Page - Media Responsive
+   Ministries Page - Interest Form
+================================ */
+
+.ministry-interest-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.ministry-interest-intro h2 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.ministry-interest-intro p:not(.eyebrow) {
+  margin-top: 16px;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.ministry-form {
+  margin-top: 0;
+}
+
+/* ================================
+   Ministries Page - CTA
+================================ */
+
+.ministries-final-cta {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 80px;
+  padding: 34px;
+  border-radius: var(--radius-lg);
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.ministries-final-cta h2 {
+  margin: 0;
+  color: var(--color-white);
+}
+
+.ministries-final-cta p {
+  margin: 12px 0 0;
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+/* ================================
+   Ministries Page - Responsive
 ================================ */
 
 @media (max-width: 1100px) {
-  .ministry-media-grid {
+  .ministry-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .ministry-card-image-wrap {
-    min-height: 240px;
+  .ministry-interest-section {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 640px) {
-  .ministry-media-grid {
+  .ministries-intro {
+    padding-top: 42px;
+  }
+
+  .ministry-grid {
     grid-template-columns: 1fr;
   }
 
   .ministry-card-image-wrap {
-    min-height: 230px;
+    height: 240px;
+  }
+
+  .serve-section {
+    min-height: 360px;
+  }
+
+  .serve-content {
+    padding: 24px;
+  }
+
+  .ministries-final-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 56px;
+    padding: 24px;
+  }
+
+  .ministries-final-cta .btn,
+  .ministry-form .btn {
+    width: 100%;
   }
 }
