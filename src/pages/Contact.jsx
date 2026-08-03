@@ -6,7 +6,7 @@ function Contact() {
       <section className="content-section contact-start">
         <div className="section-heading contact-heading">
           <p className="eyebrow">Contact</p>
-          <h1>Get In Touch With Us</h1>
+          <h1>Service times, prayer line, and church contact details.</h1>
         </div>
 
         <div className="contact-card-grid">
