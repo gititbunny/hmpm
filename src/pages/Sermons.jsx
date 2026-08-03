@@ -14,18 +14,9 @@ function Sermons() {
 
   return (
     <>
-      <section className="sermons-intro">
-        <p className="eyebrow">Sermons</p>
-        <h1>Watch, read, and revisit recent messages.</h1>
-        <p>
-          Find Sunday and Wednesday service messages, scriptures, prayer points,
-          and service notes.
-        </p>
-      </section>
-
       <section className="content-section sermons-latest-section">
         <div className="section-heading compact-sermon-heading">
-          <p className="eyebrow">Latest Messages</p>
+          <p className="eyebrow">Sermons</p>
           <h2>Recent services.</h2>
         </div>
 
