@@ -14,69 +14,63 @@ const ministries = [
   {
     title: "Praise & Worship",
     image: ministryPraiseImage,
-    description:
-      "Serve through worship, singing, instruments, and helping lead the congregation into a meaningful worship experience.",
+    description: "Serve through worship, singing, and instruments.",
   },
   {
     title: "Ushering & Protocol",
     image: ministryUsheringImage,
-    description:
-      "Welcome visitors, guide members, support order during services, and help create a respectful church environment.",
+    description: "Welcome visitors and help keep services organized.",
   },
   {
     title: "Youth Ministry",
     image: ministryYouthImage,
-    description:
-      "Support young people through faith-based encouragement, fellowship, mentorship, and spiritual growth.",
+    description: "Support young people through faith, fellowship, and guidance.",
   },
   {
     title: "Prayer & Intercession",
     image: ministryPrayerImage,
-    description:
-      "Stand in prayer for the church, families, visitors, one-on-one requests, and community needs.",
+    description: "Stand in prayer for the church, families, and visitors.",
   },
   {
     title: "Media Team",
     image: ministryMediaImage,
-    description:
-      "Help capture photos, videos, service highlights, livestream support, editing, and online ministry content.",
+    description: "Help with photos, videos, livestreams, and church media.",
   },
   {
     title: "Outreach & Charity",
     image: ministryOutreachImage,
-    description:
-      "Serve the community through giving, charity projects, visits, support drives, and acts of compassion.",
+    description: "Serve the community through giving, care, and support.",
   },
   {
     title: "Children’s Ministry",
     image: ministryChildrenImage,
-    description:
-      "Create a safe and caring space for children to learn, grow, and participate in church life.",
+    description: "Create a safe and caring space for children.",
   },
   {
     title: "Cleaning & Hospitality",
     image: ministryHospitalityImage,
-    description:
-      "Help keep the church welcoming, clean, organized, and prepared before, during, and after services.",
+    description: "Help keep the church welcoming and prepared.",
   },
 ];
 
 function Ministries() {
   return (
     <>
-      <section className="content-section">
-        <div className="section-heading">
-          <p className="eyebrow">Where You Can Serve</p>
-          <h2>Find a ministry where your gifts can make an impact.</h2>
+      <section className="content-section ministries-intro">
+        <div>
+          <p className="eyebrow">Ministries</p>
+          <h1>Serve, grow, and be part of the work.</h1>
           <p>
-            These ministry areas can be updated as the church confirms its
-            official departments and serving teams.
+            Find a ministry where you can serve with your gifts, time, and
+            heart.
           </p>
         </div>
+      </section>
 
-        <div className="ministry-grid ministry-media-grid">
-          {ministries.map((ministry, index) => (
-            <article className="ministry-card ministry-card-with-media" key={ministry.title}>
+      <section className="content-section ministries-grid-section">
+        <div className="ministry-grid">
+          {ministries.map((ministry) => (
+            <article className="ministry-card" key={ministry.title}>
               <div className="ministry-card-image-wrap">
                 <img
                   className="ministry-card-image"
@@ -86,7 +80,6 @@ function Ministries() {
               </div>
 
               <div className="ministry-card-content">
-                <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{ministry.title}</h3>
                 <p>{ministry.description}</p>
               </div>
@@ -95,7 +88,7 @@ function Ministries() {
         </div>
       </section>
 
-      <section className="content-section serve-section serve-section-with-media">
+      <section className="content-section serve-section">
         <img
           className="serve-section-image"
           src={servePreviewImage}
@@ -106,44 +99,26 @@ function Ministries() {
 
         <div className="serve-content">
           <p className="eyebrow">Why Serve?</p>
-          <h2>Serving helps build the church and strengthen the community.</h2>
+          <h2>Serving helps build the church and support the community.</h2>
           <p>
-            Every ministry plays a part in creating a welcoming, prayerful, and
-            organized environment for members, visitors, families, and the wider
-            community.
+            Every ministry plays a role in welcoming people, supporting worship,
+            sharing the Word, and caring for the community.
           </p>
-        </div>
-
-        <div className="serve-points">
-          <div>
-            <strong>Grow in faith</strong>
-            <p>Serving creates space for spiritual growth, discipline, and connection.</p>
-          </div>
-
-          <div>
-            <strong>Support others</strong>
-            <p>Every act of service helps someone feel welcomed, guided, and cared for.</p>
-          </div>
-
-          <div>
-            <strong>Use your gifts</strong>
-            <p>Your skills, talents, and heart for service can strengthen the ministry.</p>
-          </div>
         </div>
       </section>
 
-      <section className="content-section form-section">
-        <div className="form-intro">
+      <section className="content-section ministry-interest-section">
+        <div className="ministry-interest-intro">
           <p className="eyebrow">Get Involved</p>
           <h2>Interested in serving?</h2>
           <p>
-            Complete this form and the church team will contact you about
+            Fill in the form and the church team will contact you about
             available ministry opportunities.
           </p>
         </div>
 
         <form
-          className="church-form"
+          className="church-form ministry-form"
           name="ministry-interest"
           method="POST"
           data-netlify="true"
@@ -182,7 +157,6 @@ function Ministries() {
                   Select a ministry
                 </option>
                 <option value="Praise & Worship">Praise & Worship</option>
-                <option value="Instruments">Instruments</option>
                 <option value="Ushering & Protocol">Ushering & Protocol</option>
                 <option value="Youth Ministry">Youth Ministry</option>
                 <option value="Prayer & Intercession">Prayer & Intercession</option>
@@ -191,32 +165,6 @@ function Ministries() {
                 <option value="Children’s Ministry">Children’s Ministry</option>
                 <option value="Cleaning & Hospitality">Cleaning & Hospitality</option>
                 <option value="General Volunteer">General Volunteer</option>
-              </select>
-            </label>
-
-            <label>
-              Availability
-              <select name="availability" required defaultValue="">
-                <option value="" disabled>
-                  Select availability
-                </option>
-                <option value="Sundays">Sundays</option>
-                <option value="Saturdays">Saturdays</option>
-                <option value="Weekends">Weekends</option>
-                <option value="Weekdays">Weekdays</option>
-                <option value="Flexible">Flexible</option>
-              </select>
-            </label>
-
-            <label>
-              Experience Level
-              <select name="experience" defaultValue="">
-                <option value="" disabled>
-                  Select experience
-                </option>
-                <option value="No experience yet">No experience yet</option>
-                <option value="Some experience">Some experience</option>
-                <option value="Experienced">Experienced</option>
               </select>
             </label>
           </div>
@@ -234,7 +182,7 @@ function Ministries() {
             <input type="checkbox" name="consent" required />
             <span>
               I consent to House Of Miracles Prophetic Ministries contacting me
-              about ministry and serving opportunities.
+              about ministry opportunities.
             </span>
           </label>
 
@@ -244,24 +192,18 @@ function Ministries() {
         </form>
       </section>
 
-      <section className="content-section page-cta">
+      <section className="content-section ministries-final-cta">
         <div>
-          <p className="eyebrow">Still deciding?</p>
-          <h2>You are welcome to visit first and speak with the church team.</h2>
+          <p className="eyebrow">Still Deciding?</p>
+          <h2>Visit first and speak with the church team.</h2>
           <p>
-            Join a Sunday service, meet the ministry, and learn more about where
-            you can serve.
+            Join a Sunday service and learn more about where you can serve.
           </p>
         </div>
 
-        <div className="cta-actions">
-          <Link className="btn btn-primary" to="/contact">
-            Plan Your Visit
-          </Link>
-          <Link className="btn btn-outline" to="/about">
-            Learn About Us
-          </Link>
-        </div>
+        <Link className="btn btn-primary" to="/contact">
+          Plan Your Visit
+        </Link>
       </section>
     </>
   );
