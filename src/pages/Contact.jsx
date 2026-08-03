@@ -1,32 +1,14 @@
 import { Link } from "react-router-dom";
 
+const churchMapLink = "https://maps.app.goo.gl/D2GF2DX77VpUNxXq8?g_st=ac";
+
 function Contact() {
   return (
     <>
       <section className="content-section contact-start">
         <div className="section-heading contact-heading">
           <p className="eyebrow">Contact</p>
-          <h1>Service times, prayer line, and church contact details.</h1>
-        </div>
-
-        <div className="contact-card-grid">
-          <article className="contact-info-card">
-            <span>Sunday Service</span>
-            <h2>11:30 AM</h2>
-            <p>Join us every Sunday for worship, prayer, and the Word.</p>
-          </article>
-
-          <article className="contact-info-card">
-            <span>One-on-One</span>
-            <h2>Wed, Sat & Sun</h2>
-            <p>Book online and keep your reference number for the day.</p>
-          </article>
-
-          <article className="contact-info-card">
-            <span>Prayer Line</span>
-            <h2>Coming Soon</h2>
-            <p>Add the official church prayer line or WhatsApp number here.</p>
-          </article>
+          <h1>Get in touch with us.</h1>
         </div>
       </section>
 
@@ -42,7 +24,9 @@ function Contact() {
           <div className="contact-direct-list">
             <div>
               <strong>Email</strong>
-              <span>church email coming soon</span>
+              <a href="mailto:houseofmiraclesPM@gmail.com">
+                houseofmiraclesPM@gmail.com
+              </a>
             </div>
 
             <div>
@@ -52,7 +36,12 @@ function Contact() {
 
             <div>
               <strong>Social</strong>
-              <span>Facebook / YouTube links coming soon</span>
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+                Facebook
+              </a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+                YouTube
+              </a>
             </div>
           </div>
         </div>
@@ -141,18 +130,52 @@ function Contact() {
         </form>
       </section>
 
+      <section className="content-section contact-card-grid">
+        <article className="contact-info-card">
+          <span>Sunday Service</span>
+          <h2>11:30 AM</h2>
+          <p>Join us every Sunday for worship, prayer, and the Word.</p>
+        </article>
+
+        <article className="contact-info-card">
+          <span>One-on-One</span>
+          <h2>Wed, Sat & Sun</h2>
+          <p>Book online and keep your reference number for the day.</p>
+        </article>
+
+        <article className="contact-info-card">
+          <span>Prayer Line</span>
+          <h2>Coming Soon</h2>
+          <p>Add the official church prayer line or WhatsApp number here.</p>
+        </article>
+      </section>
+
       <section className="content-section contact-location-section">
         <div>
           <p className="eyebrow">Location</p>
-          <h2>Church location details coming soon.</h2>
+          <h2>Find us on Google Maps.</h2>
           <p>
-            Add the official church address and Google Maps link here before
-            launch.
+            Open the map for directions to House Of Miracles Prophetic
+            Ministries.
           </p>
+
+          <a
+            className="btn btn-primary"
+            href={churchMapLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open In Google Maps
+          </a>
         </div>
 
-        <div className="map-placeholder">
-          <span>Google Map</span>
+        <div className="map-embed-wrap">
+          <iframe
+            title="House Of Miracles Prophetic Ministries location"
+            src="https://www.google.com/maps?q=House%20Of%20Miracles%20Prophetic%20Ministries&output=embed"
+            loading="lazy"
+            allowFullScreen
+          ></iframe>
         </div>
       </section>
 
