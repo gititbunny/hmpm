@@ -1,199 +1,189 @@
 /* ================================
-   Contact Page - Visit Overview
+   Contact Page - Intro
 ================================ */
 
-.contact-overview-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 42px;
-  align-items: start;
+.contact-intro {
+  padding-top: 70px;
 }
 
-.contact-info-panel {
-  padding: 34px;
-  border-radius: var(--radius-lg);
-  background:
-    linear-gradient(135deg, rgba(214, 165, 54, 0.18), transparent),
-    var(--color-navy);
-  color: var(--color-white);
-}
-
-.contact-info-panel h2 {
+.contact-intro h1 {
+  max-width: 900px;
   margin: 0;
-  color: var(--color-white);
-  font-size: clamp(2.2rem, 4vw, 4.4rem);
-  line-height: 1;
-  letter-spacing: -0.05em;
+  color: var(--color-navy);
+  font-size: clamp(2.8rem, 7vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
 }
 
-.contact-info-panel p {
-  color: rgba(255, 255, 255, 0.76);
-  line-height: 1.75;
-}
-
-.service-time-list {
-  display: grid;
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.service-time-card {
-  padding: 18px;
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.service-time-card strong {
-  display: block;
-  color: var(--color-gold-light);
-  margin-bottom: 6px;
-  font-size: 1.05rem;
-}
-
-.service-time-card span {
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 1.6;
+.contact-intro p:not(.eyebrow) {
+  max-width: 680px;
+  margin-top: 18px;
+  color: var(--color-muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
 
 /* ================================
-   Contact Page - Contact Cards
+   Contact Page - Info Cards
 ================================ */
 
 .contact-card-grid {
   display: grid;
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding-top: 28px;
 }
 
-.contact-card {
-  padding: 24px;
+.contact-info-card {
+  padding: 26px;
   border-radius: var(--radius-md);
   background: var(--color-cream);
   border: 1px solid rgba(7, 27, 58, 0.08);
+  box-shadow: var(--shadow-soft);
 }
 
-.contact-card span {
-  display: inline-grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
+.contact-info-card span {
+  display: inline-flex;
   margin-bottom: 18px;
-  border-radius: 50%;
-  background: var(--color-navy);
   color: var(--color-gold);
+  font-size: 0.78rem;
   font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.contact-card h3 {
-  margin: 0 0 8px;
-  color: var(--color-navy);
-  font-size: 1.3rem;
-}
-
-.contact-card p {
+.contact-info-card h2 {
   margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.contact-info-card p {
+  margin: 14px 0 0;
   color: var(--color-muted);
   line-height: 1.7;
 }
 
-.contact-card a {
-  display: inline-block;
-  margin-top: 12px;
-  color: var(--color-navy);
-  font-weight: 900;
-  border-bottom: 2px solid var(--color-gold);
-}
-
 /* ================================
-   Contact Page - Form & Map Layout
+   Contact Page - Main Contact
 ================================ */
 
-.contact-form-map-section {
+.contact-main-section {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 42px;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 34px;
   align-items: start;
 }
 
-.map-panel {
-  padding: 24px;
-  border-radius: var(--radius-lg);
-  background: var(--color-cream);
-  border: 1px solid rgba(7, 27, 58, 0.08);
-  box-shadow: var(--shadow-card);
-}
-
-.map-panel h2 {
+.contact-form-intro h2 {
   margin: 0;
   color: var(--color-navy);
-  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-size: clamp(2.2rem, 5vw, 4rem);
   line-height: 1;
   letter-spacing: -0.05em;
 }
 
-.map-panel p {
+.contact-form-intro p:not(.eyebrow) {
+  margin-top: 16px;
   color: var(--color-muted);
   line-height: 1.75;
 }
 
-.map-embed {
-  width: 100%;
-  min-height: 360px;
-  margin: 24px 0;
-  border: 0;
-  border-radius: var(--radius-md);
-  background: var(--color-navy);
+.contact-direct-list {
+  margin-top: 26px;
+  display: grid;
+  gap: 12px;
 }
 
-.map-placeholder {
-  min-height: 360px;
-  border-radius: var(--radius-md);
+.contact-direct-list div {
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  background: var(--color-cream);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+}
+
+.contact-direct-list strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-navy);
+}
+
+.contact-direct-list span {
+  color: var(--color-muted);
+}
+
+.contact-form {
+  margin-top: 0;
 }
 
 /* ================================
-   Contact Page - Social Links
+   Contact Page - Location
 ================================ */
 
-.social-section {
-  padding: 42px;
-  border-radius: var(--radius-lg);
-  background: var(--color-navy);
-  color: var(--color-white);
-  display: flex;
-  justify-content: space-between;
+.contact-location-section {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
   gap: 28px;
-  align-items: center;
+  align-items: stretch;
 }
 
-.social-section h2 {
+.contact-location-section h2 {
   margin: 0;
-  color: var(--color-white);
-  font-size: clamp(2rem, 4vw, 3.8rem);
+  color: var(--color-navy);
+  font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1;
   letter-spacing: -0.05em;
 }
 
-.social-section p {
-  color: rgba(255, 255, 255, 0.76);
+.contact-location-section p:not(.eyebrow) {
+  margin-top: 16px;
+  color: var(--color-muted);
   line-height: 1.75;
 }
 
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+.map-placeholder {
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top left, rgba(214, 165, 54, 0.18), transparent 32%),
+    var(--color-navy);
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-card);
 }
 
-.social-links a {
-  display: inline-flex;
-  min-height: 46px;
-  align-items: center;
-  justify-content: center;
-  padding: 0 18px;
-  border-radius: 999px;
-  background: var(--color-white);
-  color: var(--color-navy);
+.map-placeholder span {
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
+  letter-spacing: -0.06em;
+}
+
+/* ================================
+   Contact Page - CTA
+================================ */
+
+.contact-final-cta {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 80px;
+  padding: 34px;
+  border-radius: var(--radius-lg);
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.contact-final-cta h2 {
+  margin: 0;
+  color: var(--color-white);
+}
+
+.contact-final-cta p {
+  margin: 0 0 10px;
 }
 
 /* ================================
@@ -201,35 +191,39 @@
 ================================ */
 
 @media (max-width: 980px) {
-  .contact-overview-section,
-  .contact-form-map-section,
-  .social-section {
+  .contact-card-grid,
+  .contact-main-section,
+  .contact-location-section {
     grid-template-columns: 1fr;
   }
 
-  .social-section {
-    flex-direction: column;
-    align-items: flex-start;
+  .contact-intro {
+    padding-top: 52px;
   }
 }
 
 @media (max-width: 640px) {
-  .contact-info-panel,
-  .social-section {
-    padding: 26px;
+  .contact-intro {
+    padding-top: 42px;
   }
 
-  .map-panel {
-    padding: 20px;
+  .contact-info-card,
+  .contact-final-cta {
+    padding: 24px;
   }
 
-  .map-embed,
   .map-placeholder {
-    min-height: 300px;
+    min-height: 260px;
   }
 
-  .social-links,
-  .social-links a {
+  .contact-final-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 56px;
+  }
+
+  .contact-final-cta .btn,
+  .contact-form .btn {
     width: 100%;
   }
 }
