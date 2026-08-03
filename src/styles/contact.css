@@ -177,15 +177,15 @@
     grid-template-columns: 1fr;
   }
 
-  .contact-start {
-    padding-top: 52px;
-  }
+  .contact-main-section {
+  padding-top: 52px;
+}
 }
 
 @media (max-width: 640px) {
-  .contact-start {
-    padding-top: 42px;
-  }
+  .contact-main-section {
+  padding-top: 52px;
+}
 
   .contact-info-card,
   .contact-final-cta {
