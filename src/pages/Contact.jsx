@@ -3,234 +3,160 @@ import { Link } from "react-router-dom";
 function Contact() {
   return (
     <>
-
-      <section className="content-section contact-overview-section">
-        <div className="contact-info-panel">
-          <p className="eyebrow">Service Times</p>
-          <h2>Join us for worship, prayer, and the Word.</h2>
+      <section className="content-section contact-intro">
+        <div>
+          <p className="eyebrow">Contact</p>
+          <h1>Visit, call, or send a message.</h1>
           <p>
-            Visitors are welcome to attend services and connect with the church
-            team for prayer, guidance, and support. 
+            Connect with House Of Miracles Prophetic Ministries for service
+            times, prayer, directions, and one-on-one booking support.
           </p>
-
-          <div className="service-time-list">
-            <article className="service-time-card">
-              <strong>Sunday Service</strong>
-              <span>Every Sunday from 11:30 AM</span>
-            </article>
-
-            <article className="service-time-card">
-              <strong>Wednesday Service</strong>
-              <span>Midweek service after work hours. Exact time coming soon.</span>
-            </article>
-
-            <article className="service-time-card">
-              <strong>One-on-One Sessions</strong>
-              <span>
-                Usually Saturdays and Sundays by appointment. The church team
-                will contact you to confirm.
-              </span>
-            </article>
-          </div>
-        </div>
-
-        <div className="contact-card-grid">
-          <article className="contact-card">
-            <span>01</span>
-            <h3>Prayer Line</h3>
-            <p>
-              Call or message the church prayer line for prayer support and
-              spiritual encouragement.
-            </p>
-            <a href="tel:+27000000000">Prayer line coming soon</a>
-          </article>
-
-          <article className="contact-card">
-            <span>02</span>
-            <h3>WhatsApp</h3>
-            <p>
-              Use WhatsApp for quick questions about service times, location,
-              and one-on-one session requests.
-            </p>
-            <a href="https://wa.me/27000000000" target="_blank" rel="noreferrer">
-              WhatsApp number coming soon
-            </a>
-          </article>
-
-          <article className="contact-card">
-            <span>03</span>
-            <h3>Email</h3>
-            <p>
-              Send an email for general enquiries, partnership, outreach, or
-              ministry-related questions.
-            </p>
-            <a href="mailto:info@example.com">Email coming soon</a>
-          </article>
         </div>
       </section>
 
-      <section className="content-section contact-form-map-section">
-        <div>
-          <div className="form-intro">
-            <p className="eyebrow">Send a Message</p>
-            <h2>Contact the church team.</h2>
-            <p>
-              Complete the form below and someone from the ministry team will
-              contact you.
-            </p>
-          </div>
+      <section className="content-section contact-card-grid">
+        <article className="contact-info-card">
+          <span>Sunday Service</span>
+          <h2>11:30 AM</h2>
+          <p>Join us every Sunday for worship, prayer, and the Word.</p>
+        </article>
 
-          <form
-            className="church-form"
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            action="/success"
-          >
-            <input type="hidden" name="form-name" value="contact" />
+        <article className="contact-info-card">
+          <span>One-on-One</span>
+          <h2>Wed, Sat & Sun</h2>
+          <p>Book online and keep your reference number for the day.</p>
+        </article>
 
-            <p className="hidden-field">
-              <label>
-                Do not fill this out:
-                <input name="bot-field" />
-              </label>
-            </p>
+        <article className="contact-info-card">
+          <span>Prayer Line</span>
+          <h2>Coming Soon</h2>
+          <p>Add the official church prayer line or WhatsApp number here.</p>
+        </article>
+      </section>
 
-            <div className="form-grid">
-              <label>
-                Full Name
-                <input
-                  type="text"
-                  name="fullName"
-                  placeholder="Your full name"
-                  required
-                />
-              </label>
+      <section className="content-section contact-main-section">
+        <div className="contact-form-intro">
+          <p className="eyebrow">Send A Message</p>
+          <h2>Contact the church team.</h2>
+          <p>
+            Use this form for general questions, prayer line requests, visit
+            details, or ministry information.
+          </p>
 
-              <label>
-                Phone Number
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Your phone number"
-                  required
-                />
-              </label>
-
-              <label>
-                Email Address
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="you@example.com"
-                />
-              </label>
-
-              <label>
-                Enquiry Type
-                <select name="enquiryType" required defaultValue="">
-                  <option value="" disabled>
-                    Select enquiry type
-                  </option>
-                  <option value="Prayer Request">Prayer Request</option>
-                  <option value="One-on-One Session">One-on-One Session</option>
-                  <option value="Service Information">Service Information</option>
-                  <option value="Outreach / Charity">Outreach / Charity</option>
-                  <option value="Partnership">Partnership</option>
-                  <option value="General Enquiry">General Enquiry</option>
-                </select>
-              </label>
+          <div className="contact-direct-list">
+            <div>
+              <strong>Email</strong>
+              <span>church email coming soon</span>
             </div>
 
-            <label>
-              Message
-              <textarea
-                name="message"
-                rows="6"
-                placeholder="Write your message here."
-                required
-              ></textarea>
-            </label>
+            <div>
+              <strong>Phone</strong>
+              <span>church number coming soon</span>
+            </div>
 
-            <label className="checkbox-label">
-              <input type="checkbox" name="contactConsent" required />
-              <span>
-                I consent to House Of Miracles Prophetic Ministries contacting
-                me about my enquiry.
-              </span>
-            </label>
-
-            <button className="btn btn-primary" type="submit">
-              Send Message
-            </button>
-          </form>
+            <div>
+              <strong>Social</strong>
+              <span>Facebook / YouTube links coming soon</span>
+            </div>
+          </div>
         </div>
 
-        <div className="map-panel">
-          <p className="eyebrow">Location</p>
-          <h2>Find the church location.</h2>
-          <p>
-            The exact church address and Google Maps embed will be added here
-            once the final location details are confirmed.
+        <form
+          className="church-form contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/success"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
+          <p className="hidden-field">
+            <label>
+              Do not fill this out:
+              <input name="bot-field" />
+            </label>
           </p>
 
-          <div className="media-placeholder map-placeholder">
-            <span>Google Map Embed Coming Soon</span>
+          <div className="form-grid">
+            <label>
+              Full Name
+              <input type="text" name="fullName" placeholder="Your full name" required />
+            </label>
+
+            <label>
+              Phone Number
+              <input type="tel" name="phone" placeholder="Your phone number" required />
+            </label>
+
+            <label>
+              Email Address
+              <input type="email" name="email" placeholder="you@example.com" />
+            </label>
+
+            <label>
+              Reason For Contact
+              <select name="reason" required defaultValue="">
+                <option value="" disabled>
+                  Select a reason
+                </option>
+                <option value="Prayer request">Prayer request</option>
+                <option value="Service information">Service information</option>
+                <option value="One-on-one booking help">One-on-one booking help</option>
+                <option value="Ministry information">Ministry information</option>
+                <option value="General question">General question</option>
+              </select>
+            </label>
           </div>
 
-          <a
-            className="btn btn-secondary"
-            href="https://www.google.com/maps"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open in Google Maps
-          </a>
-        </div>
+          <label>
+            Message
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Write your message here."
+              required
+            ></textarea>
+          </label>
+
+          <label className="checkbox-label">
+            <input type="checkbox" name="consent" required />
+            <span>
+              I consent to House Of Miracles Prophetic Ministries contacting me
+              using the details provided.
+            </span>
+          </label>
+
+          <button className="btn btn-primary" type="submit">
+            Send Message
+          </button>
+        </form>
       </section>
 
-      <section className="content-section social-section">
+      <section className="content-section contact-location-section">
         <div>
-          <p className="eyebrow">Follow The Ministry</p>
-          <h2>Stay connected online.</h2>
+          <p className="eyebrow">Location</p>
+          <h2>Church location details coming soon.</h2>
           <p>
-            Follow the ministry for service updates, photos, videos, livestreams,
-            and announcements.
+            Add the official church address and Google Maps link here before
+            launch.
           </p>
         </div>
 
-        <div className="social-links">
-          <a href="https://facebook.com" target="_blank" rel="noreferrer">
-            Facebook
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noreferrer">
-            YouTube
-          </a>
-          <a href="https://tiktok.com" target="_blank" rel="noreferrer">
-            TikTok
-          </a>
+        <div className="map-placeholder">
+          <span>Google Map</span>
         </div>
       </section>
 
-      <section className="content-section page-cta">
+      <section className="content-section contact-final-cta">
         <div>
-          <p className="eyebrow">Need private prayer?</p>
-          <h2>You can request a one-on-one prayer and guidance session.</h2>
-          <p>
-            Submit a booking request and the church team will contact you to
-            confirm availability and session details.
-          </p>
+          <p className="eyebrow">Need One-on-One?</p>
+          <h2>Book online and save your reference number.</h2>
         </div>
 
-        <div className="cta-actions">
-          <Link className="btn btn-primary" to="/booking">
-            Book One-on-One
-          </Link>
-          <Link className="btn btn-outline" to="/sermons">
-            View Sermons
-          </Link>
-        </div>
+        <Link className="btn btn-primary" to="/booking">
+          Book One-on-One
+        </Link>
       </section>
     </>
   );
