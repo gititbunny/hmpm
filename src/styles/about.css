@@ -11,7 +11,7 @@
 }
 
 .about-overview-image-wrap {
-  min-height: 520px;
+  height: 520px;
   overflow: hidden;
   border-radius: var(--radius-lg);
   background: var(--color-navy);
@@ -22,6 +22,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .about-overview-content h1 {
@@ -75,6 +77,33 @@
 }
 
 /* ================================
+   About Page - Ministry Note
+================================ */
+
+.about-ministry-note {
+  max-width: 920px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.about-ministry-note h2 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.about-ministry-note p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 20px auto 0;
+  color: var(--color-muted);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+/* ================================
    About Page - Mission & Vision
 ================================ */
 
@@ -86,7 +115,7 @@
 
 .mission-card-with-image {
   position: relative;
-  min-height: 430px;
+  height: 430px;
   overflow: hidden;
   border-radius: var(--radius-lg);
   background: var(--color-navy);
@@ -228,7 +257,7 @@
   }
 
   .about-overview-image-wrap {
-    min-height: 420px;
+    height: 420px;
   }
 
   .leader-grid {
@@ -242,7 +271,7 @@
   }
 
   .about-overview-image-wrap {
-    min-height: 280px;
+    height: 280px;
   }
 
   .about-quick-points,
@@ -250,8 +279,14 @@
     grid-template-columns: 1fr;
   }
 
+  .about-ministry-note {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    text-align: left;
+  }
+
   .mission-card-with-image {
-    min-height: 350px;
+    height: 350px;
   }
 
   .mission-card-content {
