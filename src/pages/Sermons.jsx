@@ -49,6 +49,22 @@ function Sermons() {
         </div>
       </section>
 
+      <section className="content-section live-section">
+        <div>
+          <p className="eyebrow">Watch Online</p>
+          <h2>Live streaming coming soon.</h2>
+          <p>
+            The ministry will share live services and recent broadcasts here
+            once Facebook Live or YouTube streaming is available.
+          </p>
+        </div>
+
+        <div className="live-actions">
+          <span>Facebook Live</span>
+          <span>YouTube</span>
+        </div>
+      </section>
+
       <section className="content-section">
         <div className="section-heading compact-sermon-heading">
           <p className="eyebrow">Sermon Archive</p>
