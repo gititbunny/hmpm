@@ -32,7 +32,7 @@ function Contact() {
               <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                 Facebook
               </a>
-              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+              <a href="https://www.youtube.com/@HouseOfMiraclesPM" target="_blank" rel="noreferrer">
                 YouTube
               </a>
             </div>
