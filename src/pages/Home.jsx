@@ -37,7 +37,7 @@ function Home() {
 
           <div className="latest-card-content">
             <span className="card-label">Recent Message</span>
-            <h3>Faith, Prayer, and Spiritual Breakthrough</h3>
+            <h3>Debt Cancellation Sunday Service</h3>
             <p>
               Read the latest message, key scriptures, prayer points, and notes
               from Sunday service.
