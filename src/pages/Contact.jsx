@@ -17,8 +17,8 @@ function Contact() {
           <div className="contact-direct-list">
             <div>
               <strong>Email</strong>
-              <a href="mailto:houseofmiraclesPM@gmail.com">
-                houseofmiraclesPM@gmail.com
+              <a href="mailto:houseofmiraclespm@gmail.com">
+                houseofmiraclespm@gmail.com
               </a>
             </div>
 
