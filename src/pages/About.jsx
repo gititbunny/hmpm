@@ -41,6 +41,17 @@ function About() {
         </div>
       </section>
 
+      <section className="content-section about-ministry-note">
+        <p className="eyebrow">What Happens Here</p>
+        <h2>A place of prayer, deliverance, guidance, and testimonies.</h2>
+        <p>
+          People come to House Of Miracles Prophetic Ministries for prayer,
+          prophetic guidance, deliverance, healing, restoration, and spiritual
+          support. Many members also share testimonies of breakthrough in their
+          families, work, faith, and personal lives.
+        </p>
+      </section>
+
       <section className="content-section mission-section">
         <article className="mission-card mission-card-with-image">
           <img src={missionImage} alt="Church mission and worship moment" />
