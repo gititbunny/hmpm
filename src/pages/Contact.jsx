@@ -5,17 +5,10 @@ const churchMapLink = "https://maps.app.goo.gl/D2GF2DX77VpUNxXq8?g_st=ac";
 function Contact() {
   return (
     <>
-      <section className="content-section contact-start">
-        <div className="section-heading contact-heading">
-          <p className="eyebrow">Contact</p>
-          <h1>Get in touch with us.</h1>
-        </div>
-      </section>
-
       <section className="content-section contact-main-section">
         <div className="contact-form-intro">
-          <p className="eyebrow">Send A Message</p>
-          <h2>Contact the church team.</h2>
+          <p className="eyebrow">Contact</p>
+          <h2>Get in touch with us.</h2>  
           <p>
             Use this form for general questions, prayer requests, visit details,
             or ministry information.
