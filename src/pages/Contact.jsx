@@ -3,35 +3,31 @@ import { Link } from "react-router-dom";
 function Contact() {
   return (
     <>
-      <section className="content-section contact-intro">
-        <div>
+      <section className="content-section contact-start">
+        <div className="section-heading contact-heading">
           <p className="eyebrow">Contact</p>
-          <h1>Visit, call, or send a message.</h1>
-          <p>
-            Connect with House Of Miracles Prophetic Ministries for service
-            times, prayer, directions, and one-on-one booking support.
-          </p>
+          <h1>Get In Touch With Us</h1>
         </div>
-      </section>
 
-      <section className="content-section contact-card-grid">
-        <article className="contact-info-card">
-          <span>Sunday Service</span>
-          <h2>11:30 AM</h2>
-          <p>Join us every Sunday for worship, prayer, and the Word.</p>
-        </article>
+        <div className="contact-card-grid">
+          <article className="contact-info-card">
+            <span>Sunday Service</span>
+            <h2>11:30 AM</h2>
+            <p>Join us every Sunday for worship, prayer, and the Word.</p>
+          </article>
 
-        <article className="contact-info-card">
-          <span>One-on-One</span>
-          <h2>Wed, Sat & Sun</h2>
-          <p>Book online and keep your reference number for the day.</p>
-        </article>
+          <article className="contact-info-card">
+            <span>One-on-One</span>
+            <h2>Wed, Sat & Sun</h2>
+            <p>Book online and keep your reference number for the day.</p>
+          </article>
 
-        <article className="contact-info-card">
-          <span>Prayer Line</span>
-          <h2>Coming Soon</h2>
-          <p>Add the official church prayer line or WhatsApp number here.</p>
-        </article>
+          <article className="contact-info-card">
+            <span>Prayer Line</span>
+            <h2>Coming Soon</h2>
+            <p>Add the official church prayer line or WhatsApp number here.</p>
+          </article>
+        </div>
       </section>
 
       <section className="content-section contact-main-section">
@@ -39,8 +35,8 @@ function Contact() {
           <p className="eyebrow">Send A Message</p>
           <h2>Contact the church team.</h2>
           <p>
-            Use this form for general questions, prayer line requests, visit
-            details, or ministry information.
+            Use this form for general questions, prayer requests, visit details,
+            or ministry information.
           </p>
 
           <div className="contact-direct-list">
@@ -81,12 +77,22 @@ function Contact() {
           <div className="form-grid">
             <label>
               Full Name
-              <input type="text" name="fullName" placeholder="Your full name" required />
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Your full name"
+                required
+              />
             </label>
 
             <label>
               Phone Number
-              <input type="tel" name="phone" placeholder="Your phone number" required />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your phone number"
+                required
+              />
             </label>
 
             <label>
@@ -102,7 +108,9 @@ function Contact() {
                 </option>
                 <option value="Prayer request">Prayer request</option>
                 <option value="Service information">Service information</option>
-                <option value="One-on-one booking help">One-on-one booking help</option>
+                <option value="One-on-one booking help">
+                  One-on-one booking help
+                </option>
                 <option value="Ministry information">Ministry information</option>
                 <option value="General question">General question</option>
               </select>
