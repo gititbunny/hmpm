@@ -1,12 +1,12 @@
 /* ================================
-   Sermons Page - Shared Sermon Elements
+   Sermons Page - Shared Elements
 ================================ */
 
 .sermon-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 20px 0;
+  margin: 18px 0;
 }
 
 .sermon-meta span {
@@ -19,6 +19,184 @@
   font-size: 0.82rem;
   font-weight: 800;
 }
+
+.small-meta {
+  margin: 0 0 12px;
+}
+
+.small-meta span {
+  font-size: 0.76rem;
+}
+
+.text-link {
+  width: fit-content;
+  display: inline-block;
+  color: var(--color-navy);
+  font-weight: 900;
+  border-bottom: 2px solid var(--color-gold);
+}
+
+/* ================================
+   Sermons Page - Intro
+================================ */
+
+.sermons-intro {
+  width: min(100% - 32px, var(--max-width));
+  margin: 0 auto;
+  padding: 70px 0 30px;
+}
+
+.sermons-intro h1 {
+  max-width: 900px;
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.8rem, 7vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+}
+
+.sermons-intro > p:not(.eyebrow) {
+  max-width: 680px;
+  margin-top: 18px;
+  color: var(--color-muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.compact-sermon-heading {
+  max-width: 720px;
+}
+
+/* ================================
+   Sermons Page - Latest Messages
+================================ */
+
+.sermons-latest-section {
+  padding-top: 36px;
+}
+
+.latest-sermon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.latest-sermon-card {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.latest-sermon-image-wrap {
+  height: 340px;
+  overflow: hidden;
+  background: var(--color-navy);
+}
+
+.latest-sermon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.latest-sermon-card:hover .latest-sermon-image {
+  transform: scale(1.05);
+}
+
+.latest-sermon-content {
+  padding: 28px;
+}
+
+.latest-sermon-content h3 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.latest-sermon-content p {
+  margin: 16px 0 22px;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+/* ================================
+   Sermons Page - Archive List
+================================ */
+
+.sermon-list {
+  display: grid;
+  gap: 16px;
+}
+
+.sermon-list-card {
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 22px;
+  align-items: center;
+  padding: 18px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+}
+
+.sermon-list-image {
+  width: 180px;
+  height: 125px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: var(--color-navy);
+}
+
+.sermon-list-content h3 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: 1.45rem;
+  line-height: 1.15;
+}
+
+.sermon-list-content p {
+  margin: 10px 0 0;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* ================================
+   Sermons Page - CTA
+================================ */
+
+.sermons-cta {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 80px;
+  padding: 34px;
+  border-radius: var(--radius-lg);
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.sermons-cta h2 {
+  margin: 0;
+  color: var(--color-white);
+}
+
+.sermons-cta p {
+  margin: 12px 0 0;
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+/* ================================
+   Sermon Detail Shared Points
+================================ */
 
 .sermon-points {
   margin: 26px 0;
@@ -33,8 +211,7 @@
   color: var(--color-navy);
 }
 
-.sermon-points ul,
-.sermon-card-content ul {
+.sermon-points ul {
   margin: 0;
   padding-left: 20px;
   color: var(--color-muted);
@@ -42,264 +219,58 @@
 }
 
 /* ================================
-   Sermons Page - Latest Services
-================================ */
-
-.latest-service-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 34px;
-  align-items: stretch;
-}
-
-.featured-service-card {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  background: var(--color-white);
-  box-shadow: var(--shadow-card);
-}
-
-.featured-service-media {
-  min-height: 100%;
-  border-radius: 0;
-}
-
-.small-featured-media {
-  min-height: 420px;
-}
-
-.featured-service-content {
-  padding: 30px;
-}
-
-.featured-service-content h2 {
-  margin: 0;
-  color: var(--color-navy);
-  font-size: clamp(1.9rem, 3vw, 3.5rem);
-  line-height: 1;
-  letter-spacing: -0.05em;
-}
-
-.featured-service-content p {
-  color: var(--color-muted);
-  line-height: 1.75;
-}
-
-.message-preview-box {
-  padding: 16px;
-  margin-bottom: 12px;
-  border-radius: var(--radius-md);
-  background: var(--color-cream);
-  border: 1px solid rgba(7, 27, 58, 0.08);
-}
-
-.message-preview-box strong {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--color-navy);
-}
-
-.message-preview-box p {
-  margin: 0;
-}
-
-.soft-box {
-  background: var(--color-white);
-}
-
-/* ================================
-   Sermons Page - Notes Preview
-================================ */
-
-.notes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.note-card {
-  padding: 28px;
-  border-radius: var(--radius-md);
-  background: var(--color-cream);
-  border: 1px solid rgba(7, 27, 58, 0.08);
-}
-
-.note-card span {
-  display: inline-grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--color-navy);
-  color: var(--color-gold);
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-
-.note-card h3 {
-  margin: 0 0 10px;
-  color: var(--color-navy);
-  font-size: 1.28rem;
-}
-
-.note-card p {
-  margin: 0;
-  color: var(--color-muted);
-  line-height: 1.7;
-}
-
-/* ================================
-   Sermons Page - Archive
-================================ */
-
-.sermon-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-}
-
-.sermon-card {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  background: var(--color-white);
-  box-shadow: var(--shadow-card);
-}
-
-.sermon-card-media {
-  min-height: 280px;
-  border-radius: 0;
-}
-
-.sermon-card-content {
-  padding: 26px;
-}
-
-.small-meta {
-  margin-top: 0;
-}
-
-.small-meta span {
-  font-size: 0.78rem;
-}
-
-.sermon-card h3 {
-  margin: 12px 0 10px;
-  color: var(--color-navy);
-  font-size: 1.45rem;
-  line-height: 1.15;
-}
-
-.sermon-card p {
-  color: var(--color-muted);
-  line-height: 1.7;
-}
-
-.archive-message-list {
-  padding: 16px;
-  margin: 18px 0;
-  border-radius: var(--radius-md);
-  background: var(--color-cream);
-}
-
-.archive-message-list p {
-  margin: 0 0 8px;
-}
-
-.archive-message-list p:last-child {
-  margin-bottom: 0;
-}
-
-.text-link {
-  display: inline-block;
-  color: var(--color-navy);
-  font-weight: 900;
-  border-bottom: 2px solid var(--color-gold);
-}
-
-/* ================================
    Sermons Page - Responsive
 ================================ */
 
 @media (max-width: 1100px) {
-  .featured-service-card {
+  .latest-sermon-grid {
     grid-template-columns: 1fr;
   }
 
-  .featured-service-media {
-    min-height: 360px;
+  .sermon-list-card {
+    grid-template-columns: 160px 1fr;
   }
-}
 
-@media (max-width: 980px) {
-  .notes-grid,
-  .sermon-grid {
-    grid-template-columns: 1fr;
+  .sermon-list-card .text-link {
+    grid-column: 2;
   }
 }
 
 @media (max-width: 640px) {
-  .featured-service-content {
+  .sermons-intro {
+    width: min(100% - 24px, var(--max-width));
+    padding: 42px 0 20px;
+  }
+
+  .latest-sermon-image-wrap {
+    height: 260px;
+  }
+
+  .latest-sermon-content {
     padding: 24px;
   }
 
-  .sermon-card-media {
-    min-height: 220px;
-  }
-}
-
-/* ================================
-   Sermons Page - Real Media
-================================ */
-
-.featured-service-media-wrap {
-  min-height: 430px;
-  overflow: hidden;
-  background: var(--color-navy);
-}
-
-.featured-service-image,
-.sermon-card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.sermon-card-media-wrap {
-  min-height: 280px;
-  overflow: hidden;
-  background: var(--color-navy);
-}
-
-.featured-service-card:hover .featured-service-image,
-.sermon-card:hover .sermon-card-image {
-  transform: scale(1.05);
-}
-
-.featured-service-image,
-.sermon-card-image {
-  transition: transform 0.35s ease;
-}
-
-/* ================================
-   Sermons Page - Real Media Responsive
-================================ */
-
-@media (max-width: 1100px) {
-  .featured-service-media-wrap {
-    min-height: 360px;
-  }
-}
-
-@media (max-width: 640px) {
-  .featured-service-media-wrap {
-    min-height: 260px;
+  .sermon-list-card {
+    grid-template-columns: 1fr;
   }
 
-  .sermon-card-media-wrap {
-    min-height: 220px;
+  .sermon-list-image {
+    width: 100%;
+    height: 230px;
+  }
+
+  .sermon-list-card .text-link {
+    grid-column: auto;
+  }
+
+  .sermons-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 56px;
+    padding: 24px;
+  }
+
+  .sermons-cta .btn {
+    width: 100%;
   }
 }
