@@ -1,28 +1,77 @@
 /* ================================
-   About Page
+   About Page - Overview
 ================================ */
 
-.two-column-section {
+.about-overview-section {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 60px;
-  align-items: start;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 34px;
+  align-items: center;
+  padding-top: 70px;
 }
 
-.two-column-section h2,
-.mission-card h2 {
+.about-overview-image-wrap {
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--color-navy);
+  box-shadow: var(--shadow-card);
+}
+
+.about-overview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-overview-content h1 {
   margin: 0;
   color: var(--color-navy);
-  font-size: clamp(2.2rem, 4vw, 4.2rem);
-  line-height: 1;
-  letter-spacing: -0.05em;
+  font-size: clamp(2.8rem, 7vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
 }
 
-.text-stack p {
-  margin-top: 0;
+.about-overview-content > p:not(.eyebrow) {
+  max-width: 650px;
+  margin-top: 20px;
   color: var(--color-muted);
-  font-size: 1.05rem;
-  line-height: 1.85;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+/* ================================
+   About Page - Quick Points
+================================ */
+
+.about-quick-points {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.about-quick-points article {
+  padding: 18px;
+  border-radius: var(--radius-md);
+  background: var(--color-cream);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+}
+
+.about-quick-points span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-gold);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.about-quick-points strong {
+  display: block;
+  color: var(--color-navy);
+  line-height: 1.35;
 }
 
 /* ================================
@@ -35,155 +84,13 @@
   gap: 24px;
 }
 
-.mission-card {
-  min-height: auto;
-  padding: 34px;
-  border-radius: var(--radius-lg);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.mission-card span {
-  display: inline-block;
-  width: fit-content;
-  margin-bottom: 16px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.mission-card p {
-  color: var(--color-muted);
-  line-height: 1.75;
-}
-
-/* ================================
-   About Page - Beliefs
-================================ */
-
-.belief-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.belief-card {
-  padding: 28px;
-  border-radius: var(--radius-md);
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-card);
-}
-
-.belief-card h3 {
-  margin: 0 0 10px;
-  color: var(--color-navy);
-  font-size: 1.35rem;
-}
-
-.belief-card p {
-  margin: 0;
-  color: var(--color-muted);
-  line-height: 1.7;
-}
-
-/* ================================
-   About Page - Leadership
-================================ */
-
-.leadership-section {
-  padding-top: 40px;
-}
-
-.leader-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.leader-card {
-  padding: 18px;
-  border-radius: var(--radius-lg);
-  background: var(--color-cream);
-  border: 1px solid rgba(7, 27, 58, 0.08);
-}
-
-.leader-card h3 {
-  margin: 18px 0 4px;
-  color: var(--color-navy);
-  font-size: 1.2rem;
-}
-
-.leader-card p {
-  margin: 0;
-  color: var(--color-muted);
-}
-
-/* ================================
-   About Page - Responsive
-================================ */
-
-@media (max-width: 980px) {
-  .two-column-section,
-  .mission-section {
-    grid-template-columns: 1fr;
-  }
-
-  .belief-grid,
-  .leader-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .belief-grid,
-  .leader-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .mission-card {
-    min-height: 320px;
-    padding: 26px;
-  }
-}
-
-/* ================================
-   About Page - Story Media
-================================ */
-
-.about-story-section {
-  align-items: center;
-}
-
-.about-story-image-wrap {
-  margin-top: 28px;
-  min-height: auto;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  background: var(--color-navy);
-  box-shadow: var(--shadow-card);
-}
-
-.about-story-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ================================
-   About Page - Mission & Vision Media
-================================ */
-
 .mission-card-with-image {
   position: relative;
-  overflow: hidden;
   min-height: 430px;
-  padding: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
   background: var(--color-navy);
+  box-shadow: var(--shadow-card);
 }
 
 .mission-card-with-image img,
@@ -213,25 +120,69 @@
 .mission-card-content {
   position: relative;
   z-index: 2;
+  height: 100%;
   padding: 34px;
-  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.mission-card-content h2,
-.mission-card-content p {
+.mission-card-content span {
+  width: fit-content;
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-gold-light);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mission-card-content h2 {
+  margin: 0;
   color: var(--color-white);
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
 }
 
 .mission-card-content p {
-  opacity: 0.82;
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.75;
 }
 
 /* ================================
-   About Page - Leadership Media
+   About Page - Leadership
 ================================ */
 
+.leadership-section {
+  padding-top: 44px;
+}
+
+.compact-about-heading {
+  max-width: 720px;
+}
+
+.leader-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.leader-card {
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  background: var(--color-cream);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+  box-shadow: var(--shadow-soft);
+}
+
 .leader-image-wrap {
-  min-height: auto;
+  height: 310px;
   overflow: hidden;
   border-radius: 22px;
   background: var(--color-navy);
@@ -243,13 +194,60 @@
   object-fit: cover;
 }
 
+.leader-card h3 {
+  margin: 18px 0 4px;
+  color: var(--color-navy);
+  font-size: 1.2rem;
+}
+
+.leader-card p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
 /* ================================
-   About Page - Media Responsive
+   About Page - CTA
 ================================ */
 
+.about-final-cta {
+  margin-bottom: 80px;
+}
+
+/* ================================
+   About Page - Responsive
+================================ */
+
+@media (max-width: 980px) {
+  .about-overview-section,
+  .mission-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-overview-section {
+    padding-top: 52px;
+  }
+
+  .about-overview-image-wrap {
+    min-height: 420px;
+  }
+
+  .leader-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 640px) {
-  .about-story-image-wrap {
-    min-height: 260px;
+  .about-overview-section {
+    padding-top: 42px;
+  }
+
+  .about-overview-image-wrap {
+    min-height: 280px;
+  }
+
+  .about-quick-points,
+  .leader-grid {
+    grid-template-columns: 1fr;
   }
 
   .mission-card-with-image {
@@ -261,6 +259,10 @@
   }
 
   .leader-image-wrap {
-    min-height: 230px;
+    height: 260px;
+  }
+
+  .about-final-cta {
+    margin-bottom: 56px;
   }
 }
