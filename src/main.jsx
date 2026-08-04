@@ -15,6 +15,7 @@ import "./styles/sermons.css";
 import "./styles/sermon-detail.css";
 import "./styles/testimonies.css";
 import "./styles/outreach.css";
+import "./styles/announcements.css";
 import "./styles/contact.css";
 import "./styles/success.css";
 import "./styles/not-found.css";
