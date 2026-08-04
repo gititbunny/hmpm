@@ -2,14 +2,16 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Sermons from "./pages/Sermons";
 import SermonDetail from "./pages/SermonDetail";
 import Testimonies from "./pages/Testimonies";
 import Ministries from "./pages/Ministries";
-import Booking from "./pages/Booking";
 import Outreach from "./pages/Outreach";
+import Announcements from "./pages/Announcements";
+import Booking from "./pages/Booking";
 import Contact from "./pages/Contact";
 import Success from "./pages/Success";
 import NotFound from "./pages/NotFound";
@@ -29,8 +31,9 @@ function App() {
           <Route path="/testimonies" element={<Testimonies />} />
           <Route path="/media" element={<Testimonies />} />
           <Route path="/ministries" element={<Ministries />} />
-          <Route path="/booking" element={<Booking />} />
           <Route path="/outreach" element={<Outreach />} />
+          <Route path="/announcements" element={<Announcements />} />
+          <Route path="/booking" element={<Booking />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/success" element={<Success />} />
           <Route path="*" element={<NotFound />} />
