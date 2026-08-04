@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { outreachFocusAreas, outreachProjects } from "../data/outreach";
+import { outreachMoments, supportAreas, waysToHelp } from "../data/outreach";
 
 import outreachHeroImage from "../assets/images/outreach/outreach-prayer.jpg";
 
@@ -8,11 +8,11 @@ function Outreach() {
     <>
       <section className="content-section outreach-intro">
         <div className="outreach-intro-content">
-          <p className="eyebrow">Outreach</p>
-          <h1>Serving the community with love and care.</h1>
+          <p className="eyebrow">Outreach & Charity</p>
+          <h1>Supporting people with care, prayer, and practical help.</h1>
           <p>
-            The ministry supports people through charity work, prayer,
-            visitation, and practical support.
+            House Of Miracles Prophetic Ministries supports people through
+            prayer, giving, visitation, church projects, and community care.
           </p>
 
           <Link className="btn btn-primary" to="/contact">
@@ -24,32 +24,53 @@ function Outreach() {
           <img
             className="outreach-intro-image"
             src={outreachHeroImage}
-            alt="House Of Miracles outreach work"
+            alt="House Of Miracles outreach and charity work"
           />
         </div>
       </section>
 
+      <section className="content-section outreach-note-section">
+        <p className="eyebrow">How Support Works</p>
+        <h2>Some support is shared publicly. Some support is kept private.</h2>
+        <p>
+          The ministry may share approved outreach moments, church needs, and
+          community support updates. However, some acts of support are kept
+          private to protect the dignity of the people being helped.
+        </p>
+      </section>
+
       <section className="content-section">
         <div className="section-heading outreach-heading">
-          <p className="eyebrow">What We Do</p>
-          <h2>Outreach focus areas.</h2>
+          <p className="eyebrow">Areas Of Support</p>
+          <h2>How the ministry helps.</h2>
         </div>
 
-        <div className="outreach-focus-grid">
-          {outreachFocusAreas.map((area) => (
-            <article className="outreach-focus-card" key={area.title}>
-              <div className="outreach-focus-image-wrap">
-                <img
-                  className="outreach-focus-image"
-                  src={area.image}
-                  alt={`${area.title} outreach`}
-                />
-              </div>
+        <div className="support-area-grid">
+          {supportAreas.map((area) => (
+            <article className="support-area-card" key={area.title}>
+              <h3>{area.title}</h3>
+              <p>{area.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
 
-              <div className="outreach-focus-content">
-                <h3>{area.title}</h3>
-                <p>{area.description}</p>
-              </div>
+      <section className="content-section ways-to-help-section">
+        <div className="ways-to-help-intro">
+          <p className="eyebrow">Ways To Help</p>
+          <h2>Support can be given in different ways.</h2>
+          <p>
+            Some people prefer giving money. Others prefer buying supplies,
+            materials, or offering their time. Please contact the official
+            church team first to confirm current needs.
+          </p>
+        </div>
+
+        <div className="ways-to-help-grid">
+          {waysToHelp.map((item) => (
+            <article className="way-to-help-card" key={item.title}>
+              <span>{item.title}</span>
+              <p>{item.description}</p>
             </article>
           ))}
         </div>
@@ -57,25 +78,29 @@ function Outreach() {
 
       <section className="content-section">
         <div className="section-heading outreach-heading">
-          <p className="eyebrow">Outreach Moments</p>
-          <h2>Recent community support.</h2>
+          <p className="eyebrow">Approved Moments</p>
+          <h2>Outreach, charity, and community care.</h2>
+          <p>
+            Photos and updates can be added here when the church approves them
+            for public sharing.
+          </p>
         </div>
 
-        <div className="outreach-project-grid">
-          {outreachProjects.map((project) => (
-            <article className="outreach-project-card" key={project.id}>
-              <div className="outreach-project-image-wrap">
+        <div className="outreach-moment-grid">
+          {outreachMoments.map((moment) => (
+            <article className="outreach-moment-card" key={moment.id}>
+              <div className="outreach-moment-image-wrap">
                 <img
-                  className="outreach-project-image"
-                  src={project.image}
-                  alt={project.title}
+                  className="outreach-moment-image"
+                  src={moment.image}
+                  alt={moment.title}
                 />
               </div>
 
-              <div className="outreach-project-content">
-                <span>{project.category}</span>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
+              <div className="outreach-moment-content">
+                <span>{moment.category}</span>
+                <h3>{moment.title}</h3>
+                <p>{moment.description}</p>
               </div>
             </article>
           ))}
@@ -84,8 +109,12 @@ function Outreach() {
 
       <section className="content-section outreach-final-cta">
         <div>
-          <p className="eyebrow">Support Outreach</p>
-          <h2>Connect with the church about charity and community work.</h2>
+          <p className="eyebrow">Support The Work</p>
+          <h2>Contact the church before sending money, supplies, or materials.</h2>
+          <p>
+            This helps confirm official needs and protects everyone from scams
+            or incorrect information.
+          </p>
         </div>
 
         <Link className="btn btn-primary" to="/contact">
