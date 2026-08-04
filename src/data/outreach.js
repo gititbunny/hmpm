@@ -1,49 +1,48 @@
+import outreachFoodImage from "../assets/images/outreach/outreach-prayer.jpg";
+import outreachCommunityImage from "../assets/images/outreach/outreach-prayer.jpg";
+import outreachPrayerImage from "../assets/images/outreach/outreach-prayer.jpg";
+import outreachDonationsImage from "../assets/images/outreach/outreach-prayer.jpg";
+import outreachVisitImage from "../assets/images/outreach/outreach-prayer.jpg";
+import outreachSupportImage from "../assets/images/outreach/outreach-prayer.jpg";
+
 export const outreachFocusAreas = [
   {
+    title: "Food & Essentials",
+    image: outreachFoodImage,
+    description: "Supporting families with food, essentials, and practical care.",
+  },
+  {
     title: "Community Support",
-    description:
-      "Supporting families and individuals through prayer, care, encouragement, and practical assistance.",
+    image: outreachCommunityImage,
+    description: "Serving the community through care, encouragement, and support.",
   },
   {
-    title: "Charity Giving",
-    description:
-      "Helping those in need through food support, clothing, essential items, and community giving projects.",
-  },
-  {
-    title: "Prayer Visits",
-    description:
-      "Offering prayer, encouragement, and spiritual support to people facing difficult seasons.",
-  },
-  {
-    title: "Youth & Family Care",
-    description:
-      "Encouraging young people and families through guidance, fellowship, and faith-based support.",
+    title: "Prayer & Visitation",
+    image: outreachPrayerImage,
+    description: "Praying with people and offering spiritual encouragement.",
   },
 ];
 
 export const outreachProjects = [
   {
     id: 1,
-    title: "Community Giving Outreach",
-    date: "June 2026",
-    category: "Charity Work",
-    description:
-      "The ministry supported families in the community through giving, prayer, and encouragement.",
+    title: "Community Giving",
+    image: outreachDonationsImage,
+    category: "Charity",
+    description: "Giving and practical support for people in need.",
   },
   {
     id: 2,
-    title: "Food & Essentials Support",
-    date: "May 2026",
-    category: "Community Support",
-    description:
-      "A practical outreach initiative focused on helping people with essential items and spiritual support.",
+    title: "Visitation & Prayer",
+    image: outreachVisitImage,
+    category: "Prayer",
+    description: "Prayer, encouragement, and support outside regular services.",
   },
   {
     id: 3,
-    title: "Prayer & Encouragement Visit",
-    date: "April 2026",
-    category: "Prayer Outreach",
-    description:
-      "A ministry visit focused on prayer, encouragement, and support for people going through difficult situations.",
+    title: "Ongoing Care",
+    image: outreachSupportImage,
+    category: "Support",
+    description: "Continued care for families, members, and the community.",
   },
 ];
