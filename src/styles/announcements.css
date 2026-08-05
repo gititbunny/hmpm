@@ -4,11 +4,16 @@
 
 .announcements-intro {
   padding-top: 70px;
+  text-align: center;
+}
+
+.announcements-intro .eyebrow {
+  justify-content: center;
 }
 
 .announcements-intro h1 {
   max-width: 940px;
-  margin: 0;
+  margin: 0 auto;
   color: var(--color-navy);
   font-size: clamp(2.8rem, 7vw, 5.8rem);
   line-height: 0.92;
@@ -17,7 +22,7 @@
 
 .announcements-intro p:not(.eyebrow) {
   max-width: 720px;
-  margin-top: 18px;
+  margin: 18px auto 0;
   color: var(--color-muted);
   font-size: 1.08rem;
   line-height: 1.75;
