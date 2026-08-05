@@ -1,3 +1,9 @@
+import allNightPrayerImage from "../assets/images/announcements/all-night-prayer.png";
+import fraudAlertImage from "../assets/images/announcements/all-night-prayer.png";
+import buildingSupportImage from "../assets/images/announcements/all-night-prayer.png";
+import officialNoticeImage from "../assets/images/announcements/all-night-prayer.png";
+import specialProgrammesImage from "../assets/images/announcements/all-night-prayer.png";
+
 export const announcements = [
   {
     id: 1,
@@ -5,11 +11,13 @@ export const announcements = [
     category: "Upcoming Event",
     title: "Annual All-Night Prayer",
     date: "Friday, 31 October 2026",
+    time: "6:00 PM – 6:00 AM",
+    image: allNightPrayerImage,
     summary:
-      "The ministry holds an annual all-night prayer service for worship, prayer, deliverance, and spiritual renewal.",
+      "Join us for a powerful night of worship, prayer, deliverance, and spiritual renewal.",
     details: [
-      "Final time and programme details will be confirmed by the church.",
-      "Please follow the official church communication lines for updates.",
+      "The all-night prayer service is one of the ministry’s important yearly gatherings.",
+      "Please follow the official church communication lines for final event updates.",
     ],
     actionLabel: "Contact Church",
     actionLink: "/contact",
@@ -21,6 +29,8 @@ export const announcements = [
     category: "Fraud Alert",
     title: "Beware of fake online accounts",
     date: "Ongoing Notice",
+    time: "Important Notice",
+    image: fraudAlertImage,
     summary:
       "Please be careful of fake accounts, messages, or people pretending to represent House Of Miracles Prophetic Ministries.",
     details: [
@@ -36,6 +46,8 @@ export const announcements = [
     category: "Support & Giving",
     title: "Church Building Support",
     date: "Current Need",
+    time: "Open Support Notice",
+    image: buildingSupportImage,
     summary:
       "The church may share approved building needs, materials, supplies, or equipment requests when support is needed.",
     details: [
@@ -51,11 +63,13 @@ export const announcements = [
     category: "Church Notice",
     title: "Official Communication Lines",
     date: "Important Notice",
+    time: "Official Information",
+    image: officialNoticeImage,
     summary:
       "All official church updates should come from the communication lines listed on this website.",
     details: [
       "The official email is houseofmiraclesPM@gmail.com.",
-      "Phone numbers and social media links can be updated once confirmed.",
+      "Please ignore unofficial accounts or unverified contact details.",
     ],
     actionLabel: "Contact Church",
     actionLink: "/contact",
@@ -66,6 +80,8 @@ export const announcements = [
     category: "Special Services",
     title: "Special Programmes & Services",
     date: "Dates To Be Confirmed",
+    time: "Updates Coming Soon",
+    image: specialProgrammesImage,
     summary:
       "Upcoming church programmes, special services, December events, and prayer gatherings can be announced here.",
     details: [
