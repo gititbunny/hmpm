@@ -77,7 +77,9 @@ function Booking() {
     return `${dayCode}-${cleanDate}-${randomCode}`;
   }, [preferredDay, preferredDate, randomCode]);
 
-  const successAction = "/";
+  const successAction = bookingReference
+  ? `/success?type=booking&ref=${encodeURIComponent(bookingReference)}`
+  : "/success";
 
   const handlePreferredDayChange = (event) => {
     setPreferredDay(event.target.value);
@@ -129,7 +131,7 @@ function Booking() {
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            action="/"
+            action={successAction}
           >
             <input type="hidden" name="form-name" value="one-on-one-booking" />
             <input
