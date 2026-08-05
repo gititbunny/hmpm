@@ -87,6 +87,29 @@ function Booking() {
     setPreferredDate("");
   };
 
+  const handleSubmit = async (event) => {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    });
+
+    if (!response.ok) {
+      throw new Error("Form submission failed");
+    }
+
+    navigate(successAction);
+  } catch (error) {
+    alert("Sorry, something went wrong. Please try again.");
+  }
+};
+
   return (
     <>
       <section className="booking-intro">
