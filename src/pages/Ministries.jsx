@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import ministryPraiseImage from "../assets/images/ministries/ministry-praise.jpg";
 import ministryUsheringImage from "../assets/images/ministries/ministry-ushering.jpg";
