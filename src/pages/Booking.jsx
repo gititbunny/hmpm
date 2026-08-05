@@ -156,6 +156,7 @@ function Booking() {
             data-netlify="true"
             netlify-honeypot="bot-field"
             action={successAction}
+            onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="one-on-one-booking" />
             <input
