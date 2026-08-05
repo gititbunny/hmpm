@@ -27,7 +27,7 @@ function Contact() {
       alert("Sorry, something went wrong. Please try again.");
     }
   };
-  
+
   return (
     <>
       <section className="content-section contact-main-section">
@@ -71,6 +71,7 @@ function Contact() {
           data-netlify="true"
           netlify-honeypot="bot-field"
           action="/success"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
 
