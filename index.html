@@ -7,7 +7,97 @@
     <title>House Of Miracles Prophetic Ministries</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <!-- Netlify Form Detection - Contact Form -->
+  <form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    hidden
+  >
+    <input type="hidden" name="form-name" value="contact" />
+    <input name="bot-field" />
+    <input type="text" name="fullName" />
+    <input type="tel" name="phone" />
+    <input type="email" name="email" />
+    <select name="reason">
+      <option value="Prayer request">Prayer request</option>
+      <option value="Service information">Service information</option>
+      <option value="One-on-one booking help">One-on-one booking help</option>
+      <option value="Ministry information">Ministry information</option>
+      <option value="General question">General question</option>
+    </select>
+    <textarea name="message"></textarea>
+    <input type="checkbox" name="consent" />
+  </form>
+
+  <!-- Netlify Form Detection - One-on-One Booking Form -->
+  <form
+    name="one-on-one-booking"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    hidden
+  >
+    <input type="hidden" name="form-name" value="one-on-one-booking" />
+    <input name="bot-field" />
+    <input type="hidden" name="bookingReference" />
+    <select name="preferredDay">
+      <option value="Wednesday">Wednesday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select>
+    <select name="preferredDate"></select>
+    <select name="preferredTime">
+      <option value="Morning">Morning</option>
+      <option value="Afternoon">Afternoon</option>
+      <option value="Before Sunday service">Before Sunday service</option>
+      <option value="After Sunday service">After Sunday service</option>
+      <option value="Flexible">Flexible</option>
+    </select>
+    <input type="tel" name="phone" />
+    <input type="text" name="initialAndSurname" />
+    <input type="email" name="email" />
+    <select name="attendingWith">
+      <option value="Just me">Just me</option>
+      <option value="Me and one person">Me and one person</option>
+      <option value="Me and family">Me and family</option>
+      <option value="Me and other people">Me and other people</option>
+    </select>
+    <input type="number" name="numberOfPeople" />
+    <input type="checkbox" name="contactConsent" />
+    <input type="checkbox" name="understanding" />
+  </form>
+
+  <!-- Netlify Form Detection - Ministry Interest Form -->
+  <form
+    name="ministry-interest"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    hidden
+  >
+    <input type="hidden" name="form-name" value="ministry-interest" />
+    <input name="bot-field" />
+    <input type="text" name="fullName" />
+    <input type="tel" name="phone" />
+    <input type="email" name="email" />
+    <select name="interest">
+      <option value="Praise & Worship">Praise & Worship</option>
+      <option value="Ushering & Protocol">Ushering & Protocol</option>
+      <option value="Youth Ministry">Youth Ministry</option>
+      <option value="Prayer & Intercession">Prayer & Intercession</option>
+      <option value="Media Team">Media Team</option>
+      <option value="Outreach & Charity">Outreach & Charity</option>
+      <option value="Children’s Ministry">Children’s Ministry</option>
+      <option value="Cleaning & Hospitality">Cleaning & Hospitality</option>
+      <option value="General Volunteer">General Volunteer</option>
+    </select>
+    <textarea name="message"></textarea>
+    <input type="checkbox" name="consent" />
+  </form>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>
