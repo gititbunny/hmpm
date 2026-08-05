@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const churchMapLink = "https://maps.app.goo.gl/D2GF2DX77VpUNxXq8?g_st=ac";
 
