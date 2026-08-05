@@ -1,24 +1,25 @@
 /* ================================
-   Navbar - Header Layout
+   Navbar - Header
 ================================ */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(7, 27, 58, 0.08);
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(18px);
 }
 
 .navbar {
   width: min(100% - 32px, var(--max-width));
-  min-height: 84px;
+  min-height: 82px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 24px;
+  position: relative;
 }
 
 /* ================================
@@ -26,25 +27,25 @@
 ================================ */
 
 .navbar-logo {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  flex-shrink: 0;
-  min-width: 0;
+  gap: 12px;
+  color: var(--color-navy);
+  font-weight: 900;
+  text-decoration: none;
 }
 
 .navbar-logo-img {
-  width: auto;
-  height: 58px;
-  max-width: 260px;
+  width: 54px;
+  height: 54px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .navbar-logo-fallback {
-  display: none;
-  max-width: 220px;
-  color: var(--color-navy);
-  font-weight: 900;
-  line-height: 1.1;
+  max-width: 210px;
+  font-size: 0.9rem;
+  line-height: 1.15;
 }
 
 /* ================================
@@ -54,89 +55,67 @@
 .nav-links {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 18px;
+  gap: clamp(10px, 1.2vw, 18px);
 }
 
 .nav-links a {
-  position: relative;
-  color: rgba(7, 27, 58, 0.78);
-  font-size: 0.94rem;
-  font-weight: 800;
-  transition:
-    color 0.2s ease,
-    background 0.2s ease;
-}
-
-.nav-links a:hover {
   color: var(--color-navy);
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
 }
 
+.nav-links a:hover,
 .nav-links a.active {
   color: var(--color-gold);
 }
 
-.nav-links a:not(.nav-cta)::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -7px;
-  width: 0;
-  height: 2px;
-  border-radius: 999px;
-  background: var(--color-gold);
-  transition: width 0.2s ease;
-}
-
-.nav-links a:not(.nav-cta):hover::after,
-.nav-links a:not(.nav-cta).active::after {
-  width: 100%;
-}
-
-.nav-cta {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-  justify-content: center;
-  padding: 0 18px;
+.nav-links .nav-cta {
+  padding: 10px 16px;
   border-radius: 999px;
   background: var(--color-navy);
-  color: var(--color-white) !important;
+  color: var(--color-white);
 }
 
-.nav-cta:hover {
-  background: var(--color-navy-soft);
+.nav-links .nav-cta:hover,
+.nav-links .nav-cta.active {
+  background: var(--color-gold);
+  color: var(--color-navy);
 }
 
 /* ================================
-   Navbar - Mobile Button
+   Navbar - Hamburger
 ================================ */
 
 .menu-toggle {
-  display: none;
   width: 46px;
   height: 46px;
-  flex-shrink: 0;
-  border: 1px solid rgba(7, 27, 58, 0.14);
-  border-radius: 14px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
   background: var(--color-white);
   cursor: pointer;
 }
 
 .menu-toggle span {
-  display: block;
   width: 20px;
   height: 2px;
-  margin: 5px auto;
+  display: block;
   border-radius: 999px;
   background: var(--color-navy);
   transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .menu-toggle.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .menu-toggle.active span:nth-child(2) {
@@ -144,92 +123,79 @@
 }
 
 .menu-toggle.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* ================================
-   Navbar - Responsive
+   Navbar - Mobile Menu
 ================================ */
 
-@media (max-width: 1080px) {
-  .navbar-logo-img {
-    max-width: 220px;
+@media (max-width: 1180px) {
+  .navbar {
+    min-height: 76px;
   }
 
-  .nav-links {
-    gap: 13px;
-  }
-
-  .nav-links a {
-    font-size: 0.88rem;
-  }
-}
-
-@media (max-width: 940px) {
   .menu-toggle {
-    display: block;
+    display: flex;
   }
 
   .nav-links {
     position: absolute;
-    top: 84px;
-    left: 16px;
-    right: 16px;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
     display: none;
     flex-direction: column;
     align-items: stretch;
-    gap: 0;
-    padding: 12px;
-    border: 1px solid rgba(7, 27, 58, 0.1);
-    border-radius: 22px;
+    gap: 8px;
+    padding: 18px;
+    border-radius: var(--radius-md);
     background: var(--color-white);
-    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
   }
 
   .nav-links.open {
     display: flex;
   }
 
-  .nav-links a {
-    padding: 14px 16px;
-    border-radius: 14px;
-    font-size: 0.96rem;
+  .nav-links a,
+  .nav-links .nav-cta {
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: var(--radius-sm);
+    text-align: left;
   }
 
-  .nav-links a:not(.nav-cta)::after {
-    display: none;
-  }
-
-  .nav-links a:hover {
+  .nav-links a:hover,
+  .nav-links a.active {
     background: var(--color-cream);
+    color: var(--color-navy);
   }
 
-  .nav-cta {
-    margin-top: 8px;
+  .nav-links .nav-cta {
     text-align: center;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .navbar {
     width: min(100% - 24px, var(--max-width));
-    min-height: 76px;
+    min-height: 72px;
   }
 
   .navbar-logo-img {
+    width: 48px;
     height: 48px;
-    max-width: 190px;
+  }
+
+  .navbar-logo-fallback {
+    max-width: 170px;
+    font-size: 0.82rem;
   }
 
   .nav-links {
-    top: 76px;
-    left: 12px;
-    right: 12px;
-  }
-}
-
-@media (max-width: 390px) {
-  .navbar-logo-img {
-    max-width: 160px;
+    top: calc(100% + 10px);
+    padding: 16px;
   }
 }
