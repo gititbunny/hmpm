@@ -35,8 +35,8 @@
 }
 
 .navbar-logo-img {
-  width: clamp(96px, 10vw, 240px);
-  height: 58px;
+  width: clamp(160px, 17vw, 240px);
+  height: 86px;
   object-fit: contain;
   object-position: left center;
   display: block;
@@ -126,7 +126,7 @@
 
 @media (max-width: 1180px) {
   .navbar {
-    min-height: 76px;
+    min-height: 86px;
   }
 
   .menu-toggle {
@@ -175,12 +175,12 @@
 @media (max-width: 640px) {
   .navbar {
     width: min(100% - 24px, var(--max-width));
-    min-height: 72px;
+    min-height: 78px;
   }
 
   .navbar-logo-img {
-    width: 96px;
-    height: 50px;
+    width: 145px;
+    height: 70px;
   }
 
   .nav-links {
