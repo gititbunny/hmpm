@@ -18,10 +18,6 @@ function Navbar() {
             alt="House Of Miracles Prophetic Ministries logo"
             className="navbar-logo-img"
           />
-
-          <span className="navbar-logo-fallback">
-            House Of Miracles Prophetic Ministries
-          </span>
         </Link>
 
         <button
