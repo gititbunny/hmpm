@@ -3,6 +3,31 @@ import { Link, useNavigate } from "react-router-dom";
 const churchMapLink = "https://maps.app.goo.gl/D2GF2DX77VpUNxXq8?g_st=ac";
 
 function Contact() {
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      navigate("/success");
+    } catch (error) {
+      alert("Sorry, something went wrong. Please try again.");
+    }
+  };
+  
   return (
     <>
       <section className="content-section contact-main-section">
