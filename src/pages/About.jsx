@@ -121,8 +121,8 @@ function About() {
                 alt="House Of Miracles leadership team"
               />
             </div>
-            <h3>Mr Nkuna</h3>
-            <p>Church Leadership Team</p>
+            <h3>Norman Nkuna</h3>
+            <p>Chairperson</p>
           </article>
         </div>
       </section>
