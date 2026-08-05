@@ -11,25 +11,34 @@ function Announcements() {
         <p className="eyebrow">Announcements</p>
         <h1>Church updates, notices, and upcoming events.</h1>
         <p>
-          Stay updated with important church announcements, event details, fraud
-          alerts, support notices, and official communication updates.
+          Stay updated with important church announcements, event details,
+          fraud alerts, support notices, and official communication updates.
         </p>
       </section>
 
       {featuredAnnouncement && (
         <section className="content-section featured-announcement-section">
           <article className={`featured-announcement ${featuredAnnouncement.type}`}>
-            <div>
+            <div className="featured-announcement-image-wrap">
+              <img
+                className="featured-announcement-image"
+                src={featuredAnnouncement.image}
+                alt={featuredAnnouncement.title}
+              />
+            </div>
+
+            <div className="featured-announcement-content">
               <span>{featuredAnnouncement.category}</span>
               <h2>{featuredAnnouncement.title}</h2>
               <strong>{featuredAnnouncement.date}</strong>
+              <small>{featuredAnnouncement.time}</small>
               <p>{featuredAnnouncement.summary}</p>
-            </div>
 
-            <div className="featured-announcement-details">
-              {featuredAnnouncement.details.map((detail) => (
-                <p key={detail}>{detail}</p>
-              ))}
+              <div className="featured-announcement-details">
+                {featuredAnnouncement.details.map((detail) => (
+                  <p key={detail}>{detail}</p>
+                ))}
+              </div>
 
               <Link
                 className="btn btn-primary"
@@ -41,30 +50,6 @@ function Announcements() {
           </article>
         </section>
       )}
-
-      <section className="content-section announcement-category-section">
-        <div className="announcement-category-grid">
-          <article>
-            <span>Events</span>
-            <p>Upcoming services, all-night prayer, and special programmes.</p>
-          </article>
-
-          <article>
-            <span>Alerts</span>
-            <p>Fraud warnings, fake account notices, and safety updates.</p>
-          </article>
-
-          <article>
-            <span>Support</span>
-            <p>Building needs, supplies, giving notices, and approved requests.</p>
-          </article>
-
-          <article>
-            <span>Church Notices</span>
-            <p>Schedule changes, communication updates, and general notices.</p>
-          </article>
-        </div>
-      </section>
 
       <section className="content-section">
         <div className="section-heading announcements-heading">
@@ -78,23 +63,35 @@ function Announcements() {
               className={`announcement-card ${announcement.type}`}
               key={announcement.id}
             >
-              <div className="announcement-card-top">
-                <span>{announcement.category}</span>
-                <small>{announcement.date}</small>
+              <div className="announcement-card-image-wrap">
+                <img
+                  className="announcement-card-image"
+                  src={announcement.image}
+                  alt={announcement.title}
+                />
               </div>
 
-              <h3>{announcement.title}</h3>
-              <p>{announcement.summary}</p>
+              <div className="announcement-card-content">
+                <div className="announcement-card-top">
+                  <span>{announcement.category}</span>
+                  <small>{announcement.date}</small>
+                </div>
 
-              <div className="announcement-details">
-                {announcement.details.map((detail) => (
-                  <p key={detail}>{detail}</p>
-                ))}
+                <strong className="announcement-time">{announcement.time}</strong>
+
+                <h3>{announcement.title}</h3>
+                <p>{announcement.summary}</p>
+
+                <div className="announcement-details">
+                  {announcement.details.map((detail) => (
+                    <p key={detail}>{detail}</p>
+                  ))}
+                </div>
+
+                <Link className="text-link" to={announcement.actionLink}>
+                  {announcement.actionLabel}
+                </Link>
               </div>
-
-              <Link className="text-link" to={announcement.actionLink}>
-                {announcement.actionLabel}
-              </Link>
             </article>
           ))}
         </div>
