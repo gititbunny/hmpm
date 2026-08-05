@@ -58,7 +58,11 @@ function Navbar() {
           </NavLink>
 
           <NavLink to="/outreach" onClick={closeMenu}>
-            Outreach
+            Charity 
+          </NavLink>
+
+          <NavLink to="/announcements" onClick={closeMenu}>
+            Announcements
           </NavLink>
 
           <NavLink to="/contact" onClick={closeMenu}>
