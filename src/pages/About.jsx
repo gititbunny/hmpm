@@ -124,7 +124,7 @@ function About() {
             <h3>Norman Nkuna</h3>
             <p>Chairperson</p>
           </article>
-        </div>
+        </div> 
       </section>
 
       <section className="content-section page-cta about-final-cta">
