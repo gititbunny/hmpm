@@ -64,7 +64,7 @@ function Media() {
             Replace or expand these items as more church photos, videos, and
             edited highlights become available. 
           </p>
-        </div>
+        </div> 
 
         <div className="media-gallery-grid">
           {galleryItems.map((item) => (
