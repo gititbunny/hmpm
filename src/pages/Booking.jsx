@@ -14,7 +14,7 @@ const allowedDayMap = {
     code: "SUN",
     dayIndex: 0,
   },
-};
+}; 
 
 function formatDateValue(date) {
   const year = date.getFullYear();
