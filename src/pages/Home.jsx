@@ -42,7 +42,7 @@ function Home() {
               Read the latest message, key scriptures, prayer points, and notes
               from Sunday service.
             </p>
-
+ 
             <div className="latest-actions">
               <Link className="btn btn-secondary" to="/sermons">
                 View Sermons
