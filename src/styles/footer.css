@@ -46,6 +46,44 @@
   font-size: 0.92rem;
 }
 
+/* ================================
+   Footer - Social Icons
+================================ */
+
+.footer-social-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.footer-social-links a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--color-gold-light);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-social-links a:hover {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  transform: translateY(-2px);
+}
+
+.footer-social-links svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
 @media (max-width: 900px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
