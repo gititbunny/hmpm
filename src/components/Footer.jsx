@@ -48,7 +48,7 @@ function Footer() {
 
         <div>
           <h3>Contact</h3>
-          <p>houseofmiraclesPM@gmail.com</p>
+          <p>houseofmiraclespm@gmail.com</p>
           <p>Prayer line coming soon.</p>
 
           <div className="footer-social-links">
