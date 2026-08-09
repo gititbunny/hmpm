@@ -444,6 +444,7 @@
   max-width: 760px;
 }
 
+
 @media (max-width: 980px) {
   .home-hero,
   .split-section {
@@ -648,30 +649,51 @@
 }
 
 /* ================================
-   Home Page - Visit Media Card
+   Home Page - Visit Preview
 ================================ */
+
+.visit-preview {
+  margin-bottom: 80px;
+}
+
+.visit-card {
+  border-radius: var(--radius-lg);
+  background: var(--color-cream);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+  box-shadow: var(--shadow-card);
+}
 
 .visit-card-with-media {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  padding: 0;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  padding: 28px;
   overflow: hidden;
 }
 
 .visit-card-content {
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 24px;
 }
 
-.visit-card-content .btn {
-  width: fit-content;
-  margin-top: 14px;
+.visit-card-content h2 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.visit-card-content p:not(.eyebrow) {
+  margin: 16px 0 24px;
+  color: var(--color-muted);
+  line-height: 1.75;
 }
 
 .visit-card-image-wrap {
-  min-height: 360px;
+  height: 380px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
   background: var(--color-navy);
 }
 
@@ -679,41 +701,39 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* ================================
-   Home Page - Media Sections Responsive
+   Home Page - Visit Responsive
 ================================ */
 
 @media (max-width: 980px) {
-  .latest-card-with-media,
   .visit-card-with-media {
     grid-template-columns: 1fr;
   }
 
-  .latest-card-image-wrap,
   .visit-card-image-wrap {
-    min-height: 340px;
+    height: 340px;
   }
 }
 
 @media (max-width: 640px) {
-  .latest-card-content,
+  .visit-preview {
+    margin-bottom: 56px;
+  }
+
+  .visit-card-with-media {
+    padding: 18px;
+  }
+
   .visit-card-content {
-    padding: 24px;
+    padding: 10px 6px 6px;
   }
 
-  .latest-card-image-wrap,
   .visit-card-image-wrap {
-    min-height: 260px;
-  }
-
-  .media-mini-card {
-    min-height: 190px;
-  }
-
-  .media-background-section {
-    min-height: 420px;
+    height: 260px;
   }
 
   .visit-card-content .btn {
