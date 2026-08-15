@@ -746,8 +746,7 @@
 ================================ */
 
 .home-testimony-section {
-  padding-top: 54px;
-  padding-bottom: 54px;
+  padding: 62px 28px;
   border-radius: var(--radius-lg);
   background:
     radial-gradient(circle at top left, rgba(214, 165, 54, 0.14), transparent 30%),
@@ -841,3 +840,58 @@
     width: 100%;
   }
 } 
+
+/* ================================
+   Home Page - Final Mobile Fixes
+================================ */
+
+@media (max-width: 640px) {
+  /* Hero carousel */
+  .hero-arrow {
+    display: none;
+  }
+
+  .hero-dots {
+    justify-content: center;
+    margin: 28px auto 0;
+  }
+
+  /* Latest service */
+  .latest-card-with-media {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    gap: 0;
+  }
+
+  .latest-card-image-wrap {
+    width: 100%;
+    min-height: 300px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .latest-card-content {
+    width: 100%;
+    padding: 24px 6px 6px;
+  }
+
+  .latest-actions {
+    width: 100%;
+  }
+
+  .latest-actions .btn {
+    width: 100%;
+  }
+
+  /* Home testimonies */
+  .home-testimony-section {
+    width: min(100% - 24px, var(--max-width));
+    padding: 42px 18px;
+    border-radius: var(--radius-lg);
+  }
+
+  .home-testimony-section .section-heading {
+    margin-bottom: 28px;
+  }
+}
