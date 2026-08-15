@@ -169,7 +169,7 @@ function Contact() {
         </article>
       </section>
 
-      <section className="content-section contact-location-section">
+      <section id="find-us" className="content-section contact-location-section">
         <div>
           <p className="eyebrow">Location</p>
           <h2>Find us on Google Maps.</h2>
