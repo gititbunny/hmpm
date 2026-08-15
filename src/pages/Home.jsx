@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import HeroCarousel from "../components/HeroCarousel";
 import { testimonies } from "../data/testimonies";
-
 import latestServiceImage from "../assets/images/home/latest-service.jpg";
 import ministryWorshipImage from "../assets/images/home/ministry-worship.jpg";
 import ministryYouthImage from "../assets/images/home/ministry-youth.jpg";
