@@ -198,7 +198,7 @@ function Home() {
               directions before your visit.
             </p>
 
-            <Link className="btn btn-primary" to="/contact">
+            <Link className="btn btn-primary" to="/contact#find-us">
               Get Directions
             </Link>
           </div>
