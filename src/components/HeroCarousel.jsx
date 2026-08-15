@@ -151,13 +151,13 @@ function HeroCarousel() {
           </article>
 
           <article>
-            <span>Wednesday Service</span>
-            <strong>Midweek service</strong>
+            <span> Midweek Wednesday Service</span>
+            <strong>Every Wednesday from 11:30 PM</strong>
           </article>
 
           <article>
             <span>One-on-One</span>
-            <strong>Weekends by appointment</strong>
+            <strong>Book an appointment</strong>
           </article>
         </div>
 
