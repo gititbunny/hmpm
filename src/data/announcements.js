@@ -85,7 +85,7 @@ export const announcements = [
     summary:
       "Upcoming church programmes, special services, December events, and prayer gatherings can be announced here.",
     details: [
-      "This section can be updated whenever the church confirms a new programme.",
+      "Confirmed programmes and special services will be shared through the church’s official communication channels.",
       "Members and visitors should check this page for important updates.",
     ],
     actionLabel: "View Sermons",
