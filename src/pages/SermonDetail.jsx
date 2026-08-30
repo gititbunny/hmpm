@@ -121,7 +121,7 @@ function SermonDetail() {
           <p className="eyebrow">Service Gallery</p>
           <h2>Photos and videos from this service.</h2>
           <p>
-            Moments from the service, including worship, prayer, the Word, and fellowship.
+            Moments from the service, including worship, prayer, the Word Of God, and fellowship.
           </p>
         </div>
 
