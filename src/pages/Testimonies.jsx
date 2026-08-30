@@ -44,8 +44,7 @@ function Testimonies() {
           <p className="eyebrow">Recent Testimonies</p>
           <h2>What God has done.</h2>
           <p>
-            Names may be shortened for privacy. Testimonies can be updated as
-            the church receives approved stories.
+            Stories of faith, prayer, healing, and breakthrough from people touched through the ministry.
           </p>
         </div>
 
