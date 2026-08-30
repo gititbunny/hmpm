@@ -81,8 +81,7 @@ function Outreach() {
           <p className="eyebrow">Approved Moments</p>
           <h2>Outreach, charity, and community care.</h2>
           <p>
-            Photos and updates can be added here when the church approves them
-            for public sharing.
+            A look at outreach, charity, prayer, and community care through the ministry.
           </p>
         </div>
 
