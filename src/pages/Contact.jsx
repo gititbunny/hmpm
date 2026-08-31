@@ -175,7 +175,7 @@ function Contact() {
           <h2>Find us on Google Maps.</h2>
           <p>
             Open the map for directions to House Of Miracles Prophetic
-            Ministries.
+            Ministries. 
           </p>
 
           <a
