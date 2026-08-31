@@ -117,7 +117,7 @@ function Booking() {
         <h1>Book your private one-on-one session.</h1>
         <p>
           Choose an available day, submit your contact details, and save your
-          booking reference number.
+          booking reference number. 
         </p>
 
         <div className="booking-how-it-works">
