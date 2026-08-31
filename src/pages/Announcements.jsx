@@ -103,7 +103,7 @@ function Announcements() {
           <h2>Contact the church for confirmed updates.</h2>
           <p>
             For event details, official notices, support needs, or prayer line
-            information, please contact the church directly.
+            information, please contact the church directly. 
           </p>
         </div>
 
