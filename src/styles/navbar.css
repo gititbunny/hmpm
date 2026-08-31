@@ -126,11 +126,16 @@
 
 @media (max-width: 1180px) {
   .navbar {
-    min-height: 86px;
+    max-height: 86px;
   }
 
   .menu-toggle {
     display: flex;
+  }
+
+  .navbar-logo-img {
+    width: 205px !important;  
+    height: 130px !important;
   }
 
   .nav-links {
@@ -175,7 +180,7 @@
 @media (max-width: 640px) {
   .navbar {
     width: min(100% - 24px, var(--max-width));
-    min-height: 78px;
+    max-height: 78px;
   }
 
   .navbar-logo-img {
