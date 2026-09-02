@@ -133,7 +133,7 @@ function About() {
           <h2>Join us this Sunday or book a one-on-one session.</h2>
           <p>
             View service details, directions, and contact information before
-            your visit.
+            your visit. 
           </p>
         </div>
 
