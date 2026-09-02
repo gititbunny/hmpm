@@ -139,7 +139,7 @@ function About() {
 
         <div className="cta-actions">
           <Link className="btn btn-primary" to="/contact">
-            Plan Your Visit
+            Plan Your Visit 
           </Link>
           <Link className="btn btn-outline" to="/booking">
             Book One-on-One
