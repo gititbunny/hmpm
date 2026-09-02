@@ -142,7 +142,7 @@ function About() {
             Plan Your Visit 
           </Link>
           <Link className="btn btn-outline" to="/booking">
-            Book One-on-One
+            Book One-on-One 
           </Link>
         </div>
       </section>
