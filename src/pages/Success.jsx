@@ -43,7 +43,7 @@ function Success() {
         ) : (
           <p>
             Your request has been received. The church team will review your
-            message and contact you using the details you provided.
+            message and contact you using the details you provided. 
           </p> 
         )}
 
