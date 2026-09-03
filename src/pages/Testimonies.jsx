@@ -44,7 +44,7 @@ function Testimonies() {
           <p className="eyebrow">Recent Testimonies</p>
           <h2>What God has done.</h2>
           <p>
-            Testimonies of faith, prayer, healing, and breakthrough from people touched through the ministry.
+            Testimonies of faith, prayer, healing, and breakthrough from people touched through the ministry. 
           </p>
         </div>
 
