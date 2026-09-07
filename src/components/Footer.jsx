@@ -53,7 +53,7 @@ function Footer() {
 
           <div className="footer-social-links">
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/share/19Y3gigB9f/"
               target="_blank"
               rel="noreferrer"
               aria-label="House Of Miracles Facebook page"
@@ -62,7 +62,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://www.youtube.com/"
+              href="https://youtube.com/@houseofmiraclespm"
               target="_blank"
               rel="noreferrer"
               aria-label="House Of Miracles YouTube channel"
