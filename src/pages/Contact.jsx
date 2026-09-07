@@ -53,13 +53,13 @@ function Contact() {
             </div>
 
             <div>
-              <strong>Social</strong>
-              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-                Facebook
-              </a>
-              <a href="https://www.youtube.com/@HouseOfMiraclesPM" target="_blank" rel="noreferrer">
-                YouTube
-              </a>
+                <strong>Social</strong>
+                <a href="https://www.facebook.com/share/19Y3gigB9f/" target="_blank" rel="noreferrer">
+                  Facebook
+                </a>
+                <a href="https://www.youtube.com/@HouseOfMiraclesPM" target="_blank" rel="noreferrer">
+                  YouTube
+                </a>
             </div>
           </div>
         </div>
