@@ -10,7 +10,7 @@ export const announcements = [
     type: "event",
     category: "Upcoming Event",
     title: "Annual All-Night Prayer",
-    date: "Friday, 31 October 2026",
+    date: "Friday, 30 October 2026",
     time: "6:00 PM – 6:00 AM",
     image: allNightPrayerImage,
     summary:
