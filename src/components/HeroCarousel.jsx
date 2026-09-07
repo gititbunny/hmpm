@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 import heroWorship from "../assets/images/home/hero-worship.jpg";
 import heroPrayer from "../assets/images/home/hero-prayer.jpg";
-import heroOutreach from "../assets/images/home/hero-outreach.jpg";
-import heroServiceVideo from "../assets/videos/services/hero-service.mp4";
+import heroOutreach from "../assets/images/home/hero-outreach1.jpg";
+import heroServiceVideo from "../assets/videos/services/hero-service1.mp4";
 
 const heroSlides = [
   {

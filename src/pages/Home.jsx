@@ -5,7 +5,7 @@ import latestServiceImage from "../assets/images/home/latest-service.jpg";
 import ministryWorshipImage from "../assets/images/home/ministry-worship.jpg";
 import ministryYouthImage from "../assets/images/home/ministry-youth.jpg";
 import ministryMediaImage from "../assets/images/home/ministry-media.jpg";
-import ministryOutreachImage from "../assets/images/home/ministry-outreach.jpg";
+import ministryOutreachImage from "../assets/images/home/outreach-preview.jpg";
 import outreachPreviewImage from "../assets/images/home/outreach-preview.jpg";
 import visitPreviewImage from "../assets/images/home/visit-preview.jpg";
 

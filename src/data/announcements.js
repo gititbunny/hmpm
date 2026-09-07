@@ -1,8 +1,8 @@
-import allNightPrayerImage from "../assets/images/announcements/all-night-prayer.png";
-import fraudAlertImage from "../assets/images/announcements/all-night-prayer.png";
-import buildingSupportImage from "../assets/images/announcements/all-night-prayer.png";
-import officialNoticeImage from "../assets/images/announcements/all-night-prayer.png";
-import specialProgrammesImage from "../assets/images/announcements/all-night-prayer.png";
+import allNightPrayerImage from "../assets/images/announcements/all-night-prayer.jpg";
+import fraudAlertImage from "../assets/images/announcements/fraud-alert.jpg";
+import buildingSupportImage from "../assets/images/announcements/support.jpg";
+import officialNoticeImage from "../assets/images/announcements/official.jpg";
+import specialProgrammesImage from "../assets/images/announcements/special-event.jpg";
 
 export const announcements = [
   {

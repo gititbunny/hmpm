@@ -1,9 +1,9 @@
-import outreachFoodImage from "../assets/images/outreach/outreach-prayer.jpg";
-import outreachCommunityImage from "../assets/images/outreach/outreach-prayer.jpg";
-import outreachPrayerImage from "../assets/images/outreach/outreach-prayer.jpg";
-import outreachDonationsImage from "../assets/images/outreach/outreach-prayer.jpg";
-import outreachVisitImage from "../assets/images/outreach/outreach-prayer.jpg";
-import outreachSupportImage from "../assets/images/outreach/outreach-prayer.jpg";
+import outreachFoodImage from "../assets/images/outreach/outreach-food.jpg";
+import outreachCommunityImage from "../assets/images/outreach/outreach-community.jpg";
+import outreachPrayerImage from "../assets/images/outreach/outreach-encourage.jpg";
+import outreachDonationsImage from "../assets/images/outreach/outreach-donations.jpg";
+import outreachVisitImage from "../assets/images/outreach/outreach-visit.jpg";
+import outreachSupportImage from "../assets/images/outreach/outreach-support.jpg";
 
 export const supportAreas = [
   {
