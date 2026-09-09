@@ -49,7 +49,7 @@ function Footer() {
         <div>
           <h3>Contact</h3>
           <p>houseofmiraclespm@gmail.com</p>
-          <p>Prayer line coming soon.</p>
+          <p>Prayer line: +27 78 478 8629.</p>
 
           <div className="footer-social-links">
             <a
