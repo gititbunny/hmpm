@@ -48,7 +48,7 @@ function Footer() {
 
         <div>
           <h3>Contact</h3>
-          <p>houseofmiraclespm@gmail.com</p>
+          <p><Link to="mailto:houseofmiraclespm@gmail.com" className="mail">houseofmiraclespm@gmail.com</Link></p>
           <p>Contact: <Link to="tel:+27729492969" className="cell">
             +27 72 949 2969
           </Link></p>
