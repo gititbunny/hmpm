@@ -333,7 +333,7 @@ function Booking() {
         </div>
 
         <Link className="btn btn-outline" to="/contact">
-          Contact Church
+          Contact Church 
         </Link>
       </section>
     </>
