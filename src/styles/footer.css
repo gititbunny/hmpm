@@ -73,7 +73,7 @@
 }
 
 .footer-social-links a:hover {
-  background: var(--color-gold);
+  background: aqua;
   color: var(--color-navy);
   transform: translateY(-2px);
 }
