@@ -49,7 +49,7 @@ function Contact() {
 
             <div>
               <strong>Phone</strong>
-              <span>church number coming soon</span>
+              <span>+27 78 478 8629</span>
             </div>
 
             <div>
