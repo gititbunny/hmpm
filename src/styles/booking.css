@@ -152,9 +152,8 @@
 }
 
 .btn.btn-outline {
-  background: transparent;
-  color: var(--color-white);
-  border-color: var(--color-white);
+   background: var(--color-gold);
+   color: var(--color-navy);
 }
 
 
