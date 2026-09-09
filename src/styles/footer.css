@@ -84,6 +84,18 @@
   fill: currentColor;
 }
 
+.cell {
+  color: var(--color-gold-light) !important;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cell:hover {
+  color: aqua !important;
+  transform: translateY(-2px);
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
 
 /* ================================
    Footer - Responsive
