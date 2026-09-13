@@ -35,7 +35,7 @@ function About() {
 
             <article>
               <span>One-on-One</span>
-              <strong>Wednesday, Saturday & Sunday</strong>
+              <strong>Every Saturday from 11:30 AM</strong>
             </article>
           </div>
         </div>
