@@ -152,12 +152,12 @@ function HeroCarousel() {
 
           <article>
             <span> Midweek Wednesday Service</span>
-            <strong>Every Wednesday from 11:30 PM</strong>
+            <strong>Every Wednesday from 11:30 AM</strong>
           </article>
 
           <article>
             <span>One-on-One</span>
-            <strong>Book an appointment</strong>
+            <strong>Every Saturday from 11:30 AM</strong>
           </article>
         </div>
 
