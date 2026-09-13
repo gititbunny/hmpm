@@ -104,68 +104,30 @@
       <input type="hidden" name="form-name" value="one-on-one-booking" />
       <input name="bot-field" />
       <input type="hidden" name="bookingReference" />
-      <select name="preferredDay">
-        <option value="Wednesday">Wednesday</option>
-        <option value="Saturday">Saturday</option>
-        <option value="Sunday">Sunday</option>
+      <input type="hidden" name="preferredDay" value="Saturday" />
+      <select name="preferredDate">
+        <option value="Selected Saturday">Selected Saturday</option>
       </select>
-      <select name="preferredDate"></select>
       <select name="preferredTime">
         <option value="Morning">Morning</option>
         <option value="Afternoon">Afternoon</option>
-        <option value="Before Sunday service">Before Sunday service</option>
-        <option value="After Sunday service">After Sunday service</option>
         <option value="Flexible">Flexible</option>
       </select>
       <input type="tel" name="phone" />
       <input type="text" name="initialAndSurname" />
-      <input type="email" name="email" />
       <select name="attendingWith">
         <option value="Just me">Just me</option>
         <option value="Me and one person">Me and one person</option>
         <option value="Me and family">Me and family</option>
         <option value="Me and other people">Me and other people</option>
       </select>
-      <input type="number" name="numberOfPeople" />
+      <select name="firstTimeOneOnOne">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
       <input type="checkbox" name="contactConsent" />
       <input type="checkbox" name="understanding" />
     </form>
-
-    <!-- Netlify Form Detection - One-on-One Booking Form -->
-      <form
-        name="one-on-one-booking"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        hidden
-      >
-        <input type="hidden" name="form-name" value="one-on-one-booking" />
-        <input name="bot-field" />
-        <input type="hidden" name="bookingReference" />
-        <input type="hidden" name="preferredDay" value="Saturday" />
-        <select name="preferredDate">
-          <option value="Selected Saturday">Selected Saturday</option>
-        </select>
-        <select name="preferredTime">
-          <option value="Morning">Morning</option>
-          <option value="Afternoon">Afternoon</option>
-          <option value="Flexible">Flexible</option>
-        </select>
-        <input type="tel" name="phone" />
-        <input type="text" name="initialAndSurname" />
-        <select name="attendingWith">
-          <option value="Just me">Just me</option>
-          <option value="Me and one person">Me and one person</option>
-          <option value="Me and family">Me and family</option>
-          <option value="Me and other people">Me and other people</option>
-        </select>
-        <select name="firstTimeOneOnOne">
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
-        <input type="checkbox" name="contactConsent" />
-        <input type="checkbox" name="understanding" />
-      </form>
 
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
