@@ -158,14 +158,14 @@ function Contact() {
 
         <article className="contact-info-card">
           <span>One-on-One</span>
-          <h2>Wed, Sat & Sun</h2>
+          <h2>Every Saturday</h2>
           <p>Book online and keep your reference number for the day.</p>
         </article>
 
         <article className="contact-info-card">
           <span>Prayer Line</span>
-          <h2>Coming Soon</h2>
-          <p>Add the official church prayer line or WhatsApp number here.</p>
+          <h2>+27 78 478 8629</h2>
+          <p>Official church prayer line for spiritual support and guidance.</p>
         </article>
       </section>
 
