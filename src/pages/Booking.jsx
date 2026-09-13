@@ -102,7 +102,7 @@ function Booking() {
         <div className="booking-how-it-works">
           <article>
             <span>01</span>
-            <p>Choose your preferred Saturday.</p>
+            <p>Fill in the booking form.</p>
           </article>
 
           <article>
