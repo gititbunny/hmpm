@@ -45,54 +45,21 @@ function SermonDetail() {
 
       <section className="content-section sermon-message-section">
         <div className="message-section-heading">
-          <p className="eyebrow">Opening Message</p>
-          <h2>{sermon.pastorMessage.title}</h2>
+          <h2>{sermon.message.title}</h2>
 
           <div className="sermon-meta">
-            <span>{sermon.pastorMessage.speaker}</span>
-            <span>{sermon.pastorMessage.scripture}</span>
+            <span>{sermon.message.speaker}</span>
+            <span>{sermon.message.scripture}</span>
           </div>
 
-          <p>{sermon.pastorMessage.summary}</p>
+          <p>{sermon.message.summary}</p>
         </div>
 
         <div className="message-body-grid">
           <div className="sermon-points">
             <h3>Key Points</h3>
             <ul>
-              {sermon.pastorMessage.keyPoints.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="full-notes-card">
-            <h3>Full Notes</h3>
-            {sermon.pastorMessage.fullNotes.map((note) => (
-              <p key={note}>{note}</p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="content-section sermon-message-section prophet-message-section">
-        <div className="message-section-heading">
-          <p className="eyebrow">Main Message</p>
-          <h2>{sermon.prophetMessage.title}</h2>
-
-          <div className="sermon-meta">
-            <span>{sermon.prophetMessage.speaker}</span>
-            <span>{sermon.prophetMessage.scripture}</span>
-          </div>
-
-          <p>{sermon.prophetMessage.summary}</p>
-        </div>
-
-        <div className="message-body-grid">
-          <div className="sermon-points">
-            <h3>Key Points</h3>
-            <ul>
-              {sermon.prophetMessage.keyPoints.map((point) => (
+              {sermon.message.keyPoints.map((point) => (
                 <li key={point}>{point}</li>
               ))}
             </ul>
@@ -101,7 +68,7 @@ function SermonDetail() {
           <div className="sermon-points prayer-points-card">
             <h3>Prayer Points</h3>
             <ul>
-              {sermon.prophetMessage.prayerPoints.map((point) => (
+              {sermon.message.prayerPoints.map((point) => (
                 <li key={point}>{point}</li>
               ))}
             </ul>
@@ -109,7 +76,7 @@ function SermonDetail() {
 
           <div className="full-notes-card wide-notes-card">
             <h3>Full Notes</h3>
-            {sermon.prophetMessage.fullNotes.map((note) => (
+            {sermon.message.fullNotes.map((note) => (
               <p key={note}>{note}</p>
             ))}
           </div>
@@ -121,7 +88,8 @@ function SermonDetail() {
           <p className="eyebrow">Service Gallery</p>
           <h2>Photos and videos from this service.</h2>
           <p>
-            Moments from the service, including worship, prayer, the Word Of God, and fellowship. 
+            Moments from the service, including worship, prayer, the Word of
+            God, and fellowship.
           </p>
         </div>
 
@@ -158,7 +126,7 @@ function SermonDetail() {
           <h2>Join the next service or request a one-on-one session.</h2>
           <p>
             You can visit the church, contact the prayer line, or request a
-            private prayer and guidance session. 
+            private prayer and guidance session.
           </p>
         </div>
 
