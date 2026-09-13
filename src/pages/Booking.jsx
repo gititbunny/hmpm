@@ -235,7 +235,7 @@ function Booking() {
             <div className="booking-reference-box">
               <span>Your Booking Reference</span>
               <strong>
-                {bookingReference || "Choose a Saturday first"}
+                {bookingReference || "Reference Number"}
               </strong>
               <p>
                 Please keep this reference number safe. You will need it when
