@@ -17,10 +17,12 @@ function SermonDetail() {
     );
   }
 
+  const hasGallery = sermon.gallery && sermon.gallery.length > 1;
+
   return (
     <>
       <section className="page-hero sermon-detail-hero">
-        <div>
+        <div className="sermon-detail-hero-content">
           <p className="eyebrow">{sermon.serviceType}</p>
           <h1>{sermon.theme}</h1>
 
@@ -31,14 +33,11 @@ function SermonDetail() {
 
           <p>{sermon.summary}</p>
         </div>
-      </section>
 
-      <section className="content-section sermon-detail-media-section">
-        <div className="sermon-detail-main-media-wrap">
+        <div className="sermon-detail-hero-poster">
           <img
-            className="sermon-detail-main-image"
             src={sermon.mainImage || sermon.image}
-            alt={`${sermon.theme} service highlight`}
+            alt={`${sermon.theme} poster`}
           />
         </div>
       </section>
@@ -83,42 +82,47 @@ function SermonDetail() {
         </div>
       </section>
 
-      <section className="content-section service-gallery-section">
-        <div className="section-heading">
-          <p className="eyebrow">Service Gallery</p>
-          <h2>Photos and videos from this service.</h2>
-          <p>
-            Moments from the service, including worship, prayer, the Word of
-            God, and fellowship.
-          </p>
-        </div>
+      {hasGallery && (
+        <section className="content-section service-gallery-section">
+          <div className="section-heading">
+            <p className="eyebrow">Service Gallery</p>
+            <h2>Photos and videos from this service.</h2>
+            <p>
+              Moments from the service, including worship, prayer, the Word of
+              God, and fellowship.
+            </p>
+          </div>
 
-        <div className="service-gallery-grid">
-          {sermon.gallery.map((item, index) => (
-            <article className="service-gallery-card" key={`${item.label}-${index}`}>
-              {item.type === "video" ? (
-                <video
-                  className="service-gallery-media"
-                  src={item.src}
-                  controls
-                  playsInline
-                ></video>
-              ) : (
-                <img
-                  className="service-gallery-media"
-                  src={item.src}
-                  alt={item.label}
-                />
-              )}
+          <div className="service-gallery-grid">
+            {sermon.gallery.map((item, index) => (
+              <article
+                className="service-gallery-card"
+                key={`${item.label}-${index}`}
+              >
+                {item.type === "video" ? (
+                  <video
+                    className="service-gallery-media"
+                    src={item.src}
+                    controls
+                    playsInline
+                  ></video>
+                ) : (
+                  <img
+                    className="service-gallery-media"
+                    src={item.src}
+                    alt={item.label}
+                  />
+                )}
 
-              <div className="service-gallery-caption">
-                <span>{item.type === "video" ? "Video" : "Photo"}</span>
-                <strong>{item.label}</strong>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+                <div className="service-gallery-caption">
+                  <span>{item.type === "video" ? "Video" : "Photo"}</span>
+                  <strong>{item.label}</strong>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="content-section page-cta">
         <div>
