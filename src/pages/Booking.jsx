@@ -107,7 +107,7 @@ function Booking() {
 
           <article>
             <span>02</span>
-            <p>No personal story is needed on the form.</p>
+            <p>Submit your one-on-one booking.</p>
           </article>
 
           <article>
