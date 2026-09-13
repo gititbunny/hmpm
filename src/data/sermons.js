@@ -27,34 +27,15 @@ export const sermons = [
     mainScripture: "Mark 11:24",
     summary:
       "A service focused on faith, prayer, spiritual growth, and trusting God for breakthrough.",
-    mediaLabel: "Latest Sunday Service Photo / Video",
     image: sundayFaithImage,
     mainImage: sundayFaithMainImage,
 
-    pastorMessage: {
-      title: "Preparing Your Heart for Breakthrough",
-      speaker: "Pastor Name",
-      scripture: "Psalm 51:10",
-      summary:
-        "The opening message encouraged the church to prepare their hearts through prayer, repentance, worship, and faith.",
-      keyPoints: [
-        "Prayer prepares the heart for what God wants to do.",
-        "A clean heart allows people to receive the Word with faith.",
-        "Worship helps the church focus on God before the main message.",
-      ],
-      fullNotes: [
-        "The pastor opened the service by teaching about the importance of preparing the heart before seeking breakthrough.",
-        "The message reminded the congregation that prayer is not only about asking God for things, but also about surrendering, listening, and allowing God to work within us.",
-        "The congregation was encouraged to worship with sincerity and to approach the service with expectation.",
-      ],
-    },
-
-    prophetMessage: {
+    message: {
       title: "Faith, Prayer, and Spiritual Breakthrough",
-      speaker: "Prophet / Speaker Name",
+      speaker: "Prophet VK Ngobeni",
       scripture: "Mark 11:24",
       summary:
-        "The main message focused on believing God in prayer, standing firm in faith, and trusting His timing.",
+        "The sermon focused on believing God in prayer, standing firm in faith, and trusting His timing.",
       keyPoints: [
         "Faith is important when praying for breakthrough.",
         "Breakthrough requires patience, obedience, and trust.",
@@ -74,22 +55,22 @@ export const sermons = [
     },
 
     gallery: [
-  {
-    type: "image",
-    label: "Service worship photo",
-    src: sundayFaithGalleryOne,
-  },
-  {
-    type: "image",
-    label: "Congregation prayer moment",
-    src: sundayFaithGalleryTwo,
-  },
-  {
-    type: "image",
-    label: "Prophetic service moment",
-    src: sundayFaithGalleryThree,
-  },
-],
+      {
+        type: "image",
+        label: "Service worship photo",
+        src: sundayFaithGalleryOne,
+      },
+      {
+        type: "image",
+        label: "Congregation prayer moment",
+        src: sundayFaithGalleryTwo,
+      },
+      {
+        type: "image",
+        label: "Prophetic service moment",
+        src: sundayFaithGalleryThree,
+      },
+    ],
   },
 
   {
@@ -101,34 +82,15 @@ export const sermons = [
     mainScripture: "Proverbs 3:5-6",
     summary:
       "A midweek service focused on seeking God’s direction, prayer, and spiritual guidance.",
-    mediaLabel: "Wednesday Service Photo / Video",
     image: wednesdayDirectionImage,
     mainImage: wednesdayDirectionMainImage,
 
-    pastorMessage: {
-      title: "Trusting God During the Week",
-      speaker: "Pastor Name",
-      scripture: "Psalm 37:5",
-      summary:
-        "The opening message encouraged members to commit their plans to God and trust Him during the week.",
-      keyPoints: [
-        "God should be included in daily decisions.",
-        "Prayer gives strength during the week.",
-        "Trusting God brings peace even during uncertainty.",
-      ],
-      fullNotes: [
-        "The pastor encouraged the church to stay prayerful throughout the week and not only on Sundays.",
-        "The message reminded the congregation that God is interested in daily life, work, family, and personal decisions.",
-        "Members were encouraged to commit their plans to God and trust His guidance.",
-      ],
-    },
-
-    prophetMessage: {
+    message: {
       title: "Walking in Divine Direction",
-      speaker: "Prophet / Speaker Name",
+      speaker: "Prophet VK Ngobeni",
       scripture: "Proverbs 3:5-6",
       summary:
-        "The main message taught about trusting God’s direction and allowing Him to guide every step.",
+        "The sermon taught about trusting God’s direction and allowing Him to guide every step.",
       keyPoints: [
         "Do not rely only on your own understanding.",
         "Prayer helps people receive direction.",
@@ -146,23 +108,23 @@ export const sermons = [
       ],
     },
 
-gallery: [
-  {
-    type: "image",
-    label: "Wednesday worship photo",
-    src: wednesdayDirectionGalleryOne,
-  },
-  {
-    type: "image",
-    label: "Midweek service photo",
-    src: wednesdayDirectionGalleryTwo,
-  },
-  {
-    type: "image",
-    label: "Prayer and teaching moment",
-    src: wednesdayDirectionGalleryThree,
-  },
-],
+    gallery: [
+      {
+        type: "image",
+        label: "Wednesday worship photo",
+        src: wednesdayDirectionGalleryOne,
+      },
+      {
+        type: "image",
+        label: "Midweek service photo",
+        src: wednesdayDirectionGalleryTwo,
+      },
+      {
+        type: "image",
+        label: "Prayer and teaching moment",
+        src: wednesdayDirectionGalleryThree,
+      },
+    ],
   },
 
   {
@@ -174,34 +136,15 @@ gallery: [
     mainScripture: "John 4:24",
     summary:
       "A Sunday service focused on worship, surrender, and honouring God in spirit and truth.",
-    mediaLabel: "Sunday Service Gallery",
     image: sundayWorshipImage,
     mainImage: sundayWorshipMainImage,
 
-    pastorMessage: {
-      title: "Entering His Presence With Thanksgiving",
-      speaker: "Pastor Name",
-      scripture: "Psalm 100:4",
-      summary:
-        "The opening message focused on thanksgiving, worship, and preparing the church atmosphere.",
-      keyPoints: [
-        "Thanksgiving prepares the heart for worship.",
-        "Worship changes the atmosphere.",
-        "God should be honoured with sincerity.",
-      ],
-      fullNotes: [
-        "The pastor taught that thanksgiving is an important part of approaching God.",
-        "The message encouraged the church to worship sincerely and not only out of routine.",
-        "Members were reminded that worship should continue beyond the church service.",
-      ],
-    },
-
-    prophetMessage: {
+    message: {
       title: "The Power of Worship",
-      speaker: "Prophet / Speaker Name",
+      speaker: "Prophet VK Ngobeni",
       scripture: "John 4:24",
       summary:
-        "The main message explained worship as a lifestyle and not only a church activity.",
+        "The sermon explained worship as a lifestyle and not only a church activity.",
       keyPoints: [
         "Worship is more than singing.",
         "True worship comes from the heart.",
@@ -220,94 +163,76 @@ gallery: [
     },
 
     gallery: [
-  {
-    type: "image",
-    label: "Worship team photo",
-    src: sundayWorshipGalleryOne,
+      {
+        type: "image",
+        label: "Worship team photo",
+        src: sundayWorshipGalleryOne,
+      },
+      {
+        type: "image",
+        label: "Congregation worship photo",
+        src: sundayWorshipGalleryTwo,
+      },
+      {
+        type: "image",
+        label: "Worship service moment",
+        src: sundayWorshipGalleryThree,
+      },
+    ],
   },
-  {
-    type: "image",
-    label: "Congregation worship photo",
-    src: sundayWorshipGalleryTwo,
-  },
-  {
-    type: "image",
-    label: "Worship service moment",
-    src: sundayWorshipGalleryThree,
-  },
-],
-  },
-  {
-  id: 4,
-  slug: "wednesday-prayer-and-restoration",
-  serviceType: "Wednesday Service",
-  date: "Wednesday, 24 June 2026",
-  theme: "Prayer and Restoration",
-  mainScripture: "Jeremiah 30:17",
-  summary:
-    "A midweek message focused on prayer, restoration, healing, and trusting God through difficult seasons.",
-  mediaLabel: "Wednesday Service Gallery",
-  image: wednesdayDirectionImage,
-  mainImage: wednesdayDirectionMainImage,
 
-  pastorMessage: {
-    title: "God Restores Strength",
-    speaker: "Pastor Name",
-    scripture: "Isaiah 40:31",
+  {
+    id: 4,
+    slug: "wednesday-prayer-and-restoration",
+    serviceType: "Wednesday Service",
+    date: "Wednesday, 24 June 2026",
+    theme: "Prayer and Restoration",
+    mainScripture: "Jeremiah 30:17",
     summary:
-      "The opening message encouraged the church to wait on God and trust Him for renewed strength.",
-    keyPoints: [
-      "God gives strength to those who wait on Him.",
-      "Prayer helps the heart remain steady.",
-      "Restoration begins with faith and surrender.",
-    ],
-    fullNotes: [
-      "The pastor encouraged the congregation to remain prayerful during difficult seasons.",
-      "The message reminded the church that God is able to restore strength, peace, and hope.",
-      "Members were encouraged to trust God even when answers take time.",
+      "A midweek message focused on prayer, restoration, healing, and trusting God through difficult seasons.",
+    image: wednesdayDirectionImage,
+    mainImage: wednesdayDirectionMainImage,
+
+    message: {
+      title: "Prayer and Restoration",
+      speaker: "Prophet VK Ngobeni",
+      scripture: "Jeremiah 30:17",
+      summary:
+        "The sermon focused on trusting God for restoration, healing, and spiritual renewal.",
+      keyPoints: [
+        "God is able to restore what has been broken.",
+        "Prayer opens the heart to healing and direction.",
+        "Restoration requires faith, patience, and obedience.",
+      ],
+      prayerPoints: [
+        "Pray for restoration in your life and family.",
+        "Pray for healing and renewed strength.",
+        "Pray for faith to continue trusting God.",
+      ],
+      fullNotes: [
+        "The prophet taught that restoration is part of God’s work in the lives of His people.",
+        "The message encouraged the congregation not to give up during difficult seasons.",
+        "The church was reminded that prayer, faith, and obedience help people remain connected to God.",
+        "The sermon ended with prayer for restoration, healing, and spiritual strength.",
+      ],
+    },
+
+    gallery: [
+      {
+        type: "image",
+        label: "Wednesday prayer moment",
+        src: wednesdayDirectionGalleryOne,
+      },
+      {
+        type: "image",
+        label: "Restoration service photo",
+        src: wednesdayDirectionGalleryTwo,
+      },
+      {
+        type: "image",
+        label: "Midweek teaching moment",
+        src: wednesdayDirectionGalleryThree,
+      },
     ],
   },
-
-  prophetMessage: {
-    title: "Prayer and Restoration",
-    speaker: "Prophet / Speaker Name",
-    scripture: "Jeremiah 30:17",
-    summary:
-      "The main message focused on trusting God for restoration, healing, and spiritual renewal.",
-    keyPoints: [
-      "God is able to restore what has been broken.",
-      "Prayer opens the heart to healing and direction.",
-      "Restoration requires faith, patience, and obedience.",
-    ],
-    prayerPoints: [
-      "Pray for restoration in your life and family.",
-      "Pray for healing and renewed strength.",
-      "Pray for faith to continue trusting God.",
-    ],
-    fullNotes: [
-      "The prophet taught that restoration is part of God’s work in the lives of His people.",
-      "The message encouraged the congregation not to give up during difficult seasons.",
-      "The church was reminded that prayer, faith, and obedience help people remain connected to God.",
-      "The sermon ended with prayer for restoration, healing, and spiritual strength.",
-    ],
-  },
-
-  gallery: [
-    {
-      type: "image",
-      label: "Wednesday prayer moment",
-      src: wednesdayDirectionGalleryOne,
-    },
-    {
-      type: "image",
-      label: "Restoration service photo",
-      src: wednesdayDirectionGalleryTwo,
-    },
-    {
-      type: "image",
-      label: "Midweek teaching moment",
-      src: wednesdayDirectionGalleryThree,
-    },
-  ],
-},
 ];
