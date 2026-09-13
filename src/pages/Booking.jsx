@@ -1,20 +1,10 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const allowedDayMap = {
-  Wednesday: {
-    code: "WED",
-    dayIndex: 3,
-  },
-  Saturday: {
-    code: "SAT",
-    dayIndex: 6,
-  },
-  Sunday: {
-    code: "SUN",
-    dayIndex: 0,
-  },
-}; 
+const saturdayBooking = {
+  code: "SAT",
+  dayIndex: 6,
+};
 
 function formatDateValue(date) {
   const year = date.getFullYear();
@@ -35,18 +25,12 @@ function formatDateLabel(date) {
 
 function Booking() {
   const navigate = useNavigate();
-  const [preferredDay, setPreferredDay] = useState("");
   const [preferredDate, setPreferredDate] = useState("");
   const [randomCode] = useState(() =>
     String(Math.floor(1000 + Math.random() * 9000))
   );
 
   const availableDates = useMemo(() => {
-    if (!preferredDay) {
-      return [];
-    }
-
-    const selectedDay = allowedDayMap[preferredDay];
     const dates = [];
     const currentDate = new Date();
 
@@ -56,7 +40,7 @@ function Booking() {
       const possibleDate = new Date(currentDate);
       possibleDate.setDate(currentDate.getDate() + index);
 
-      if (possibleDate.getDay() === selectedDay.dayIndex) {
+      if (possibleDate.getDay() === saturdayBooking.dayIndex) {
         dates.push({
           value: formatDateValue(possibleDate),
           label: formatDateLabel(possibleDate),
@@ -65,50 +49,44 @@ function Booking() {
     }
 
     return dates;
-  }, [preferredDay]);
+  }, []);
 
   const bookingReference = useMemo(() => {
-    if (!preferredDay || !preferredDate) {
+    if (!preferredDate) {
       return "";
     }
 
-    const dayCode = allowedDayMap[preferredDay]?.code;
     const cleanDate = preferredDate.split("-").join("");
 
-    return `${dayCode}-${cleanDate}-${randomCode}`;
-  }, [preferredDay, preferredDate, randomCode]);
+    return `${saturdayBooking.code}-${cleanDate}-${randomCode}`;
+  }, [preferredDate, randomCode]);
 
   const successAction = bookingReference
-  ? `/success?type=booking&ref=${encodeURIComponent(bookingReference)}`
-  : "/success";
-
-  const handlePreferredDayChange = (event) => {
-    setPreferredDay(event.target.value);
-    setPreferredDate("");
-  };
+    ? `/success?type=booking&ref=${encodeURIComponent(bookingReference)}`
+    : "/success";
 
   const handleSubmit = async (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  const form = event.currentTarget;
-  const formData = new FormData(form);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
-  try {
-    const response = await fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    });
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
 
-    if (!response.ok) {
-      throw new Error("Form submission failed");
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      navigate(successAction);
+    } catch (error) {
+      alert("Sorry, something went wrong. Please try again.");
     }
-
-    navigate(successAction);
-  } catch (error) {
-    alert("Sorry, something went wrong. Please try again.");
-  }
-};
+  };
 
   return (
     <>
@@ -116,14 +94,15 @@ function Booking() {
         <p className="eyebrow">One-on-One Booking</p>
         <h1>Book your private one-on-one session.</h1>
         <p>
-          Choose an available day, submit your contact details, and save your
-          booking reference number. 
+          One-on-one sessions are available on Saturdays by appointment. Choose
+          your preferred Saturday, submit your contact details, and save your
+          booking reference number.
         </p>
 
         <div className="booking-how-it-works">
           <article>
             <span>01</span>
-            <p>Choose Wednesday, Saturday, or Sunday.</p>
+            <p>Choose your preferred Saturday.</p>
           </article>
 
           <article>
@@ -144,8 +123,8 @@ function Booking() {
             <p className="eyebrow">Booking Form</p>
             <h2>Secure your spot.</h2>
             <p>
-              The church team will receive your booking by email. Your reference
-              number helps the team identify your booking on the day.
+              The church team will receive your booking by email and contact you
+              to confirm your one-on-one session.
             </p>
           </div>
 
@@ -159,6 +138,7 @@ function Booking() {
             onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="one-on-one-booking" />
+            <input type="hidden" name="preferredDay" value="Saturday" />
             <input
               type="hidden"
               name="bookingReference"
@@ -174,35 +154,15 @@ function Booking() {
 
             <div className="form-grid">
               <label>
-                Preferred Day
-                <select
-                  name="preferredDay"
-                  required
-                  value={preferredDay}
-                  onChange={handlePreferredDayChange}
-                >
-                  <option value="" disabled>
-                    Select a day
-                  </option>
-                  <option value="Wednesday">Wednesday</option>
-                  <option value="Saturday">Saturday</option>
-                  <option value="Sunday">Sunday</option>
-                </select>
-              </label>
-
-              <label>
-                Available Date
+                Preferred Saturday Date
                 <select
                   name="preferredDate"
                   required
                   value={preferredDate}
                   onChange={(event) => setPreferredDate(event.target.value)}
-                  disabled={!preferredDay}
                 >
                   <option value="" disabled>
-                    {preferredDay
-                      ? `Select an available ${preferredDay}`
-                      : "Choose a day first"}
+                    Select a Saturday
                   </option>
 
                   {availableDates.map((date) => (
@@ -221,12 +181,6 @@ function Booking() {
                   </option>
                   <option value="Morning">Morning</option>
                   <option value="Afternoon">Afternoon</option>
-                  <option value="Before Sunday service">
-                    Before Sunday service
-                  </option>
-                  <option value="After Sunday service">
-                    After Sunday service
-                  </option>
                   <option value="Flexible">Flexible</option>
                 </select>
               </label>
@@ -246,16 +200,8 @@ function Booking() {
                 <input
                   type="text"
                   name="initialAndSurname"
-                  placeholder="Optional: N. Baloyi"
-                />
-              </label>
-
-              <label>
-                Email Address
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Optional: you@example.com"
+                  placeholder="Example: N. Baloyi"
+                  required
                 />
               </label>
 
@@ -275,23 +221,25 @@ function Booking() {
               </label>
 
               <label>
-                Number of people attending
-                <input
-                  type="number"
-                  name="numberOfPeople"
-                  min="1"
-                  max="20"
-                  placeholder="Example: 1"
-                  required
-                />
+                Is this your first time attending?
+                <select name="firstTimeOneOnOne" required defaultValue="">
+                  <option value="" disabled>
+                    Select an option
+                  </option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
               </label>
             </div>
 
             <div className="booking-reference-box">
               <span>Your Booking Reference</span>
-              <strong>{bookingReference || "Choose a day and date first"}</strong>
+              <strong>
+                {bookingReference || "Choose a Saturday first"}
+              </strong>
               <p>
-                  Please keep this reference number safe. You will need it when you arrive for your one-on-one session.
+                Please keep this reference number safe. You will need it when
+                you arrive for your one-on-one session.
               </p>
             </div>
 
@@ -333,7 +281,7 @@ function Booking() {
         </div>
 
         <Link className="btn btn-outline" to="/contact">
-          Contact Church 
+          Contact Church
         </Link>
       </section>
     </>
