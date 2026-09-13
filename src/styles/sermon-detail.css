@@ -1,37 +1,13 @@
 /* ================================
-   Sermon Detail Page - Hero
+   Sermon Detail Page - Main Media
 ================================ */
 
-.sermon-detail-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
-  gap: 48px;
-  align-items: center;
-  padding-top: 90px;
-  padding-bottom: 70px;
+.sermon-detail-media-section {
+  padding-top: 20px;
 }
 
-.sermon-detail-hero .sermon-detail-hero-content {
-  max-width: 820px;
-}
-
-.sermon-detail-hero-poster {
-  max-width: 420px;
-  justify-self: end;
-  padding: 14px;
-  border-radius: var(--radius-lg);
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-card);
-}
-
-.sermon-detail-hero-poster img {
-  width: 100%;
-  max-height: 560px;
-  object-fit: contain;
-  display: block;
-  border-radius: var(--radius-md);
-  background: var(--color-navy);
+.sermon-detail-main-media {
+  min-height: 540px;
 }
 
 /* ================================
@@ -39,7 +15,7 @@
 ================================ */
 
 .sermon-message-section {
-  padding-top: 30px;
+  padding-top: 60px;
 }
 
 .message-section-heading {
@@ -68,35 +44,6 @@
   align-items: start;
 }
 
-.sermon-points {
-  margin: 26px 0;
-  padding: 24px;
-  border-radius: var(--radius-md);
-  background: var(--color-cream);
-  border: 1px solid rgba(7, 27, 58, 0.08);
-}
-
-.sermon-points h3 {
-  margin: 0 0 12px;
-  color: var(--color-navy);
-}
-
-.sermon-points ul {
-  margin: 0;
-  padding-left: 20px;
-  color: var(--color-muted);
-  line-height: 1.8;
-}
-
-.prayer-points-card {
-  background: var(--color-navy);
-}
-
-.prayer-points-card h3,
-.prayer-points-card li {
-  color: var(--color-white);
-}
-
 .full-notes-card {
   padding: 28px;
   border-radius: var(--radius-md);
@@ -115,6 +62,30 @@
   line-height: 1.8;
 }
 
+/* ================================
+   Sermon Detail Page - Prophet Message
+================================ */
+
+.prophet-message-section {
+  border-radius: var(--radius-lg);
+  background: var(--color-cream);
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.prophet-message-section .full-notes-card {
+  background: var(--color-white);
+}
+
+.prayer-points-card {
+  background: var(--color-navy);
+}
+
+.prayer-points-card h3,
+.prayer-points-card li {
+  color: var(--color-white);
+}
+
 .wide-notes-card {
   grid-column: 1 / -1;
 }
@@ -128,6 +99,67 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
+
+.gallery-placeholder {
+  min-height: 230px;
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+/* ================================
+   Sermon Detail Page - Responsive
+================================ */
+
+@media (max-width: 1100px) {
+  .message-body-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sermon-detail-main-media {
+    min-height: 320px;
+  }
+
+  .prophet-message-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .service-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-placeholder {
+    min-height: 210px;
+  }
+}
+
+/* ================================
+   Sermon Detail Page - Real Main Media
+================================ */
+
+.sermon-detail-main-media-wrap {
+  min-height: 540px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--color-navy);
+  box-shadow: var(--shadow-card);
+}
+
+.sermon-detail-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================================
+   Sermon Detail Page - Real Gallery Media
+================================ */
 
 .service-gallery-card {
   overflow: hidden;
@@ -166,50 +198,12 @@
 }
 
 /* ================================
-   Sermon Detail Page - Responsive
+   Sermon Detail Page - Real Media Responsive
 ================================ */
 
-@media (max-width: 980px) {
-  .sermon-detail-hero {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .sermon-detail-hero-poster {
-    justify-self: start;
-    max-width: 360px;
-  }
-
-  .message-body-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 640px) {
-  .sermon-detail-hero {
-    padding-top: 60px;
-    padding-bottom: 40px;
-  }
-
-  .sermon-detail-hero-poster {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .sermon-detail-hero-poster img {
-    max-height: 520px;
-  }
-
-  .sermon-message-section {
-    padding-top: 20px;
-  }
-
-  .service-gallery-grid {
-    grid-template-columns: 1fr;
+  .sermon-detail-main-media-wrap {
+    min-height: 320px;
   }
 
   .service-gallery-media {

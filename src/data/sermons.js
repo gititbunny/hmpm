@@ -1,201 +1,80 @@
-import sundayCarrySamuelImage from "../assets/images/sermons/sunday-carry-samuel.jpg";
-import sundayBreakthroughImage from "../assets/images/sermons/sunday-breakthrough.jpg";
-import sundaySaltMiracleWaterImage from "../assets/images/sermons/sunday-salt-miracle-water.jpg";
-import sundayShekinahGloryImage from "../assets/images/sermons/sunday-shekinah-glory.jpg";
-
+import sundayFaithImage from "../assets/images/sermons/sunday-faith.jpg";
 import wednesdayDirectionImage from "../assets/images/sermons/wednesday-direction.jpg";
+import sundayWorshipImage from "../assets/images/sermons/sunday-worship.jpg";
+
+import sundayFaithMainImage from "../assets/images/sermons/sunday-faith-main.jpg";
+import sundayFaithGalleryOne from "../assets/images/sermons/sunday-faith-gallery-01.jpg";
+import sundayFaithGalleryTwo from "../assets/images/sermons/sunday-faith-gallery-02.jpg";
+import sundayFaithGalleryThree from "../assets/images/sermons/sunday-faith-gallery-03.jpg";
+
 import wednesdayDirectionMainImage from "../assets/images/sermons/wednesday-direction-main.jpg";
 import wednesdayDirectionGalleryOne from "../assets/images/sermons/wednesday-direction-gallery-01.jpg";
 import wednesdayDirectionGalleryTwo from "../assets/images/sermons/wednesday-direction-gallery-02.jpg";
 import wednesdayDirectionGalleryThree from "../assets/images/sermons/wednesday-direction-gallery-03.jpg";
 
+import sundayWorshipMainImage from "../assets/images/sermons/sunday-worship-main.jpg";
+import sundayWorshipGalleryOne from "../assets/images/sermons/sunday-worship-gallery-01.jpg";
+import sundayWorshipGalleryTwo from "../assets/images/sermons/sunday-worship-gallery-02.jpg";
+import sundayWorshipGalleryThree from "../assets/images/sermons/sunday-worship-gallery-03.jpg";
+
 export const sermons = [
   {
     id: 1,
-    slug: "sunday-i-must-carry-my-samuel",
+    slug: "sunday-faith-prayer-and-spiritual-breakthrough",
     serviceType: "Sunday Service",
-    date: "Sunday, 30 August 2026",
-    theme: "I Must Carry My Samuel",
-    mainScripture: "1 Samuel 1:27-28",
+    date: "Sunday, 7 July 2026",
+    theme: "Faith, Prayer, and Spiritual Breakthrough",
+    mainScripture: "Mark 11:24",
     summary:
-      "A Sunday sermon about carrying what God has given with faith, responsibility, prayer, and obedience.",
-    image: sundayCarrySamuelImage,
-    mainImage: sundayCarrySamuelImage,
+      "A service focused on faith, prayer, spiritual growth, and trusting God for breakthrough.",
+    image: sundayFaithImage,
+    mainImage: sundayFaithMainImage,
 
     message: {
-      title: "I Must Carry My Samuel",
+      title: "Faith, Prayer, and Spiritual Breakthrough",
       speaker: "Prophet VK Ngobeni",
-      scripture: "1 Samuel 1:27-28",
+      scripture: "Mark 11:24",
       summary:
-        "The sermon focused on answered prayer, spiritual responsibility, and carrying what God has entrusted with faith and obedience.",
+        "The sermon focused on believing God in prayer, standing firm in faith, and trusting His timing.",
       keyPoints: [
-        "Samuel represents answered prayer and divine purpose.",
-        "What God gives must be carried with responsibility.",
-        "Prayer prepares people for what God is about to release.",
-        "A blessing must be protected, nurtured, and dedicated back to God.",
+        "Faith is important when praying for breakthrough.",
+        "Breakthrough requires patience, obedience, and trust.",
+        "God responds to sincere prayer and faith.",
       ],
       prayerPoints: [
-        "Pray for the strength to carry what God has given you.",
-        "Pray for wisdom to protect your blessing and assignment.",
-        "Pray for obedience and spiritual maturity.",
+        "Pray for stronger faith and patience.",
+        "Pray for spiritual direction and clarity.",
+        "Pray for breakthrough in areas of delay and difficulty.",
       ],
       fullNotes: [
-        "The message taught that Hannah did not only pray for Samuel, she also carried the responsibility that came with receiving him.",
-        "The church was encouraged to understand that answered prayer comes with stewardship, patience, and dedication.",
-        "The sermon reminded the congregation that some blessings require discipline, prayer, and spiritual covering.",
-        "The message ended with prayer for strength, wisdom, and grace to carry what God has released.",
+        "The prophet taught that faith is not only spoken but also demonstrated through trust, obedience, and patience.",
+        "The message explained that people should continue praying even when answers do not appear immediately.",
+        "The congregation was encouraged to believe that God is able to intervene in difficult situations and bring restoration.",
+        "The sermon ended with prayer for spiritual breakthrough, direction, and renewed faith.",
       ],
     },
 
     gallery: [
       {
         type: "image",
-        label: "I Must Carry My Samuel poster",
-        src: sundayCarrySamuelImage,
+        label: "Service worship photo",
+        src: sundayFaithGalleryOne,
+      },
+      {
+        type: "image",
+        label: "Congregation prayer moment",
+        src: sundayFaithGalleryTwo,
+      },
+      {
+        type: "image",
+        label: "Prophetic service moment",
+        src: sundayFaithGalleryThree,
       },
     ],
   },
 
   {
     id: 2,
-    slug: "sunday-of-breakthrough",
-    serviceType: "Sunday Service",
-    date: "Sunday, 22 August 2026",
-    theme: "Sunday of Breakthrough",
-    mainScripture: "Isaiah 60:1",
-    summary:
-      "A Sunday sermon focused on breakthrough, rising in faith, and trusting God for a new season.",
-    image: sundayBreakthroughImage,
-    mainImage: sundayBreakthroughImage,
-
-    message: {
-      title: "Sunday of Breakthrough",
-      speaker: "Prophet VK Ngobeni",
-      scripture: "Isaiah 60:1",
-      summary:
-        "The sermon encouraged believers to arise in faith, receive direction, and trust God for breakthrough.",
-      keyPoints: [
-        "Breakthrough begins when people respond to God’s instruction.",
-        "Faith helps people rise above fear, delay, and discouragement.",
-        "God can bring light and direction into difficult seasons.",
-        "Prayer strengthens people while they wait for breakthrough.",
-      ],
-      prayerPoints: [
-        "Pray for breakthrough in delayed areas of life.",
-        "Pray for divine direction and clarity.",
-        "Pray for strength to rise and move forward in faith.",
-      ],
-      fullNotes: [
-        "The sermon focused on the call to arise and trust God when life feels delayed or uncertain.",
-        "The church was reminded that breakthrough is not only about receiving, but also about obeying God’s direction.",
-        "The message encouraged people not to give up when they are close to a new season.",
-        "The service ended with prayer for healing, direction, and breakthrough.",
-      ],
-    },
-
-    gallery: [
-      {
-        type: "image",
-        label: "Sunday of Breakthrough poster",
-        src: sundayBreakthroughImage,
-      },
-    ],
-  },
-
-  {
-    id: 3,
-    slug: "big-sunday-of-salt-and-miracle-water",
-    serviceType: "Sunday Service",
-    date: "Sunday, 16 August 2026",
-    theme: "Big Sunday of Salt and Miracle Water",
-    mainScripture: "2 Kings 2:21",
-    summary:
-      "A Sunday sermon about healing, preservation, cleansing, and trusting God for miracles.",
-    image: sundaySaltMiracleWaterImage,
-    mainImage: sundaySaltMiracleWaterImage,
-
-    message: {
-      title: "Big Sunday of Salt and Miracle Water",
-      speaker: "Prophet VK Ngobeni",
-      scripture: "2 Kings 2:21",
-      summary:
-        "The sermon focused on God’s power to heal, preserve, restore, and bring miracles into difficult situations.",
-      keyPoints: [
-        "God can heal what has been bitter, broken, or polluted.",
-        "Salt represents preservation, purity, and covenant.",
-        "Water points to cleansing, life, and restoration.",
-        "Miracles happen when people trust God with faith and obedience.",
-      ],
-      prayerPoints: [
-        "Pray for healing and restoration.",
-        "Pray for God to preserve your life, family, and faith.",
-        "Pray for every bitter situation to be healed by God.",
-      ],
-      fullNotes: [
-        "The message used the story of Elisha healing the water to show that God can change what seems damaged or unproductive.",
-        "The sermon reminded the church that God is able to restore peace, health, and spiritual strength.",
-        "The congregation was encouraged to trust God for healing in areas that have carried pain, delay, or struggle.",
-        "The service ended with prayer for miracles, preservation, healing, and restoration.",
-      ],
-    },
-
-    gallery: [
-      {
-        type: "image",
-        label: "Salt and Miracle Water poster",
-        src: sundaySaltMiracleWaterImage,
-      },
-    ],
-  },
-
-  {
-    id: 4,
-    slug: "big-sunday-of-shekinah-glory",
-    serviceType: "Sunday Service",
-    date: "Sunday, 9 August 2026",
-    theme: "Big Sunday of Shekinah Glory",
-    mainScripture: "Exodus 40:34",
-    summary:
-      "A Sunday sermon focused on God’s presence, worship, glory, and spiritual encounter.",
-    image: sundayShekinahGloryImage,
-    mainImage: sundayShekinahGloryImage,
-
-    message: {
-      title: "Big Sunday of Shekinah Glory",
-      speaker: "Prophet VK Ngobeni",
-      scripture: "Exodus 40:34",
-      summary:
-        "The sermon taught about seeking the presence of God and allowing His glory to transform lives.",
-      keyPoints: [
-        "The glory of God brings transformation.",
-        "God’s presence gives direction, peace, and strength.",
-        "Worship prepares the heart for spiritual encounter.",
-        "People should desire God’s presence above everything else.",
-      ],
-      prayerPoints: [
-        "Pray for a deeper hunger for God’s presence.",
-        "Pray for God’s glory to be revealed in your life.",
-        "Pray for spiritual renewal, peace, and direction.",
-      ],
-      fullNotes: [
-        "The sermon focused on the presence and glory of God as the source of true transformation.",
-        "The church was reminded that worship is not only music, but a surrendered heart before God.",
-        "The message encouraged people to seek God sincerely and make room for His presence.",
-        "The service ended with prayer for spiritual renewal, encounter, and the glory of God.",
-      ],
-    },
-
-    gallery: [
-      {
-        type: "image",
-        label: "Shekinah Glory poster",
-        src: sundayShekinahGloryImage,
-      },
-    ],
-  },
-
-  {
-    id: 5,
     slug: "wednesday-divine-direction-and-prayer",
     serviceType: "Wednesday Service",
     date: "Wednesday, 3 July 2026",
@@ -249,7 +128,61 @@ export const sermons = [
   },
 
   {
-    id: 6,
+    id: 3,
+    slug: "sunday-power-of-worship",
+    serviceType: "Sunday Service",
+    date: "Sunday, 30 June 2026",
+    theme: "The Power of Worship",
+    mainScripture: "John 4:24",
+    summary:
+      "A Sunday service focused on worship, surrender, and honouring God in spirit and truth.",
+    image: sundayWorshipImage,
+    mainImage: sundayWorshipMainImage,
+
+    message: {
+      title: "The Power of Worship",
+      speaker: "Prophet VK Ngobeni",
+      scripture: "John 4:24",
+      summary:
+        "The sermon explained worship as a lifestyle and not only a church activity.",
+      keyPoints: [
+        "Worship is more than singing.",
+        "True worship comes from the heart.",
+        "Worship brings focus back to God.",
+      ],
+      prayerPoints: [
+        "Pray for a sincere heart of worship.",
+        "Pray for deeper spiritual focus.",
+        "Pray for a lifestyle that honours God.",
+      ],
+      fullNotes: [
+        "The prophet taught that worship is not limited to music, songs, or Sunday services.",
+        "The message explained that true worship is shown through obedience, gratitude, humility, and reverence for God.",
+        "The congregation was encouraged to worship God in every season, including difficult times.",
+      ],
+    },
+
+    gallery: [
+      {
+        type: "image",
+        label: "Worship team photo",
+        src: sundayWorshipGalleryOne,
+      },
+      {
+        type: "image",
+        label: "Congregation worship photo",
+        src: sundayWorshipGalleryTwo,
+      },
+      {
+        type: "image",
+        label: "Worship service moment",
+        src: sundayWorshipGalleryThree,
+      },
+    ],
+  },
+
+  {
+    id: 4,
     slug: "wednesday-prayer-and-restoration",
     serviceType: "Wednesday Service",
     date: "Wednesday, 24 June 2026",

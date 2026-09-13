@@ -60,16 +60,25 @@ function Sermons() {
         </div>
 
         <div className="live-actions">
-              <span>
-                <a href="https://www.facebook.com/share/19Y3gigB9f/" target="_blank" rel="noreferrer">
-                  Facebook
-                </a>
-              </span>
-              <span>
-                <a href="https://www.youtube.com/@HouseOfMiraclesPM" target="_blank" rel="noreferrer">
-                  YouTube
-                </a>
-              </span>
+          <span>
+            <a
+              href="https://www.facebook.com/share/19Y3gigB9f/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook
+            </a>
+          </span>
+
+          <span>
+            <a
+              href="https://www.youtube.com/@HouseOfMiraclesPM"
+              target="_blank"
+              rel="noreferrer"
+            >
+              YouTube
+            </a>
+          </span>
         </div>
       </section>
 
