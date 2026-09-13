@@ -42,7 +42,7 @@ function Footer() {
         <div>
           <h3>Visit Us</h3>
           <p>Sunday Service: 11:30 AM</p>
-          <p>One-on-One Sessions: Wednesday, Saturday, and Sunday</p>
+          <p>One-on-One Sessions: Every Saturday from 11:30 AM</p>
           <p>Location details available on the contact page.</p>
         </div>
 
