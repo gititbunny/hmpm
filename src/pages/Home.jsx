@@ -98,7 +98,7 @@ function Home() {
             <h3>Attend a Service</h3>
             <p>
               Join our Sunday service for worship, the Word, prayer, and
-              fellowship.
+              fellowship. 
             </p>
             <Link to="/contact">View service details</Link>
           </article>
