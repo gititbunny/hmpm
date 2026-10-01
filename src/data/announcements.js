@@ -14,7 +14,7 @@ export const announcements = [
     time: "6:00 PM – 6:00 AM",
     image: allNightPrayerImage,
     summary:
-      "Join us for a powerful night of worship, prayer, deliverance, and spiritual renewal.",
+      "Join us for a powerful night of worship, prayer, deliverance, miracles, and spiritual renewal.",
     details: [
       "The all-night prayer service is one of the ministry’s important yearly gatherings.",
       "Please follow the official church communication lines for final event updates.",
