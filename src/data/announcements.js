@@ -16,7 +16,7 @@ export const announcements = [
     summary:
       "Join us for a powerful night of worship, prayer, deliverance, miracles, and spiritual renewal.",
     details: [
-      "The all-night prayer service is one of the ministry’s important yearly gatherings.",
+      "This all-night prayer service is the ministry’s important yearly October event.",
       "Please follow the official church communication lines for final event updates.",
     ],
     actionLabel: "Contact Church",
