@@ -9,7 +9,7 @@ export const announcements = [
     id: 1,
     type: "event",
     category: "Upcoming Event",
-    title: "BIG NIGHT OF JUDGEMENT (Back To The Sender) All-Night Prayer Service!",
+    title: "BIG NIGHT OF JUDGEMENT (Back To The Sender) All-Night Prayer Service",
     date: "Friday, 30 October 2026",
     time: "6:00 PM – 6:00 AM",
     image: allNightPrayerImage,
