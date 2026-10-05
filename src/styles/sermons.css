@@ -364,12 +364,20 @@
     justify-content: center;
   }
 
-  .weekly-gallery-card {
-    width: 100%;
+  .weekly-gallery-strip {
+    gap: 12px;
+    padding-bottom: 18px;
   }
 
-  .weekly-gallery-preview {
+  .weekly-gallery-strip-card {
+    flex-basis: 230px;
     height: 170px;
+    border-radius: 16px;
+  }
+
+  .featured-gallery-card {
+    flex-basis: 260px;
+    height: 195px;
   }
 
   .sermons-cta {
