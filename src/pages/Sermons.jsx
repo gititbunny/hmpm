@@ -5,6 +5,7 @@ import { servicePosters, weeklyServiceGallery } from "../data/sermons";
 function Sermons() {
   const [activePosterIndex, setActivePosterIndex] = useState(null);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(null);
+  const [centeredGalleryIndex, setCenteredGalleryIndex] = useState(2);
   const [touchStart, setTouchStart] = useState(null);
   const galleryStripRef = useRef(null);
 
