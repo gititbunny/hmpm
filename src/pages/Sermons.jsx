@@ -1,61 +1,129 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { sermons } from "../data/sermons";
+import { servicePosters } from "../data/sermons";
 
 function Sermons() {
-  const latestSunday = sermons.find(
-    (sermon) => sermon.serviceType === "Sunday Service"
+  const [activePosterIndex, setActivePosterIndex] = useState(null);
+  const [touchStart, setTouchStart] = useState(null);
+
+  const latestSunday = servicePosters.find(
+    (poster) => poster.serviceType === "Sunday Service"
   );
 
-  const latestWednesday = sermons.find(
-    (sermon) => sermon.serviceType === "Wednesday Service"
+  const latestWednesday = servicePosters.find(
+    (poster) => poster.serviceType === "Wednesday Service"
   );
 
-  const latestMessages = [latestSunday, latestWednesday].filter(Boolean);
+  const featuredServices = [latestSunday, latestWednesday].filter(Boolean);
+  const activePoster =
+    activePosterIndex !== null ? servicePosters[activePosterIndex] : null;
+
+  function openPoster(index) {
+    setActivePosterIndex(index);
+  }
+
+  function closePoster() {
+    setActivePosterIndex(null);
+  }
+
+  function showPreviousPoster() {
+    setActivePosterIndex((currentIndex) =>
+      currentIndex === 0 ? servicePosters.length - 1 : currentIndex - 1
+    );
+  }
+
+  function showNextPoster() {
+    setActivePosterIndex((currentIndex) =>
+      currentIndex === servicePosters.length - 1 ? 0 : currentIndex + 1
+    );
+  }
+
+  function handleTouchEnd(event) {
+    if (touchStart === null) {
+      return;
+    }
+
+    const touchEnd = event.changedTouches[0].clientX;
+    const distance = touchStart - touchEnd;
+
+    if (distance > 50) {
+      showNextPoster();
+    }
+
+    if (distance < -50) {
+      showPreviousPoster();
+    }
+
+    setTouchStart(null);
+  }
 
   return (
     <>
       <section className="content-section sermons-latest-section">
         <div className="section-heading compact-sermon-heading">
-          <p className="eyebrow">Sermons</p>
-          <h2>Recent services.</h2>
+          <p className="eyebrow">Services</p>
+          <h2>Join us for worship, prayer, and the Word of God.</h2>
+          <p>
+            View the latest Sunday and Wednesday service posters from House Of
+            Miracles Prophetic Ministries.
+          </p>
         </div>
 
         <div className="latest-sermon-grid">
-          {latestMessages.map((sermon) => (
-            <article className="latest-sermon-card" key={sermon.id}>
-              <div className="latest-sermon-image-wrap">
-                <img
-                  className="latest-sermon-image"
-                  src={sermon.image}
-                  alt={`${sermon.theme} sermon`}
-                />
-              </div>
+          {featuredServices.map((poster) => {
+            const posterIndex = servicePosters.findIndex(
+              (item) => item.id === poster.id
+            );
 
-              <div className="latest-sermon-content">
-                <div className="sermon-meta">
-                  <span>{sermon.serviceType}</span>
-                  <span>{sermon.date}</span>
+            return (
+              <article className="latest-sermon-card" key={poster.id}>
+                <button
+                  className="poster-button"
+                  type="button"
+                  onClick={() => openPoster(posterIndex)}
+                >
+                  <div className="latest-sermon-image-wrap poster-image-wrap">
+                    <img
+                      className="latest-sermon-image"
+                      src={poster.image}
+                      alt={`${poster.title} poster`}
+                    />
+                  </div>
+                </button>
+
+                <div className="latest-sermon-content">
+                  <div className="sermon-meta">
+                    <span>{poster.serviceType}</span>
+                    <span>{poster.date}</span>
+                  </div>
+
+                  <h3>{poster.title}</h3>
+                  <p>
+                    Join us for a service filled with worship, prayer, teaching,
+                    and spiritual encouragement.
+                  </p>
+
+                  <button
+                    className="btn btn-primary"
+                    type="button"
+                    onClick={() => openPoster(posterIndex)}
+                  >
+                    View Poster
+                  </button>
                 </div>
-
-                <h3>{sermon.theme}</h3>
-                <p>{sermon.summary}</p>
-
-                <Link className="btn btn-primary" to={`/sermons/${sermon.slug}`}>
-                  Open Sermon
-                </Link>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </section>
 
       <section className="content-section live-section">
         <div>
           <p className="eyebrow">Watch Online</p>
-          <h2>Live streaming coming soon.</h2>
+          <h2>Connect with the ministry online.</h2>
           <p>
-            The ministry will share live services and recent broadcasts here
-            once Facebook Live or YouTube streaming is available.
+            Follow the official Facebook and YouTube pages for ministry updates,
+            service moments, and live broadcasts when available.
           </p>
         </div>
 
@@ -84,33 +152,34 @@ function Sermons() {
 
       <section className="content-section">
         <div className="section-heading compact-sermon-heading">
-          <p className="eyebrow">Sermon Archive</p>
-          <h2>Previous messages.</h2>
+          <p className="eyebrow">Service Posters</p>
+          <h2>Recent service announcements.</h2>
+          <p>
+            Click any poster to view it larger. New posters can be added for
+            Sunday and Wednesday services.
+          </p>
         </div>
 
-        <div className="sermon-list">
-          {sermons.map((sermon) => (
-            <article className="sermon-list-card" key={sermon.id}>
-              <img
-                className="sermon-list-image"
-                src={sermon.image}
-                alt={`${sermon.theme} sermon thumbnail`}
-              />
+        <div className="service-poster-grid">
+          {servicePosters.map((poster, index) => (
+            <article className="service-poster-card" key={poster.id}>
+              <button
+                className="service-poster-image-button"
+                type="button"
+                onClick={() => openPoster(index)}
+              >
+                <img
+                  className="service-poster-image"
+                  src={poster.image}
+                  alt={`${poster.title} poster`}
+                />
+              </button>
 
-              <div className="sermon-list-content">
-                <div className="sermon-meta small-meta">
-                  <span>{sermon.serviceType}</span>
-                  <span>{sermon.date}</span>
-                  <span>{sermon.mainScripture}</span>
-                </div>
-
-                <h3>{sermon.theme}</h3>
-                <p>{sermon.summary}</p>
+              <div className="service-poster-content">
+                <span>{poster.serviceType}</span>
+                <h3>{poster.title}</h3>
+                <p>{poster.date}</p>
               </div>
-
-              <Link className="text-link" to={`/sermons/${sermon.slug}`}>
-                Read Sermon
-              </Link>
             </article>
           ))}
         </div>
@@ -118,18 +187,75 @@ function Sermons() {
 
       <section className="content-section sermons-cta">
         <div>
-          <p className="eyebrow">Need Prayer?</p>
-          <h2>Book a one-on-one session.</h2>
+          <p className="eyebrow">Visit The Ministry</p>
+          <h2>Join us for the next service.</h2>
           <p>
-            Submit a private booking request and keep your reference number for
-            the day.
+            View service times, location details, prayer line information, and
+            directions before your visit.
           </p>
         </div>
 
-        <Link className="btn btn-primary" to="/booking">
-          Book One-on-One
-        </Link>
+        <div className="cta-actions">
+          <Link className="btn btn-primary" to="/contact#find-us">
+            Get Directions
+          </Link>
+          <Link className="btn btn-outline" to="/booking">
+            Book One-on-One
+          </Link>
+        </div>
       </section>
+
+      {activePoster && (
+        <div className="poster-modal" role="dialog" aria-modal="true">
+          <button
+            className="poster-modal-backdrop"
+            type="button"
+            onClick={closePoster}
+            aria-label="Close poster preview"
+          ></button>
+
+          <div
+            className="poster-modal-card"
+            onTouchStart={(event) =>
+              setTouchStart(event.changedTouches[0].clientX)
+            }
+            onTouchEnd={handleTouchEnd}
+          >
+            <button
+              className="poster-modal-close"
+              type="button"
+              onClick={closePoster}
+              aria-label="Close poster preview"
+            >
+              ×
+            </button>
+
+            <button
+              className="poster-modal-arrow poster-modal-arrow-left"
+              type="button"
+              onClick={showPreviousPoster}
+              aria-label="Previous poster"
+            >
+              ‹
+            </button>
+
+            <img
+              className="poster-modal-image"
+              src={activePoster.image}
+              alt={`${activePoster.title} poster`}
+            />
+
+            <button
+              className="poster-modal-arrow poster-modal-arrow-right"
+              type="button"
+              onClick={showNextPoster}
+              aria-label="Next poster"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
