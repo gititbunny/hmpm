@@ -67,6 +67,15 @@ function Sermons() {
     setTouchStart(null);
   }
 
+  function scrollGallery(direction) {
+    if (!galleryStripRef.current) return;
+
+    galleryStripRef.current.scrollBy({
+      left: direction * 520,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <>
       <section className="content-section services-intro-section">
