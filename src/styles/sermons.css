@@ -1,5 +1,5 @@
 /* ================================
-   Sermons Page - Shared Elements
+   Services Page - Shared Elements
 ================================ */
 
 .sermon-meta {
@@ -20,14 +20,6 @@
   font-weight: 800;
 }
 
-.small-meta {
-  margin: 0 0 12px;
-}
-
-.small-meta span {
-  font-size: 0.76rem;
-}
-
 .text-link {
   width: fit-content;
   display: inline-block;
@@ -37,11 +29,11 @@
 }
 
 .compact-sermon-heading {
-  max-width: 720px;
+  max-width: 760px;
 }
 
 /* ================================
-   Sermons Page - Latest Messages
+   Services Page - Featured Posters
 ================================ */
 
 .sermons-latest-section {
@@ -62,21 +54,36 @@
   box-shadow: var(--shadow-card);
 }
 
+.poster-button,
+.service-poster-image-button {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
 .latest-sermon-image-wrap {
-  height: 340px;
+  height: 520px;
   overflow: hidden;
+  background: var(--color-navy);
+}
+
+.poster-image-wrap {
   background: var(--color-navy);
 }
 
 .latest-sermon-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--color-navy);
   transition: transform 0.35s ease;
 }
 
 .latest-sermon-card:hover .latest-sermon-image {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .latest-sermon-content {
@@ -98,7 +105,7 @@
 }
 
 /* ================================
-   Sermons Page - Live Section
+   Services Page - Live Section
 ================================ */
 
 .live-section {
@@ -145,50 +152,70 @@
   font-weight: 900;
 }
 
-/* ================================
-   Sermons Page - Archive List
-================================ */
-
-.sermon-list {
-  display: grid;
-  gap: 16px;
+.live-actions a {
+  color: inherit;
 }
 
-.sermon-list-card {
+/* ================================
+   Services Page - Poster Grid
+================================ */
+
+.service-poster-grid {
   display: grid;
-  grid-template-columns: 180px 1fr auto;
-  gap: 22px;
-  align-items: center;
-  padding: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.service-poster-card {
+  overflow: hidden;
   border-radius: var(--radius-md);
   background: var(--color-white);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-soft);
 }
 
-.sermon-list-image {
-  width: 180px;
-  height: 125px;
-  border-radius: var(--radius-sm);
-  object-fit: cover;
+.service-poster-image {
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+  display: block;
   background: var(--color-navy);
+  transition: transform 0.35s ease;
 }
 
-.sermon-list-content h3 {
+.service-poster-card:hover .service-poster-image {
+  transform: scale(1.03);
+}
+
+.service-poster-content {
+  padding: 18px;
+}
+
+.service-poster-content span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--color-gold);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.service-poster-content h3 {
   margin: 0;
   color: var(--color-navy);
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   line-height: 1.15;
 }
 
-.sermon-list-content p {
-  margin: 10px 0 0;
+.service-poster-content p {
+  margin: 8px 0 0;
   color: var(--color-muted);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ================================
-   Sermons Page - CTA
+   Services Page - CTA
 ================================ */
 
 .sermons-cta {
@@ -216,31 +243,86 @@
 }
 
 /* ================================
-   Sermon Detail Shared Points
+   Services Page - Poster Modal
 ================================ */
 
-.sermon-points {
-  margin: 26px 0;
+.poster-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
   padding: 24px;
+}
+
+.poster-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(3, 12, 28, 0.82);
+  cursor: pointer;
+}
+
+.poster-modal-card {
+  position: relative;
+  width: min(92vw, 620px);
+  max-height: 92vh;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+}
+
+.poster-modal-image {
+  width: 100%;
+  max-height: 92vh;
+  object-fit: contain;
+  display: block;
   border-radius: var(--radius-md);
-  background: var(--color-cream);
-  border: 1px solid rgba(7, 27, 58, 0.08);
+  background: var(--color-navy);
+  box-shadow: var(--shadow-card);
 }
 
-.sermon-points h3 {
-  margin: 0 0 12px;
+.poster-modal-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  z-index: 4;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--color-white);
   color: var(--color-navy);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
-.sermon-points ul {
-  margin: 0;
-  padding-left: 20px;
-  color: var(--color-muted);
-  line-height: 1.8;
+.poster-modal-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(7, 27, 58, 0.72);
+  color: var(--color-white);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.poster-modal-arrow-left {
+  left: -70px;
+}
+
+.poster-modal-arrow-right {
+  right: -70px;
 }
 
 /* ================================
-   Sermons Page - Responsive
+   Services Page - Responsive
 ================================ */
 
 @media (max-width: 1100px) {
@@ -248,17 +330,21 @@
     grid-template-columns: 1fr;
   }
 
+  .service-poster-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .live-section {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .sermon-list-card {
-    grid-template-columns: 160px 1fr;
+  .poster-modal-arrow-left {
+    left: 12px;
   }
 
-  .sermon-list-card .text-link {
-    grid-column: 2;
+  .poster-modal-arrow-right {
+    right: 12px;
   }
 }
 
@@ -268,11 +354,15 @@
   }
 
   .latest-sermon-image-wrap {
-    height: 260px;
+    height: 430px;
   }
 
   .latest-sermon-content {
     padding: 24px;
+  }
+
+  .latest-sermon-content .btn {
+    width: 100%;
   }
 
   .live-section {
@@ -288,17 +378,12 @@
     justify-content: center;
   }
 
-  .sermon-list-card {
+  .service-poster-grid {
     grid-template-columns: 1fr;
   }
 
-  .sermon-list-image {
-    width: 100%;
-    height: 230px;
-  }
-
-  .sermon-list-card .text-link {
-    grid-column: auto;
+  .service-poster-image {
+    height: 460px;
   }
 
   .sermons-cta {
@@ -308,7 +393,35 @@
     padding: 24px;
   }
 
-  .sermons-cta .btn {
+  .sermons-cta .btn,
+  .sermons-cta .cta-actions {
     width: 100%;
+  }
+
+  .poster-modal {
+    padding: 18px;
+  }
+
+  .poster-modal-card {
+    width: 100%;
+  }
+
+  .poster-modal-close {
+    top: -12px;
+    right: -4px;
+  }
+
+  .poster-modal-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 1.7rem;
+  }
+
+  .poster-modal-arrow-left {
+    left: 8px;
+  }
+
+  .poster-modal-arrow-right {
+    right: 8px;
   }
 }
