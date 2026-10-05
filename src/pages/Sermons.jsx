@@ -201,6 +201,7 @@ function Sermons() {
           <div
             className="weekly-gallery-strip"
             ref={galleryStripRef}
+            onScroll={updateCenteredGalleryImage}
             aria-label="Weekly service gallery"
           >
             {weeklyServiceGallery.map((item, index) => (
