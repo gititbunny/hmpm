@@ -1,17 +1,22 @@
-import sundayFaithImage from "../assets/images/sermons/sunday-faith.jpg";
-import wednesdayDirectionImage from "../assets/images/sermons/wednesday-direction.jpg";
-import sundayWorshipImage from "../assets/images/sermons/sunday-worship.jpg";
-import sundayFaithMainImage from "../assets/images/sermons/sunday-faith-main.jpg";
+import sundayServicePoster from "../assets/images/sermons/sunday-service-poster.png";
+import wednesdayServicePoster from "../assets/images/sermons/wednesday-service-poster.png";
+
+import galleryOne from "../assets/images/sermons/sunday-faith-gallery-01.jpg";
+import galleryTwo from "../assets/images/sermons/sunday-faith-gallery-02.jpg";
+import galleryThree from "../assets/images/sermons/sunday-faith-gallery-03.jpg";
+import galleryFour from "../assets/images/sermons/wednesday-direction-gallery-01.jpg";
+import galleryFive from "../assets/images/sermons/wednesday-direction-gallery-02.jpg";
+import gallerySix from "../assets/images/sermons/wednesday-direction-gallery-03.jpg";
 
 export const servicePosters = [
   {
     id: 1,
     serviceType: "Sunday Service",
     title: "Sunday Service",
-    date: "Sunday, 30 August 2026",
+    date: "Sunday Service",
     time: "11:00 AM",
     location: "Tzaneen, Sasekani, Vantor Park",
-    image: sundayFaithImage,
+    image: sundayServicePoster,
   },
   {
     id: 2,
@@ -20,24 +25,39 @@ export const servicePosters = [
     date: "Wednesday Service",
     time: "Midweek Service",
     location: "Tzaneen, Sasekani, Vantor Park",
-    image: wednesdayDirectionImage,
+    image: wednesdayServicePoster,
+  },
+];
+
+export const weeklyServiceGallery = [
+  {
+    id: 1,
+    image: galleryOne,
+    alt: "House Of Miracles service moment",
+  },
+  {
+    id: 2,
+    image: galleryTwo,
+    alt: "House Of Miracles worship moment",
   },
   {
     id: 3,
-    serviceType: "Sunday Service",
-    title: "Sunday of Breakthrough",
-    date: "Sunday, 22 August 2026",
-    time: "11:00 AM",
-    location: "Tzaneen, Sasekani, Vantor Park",
-    image: sundayWorshipImage,
+    image: galleryThree,
+    alt: "House Of Miracles prayer moment",
   },
   {
     id: 4,
-    serviceType: "Sunday Service",
-    title: "Sunday Service Poster",
-    date: "Recent Service",
-    time: "11:00 AM",
-    location: "Tzaneen, Sasekani, Vantor Park",
-    image: sundayFaithMainImage,
+    image: galleryFour,
+    alt: "House Of Miracles Wednesday service moment",
+  },
+  {
+    id: 5,
+    image: galleryFive,
+    alt: "House Of Miracles church gathering",
+  },
+  {
+    id: 6,
+    image: gallerySix,
+    alt: "House Of Miracles congregation moment",
   },
 ];
