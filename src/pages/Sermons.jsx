@@ -77,6 +77,30 @@ function Sermons() {
     });
   }
 
+  function updateCenteredGalleryImage() {
+    if (!galleryStripRef.current) return;
+
+    const strip = galleryStripRef.current;
+    const stripCenter = strip.getBoundingClientRect().left + strip.clientWidth / 2;
+    const cards = Array.from(strip.children);
+
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    cards.forEach((card, index) => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = cardRect.left + cardRect.width / 2;
+      const distance = Math.abs(stripCenter - cardCenter);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    setCenteredGalleryIndex(closestIndex);
+  }
+
   return (
     <>
       <section className="content-section services-intro-section">
