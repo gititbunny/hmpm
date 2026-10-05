@@ -20,14 +20,6 @@
   font-weight: 800;
 }
 
-.text-link {
-  width: fit-content;
-  display: inline-block;
-  color: var(--color-navy);
-  font-weight: 900;
-  border-bottom: 2px solid var(--color-gold);
-}
-
 .compact-sermon-heading {
   max-width: 760px;
 }
@@ -36,17 +28,17 @@
    Services Page - Featured Posters
 ================================ */
 
-.sermons-latest-section {
+.services-intro-section {
   padding-top: 70px;
 }
 
-.latest-sermon-grid {
+.service-poster-feature-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  gap: 26px;
 }
 
-.latest-sermon-card {
+.service-poster-feature-card {
   overflow: hidden;
   border-radius: var(--radius-lg);
   background: var(--color-white);
@@ -54,43 +46,34 @@
   box-shadow: var(--shadow-card);
 }
 
-.poster-button,
-.service-poster-image-button {
+.service-poster-feature-image-button {
   width: 100%;
   padding: 0;
   border: 0;
-  background: transparent;
+  background: var(--color-navy);
   cursor: pointer;
   display: block;
 }
 
-.latest-sermon-image-wrap {
-  height: 520px;
-  overflow: hidden;
-  background: var(--color-navy);
-}
-
-.poster-image-wrap {
-  background: var(--color-navy);
-}
-
-.latest-sermon-image {
+.service-poster-feature-image {
   width: 100%;
-  height: 100%;
+  height: 680px;
   object-fit: contain;
+  object-position: center;
+  display: block;
   background: var(--color-navy);
   transition: transform 0.35s ease;
 }
 
-.latest-sermon-card:hover .latest-sermon-image {
-  transform: scale(1.03);
+.service-poster-feature-card:hover .service-poster-feature-image {
+  transform: scale(1.02);
 }
 
-.latest-sermon-content {
+.service-poster-feature-content {
   padding: 28px;
 }
 
-.latest-sermon-content h3 {
+.service-poster-feature-content h3 {
   margin: 0;
   color: var(--color-navy);
   font-size: clamp(1.8rem, 3vw, 2.8rem);
@@ -98,7 +81,7 @@
   letter-spacing: -0.04em;
 }
 
-.latest-sermon-content p {
+.service-poster-feature-content p {
   margin: 16px 0 22px;
   color: var(--color-muted);
   line-height: 1.75;
@@ -157,61 +140,51 @@
 }
 
 /* ================================
-   Services Page - Poster Grid
+   Services Page - Weekly Gallery
 ================================ */
 
-.service-poster-grid {
+.weekly-gallery-section {
+  padding-top: 20px;
+}
+
+.weekly-gallery-card {
+  width: min(100%, 760px);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-
-.service-poster-card {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  border-radius: var(--radius-md);
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-soft);
-}
-
-.service-poster-image {
-  width: 100%;
-  height: 360px;
-  object-fit: contain;
-  display: block;
   background: var(--color-navy);
-  transition: transform 0.35s ease;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
 }
 
-.service-poster-card:hover .service-poster-image {
-  transform: scale(1.03);
+.weekly-gallery-preview {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background: var(--color-navy);
 }
 
-.service-poster-content {
-  padding: 18px;
+.weekly-gallery-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
-.service-poster-content span {
-  display: inline-flex;
-  margin-bottom: 10px;
-  color: var(--color-gold);
-  font-size: 0.78rem;
+.weekly-gallery-more {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(3, 12, 28, 0.55);
+  color: var(--color-white);
+  font-size: clamp(2rem, 6vw, 4.5rem);
   font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.service-poster-content h3 {
-  margin: 0;
-  color: var(--color-navy);
-  font-size: 1.25rem;
-  line-height: 1.15;
-}
-
-.service-poster-content p {
-  margin: 8px 0 0;
-  color: var(--color-muted);
-  line-height: 1.5;
 }
 
 /* ================================
@@ -243,7 +216,7 @@
 }
 
 /* ================================
-   Services Page - Poster Modal
+   Services Page - Modal
 ================================ */
 
 .poster-modal {
@@ -272,6 +245,10 @@
   place-items: center;
 }
 
+.gallery-modal-card {
+  width: min(92vw, 980px);
+}
+
 .poster-modal-image {
   width: 100%;
   max-height: 92vh;
@@ -280,6 +257,10 @@
   border-radius: var(--radius-md);
   background: var(--color-navy);
   box-shadow: var(--shadow-card);
+}
+
+.gallery-modal-image {
+  max-height: 88vh;
 }
 
 .poster-modal-close {
@@ -326,17 +307,8 @@
 ================================ */
 
 @media (max-width: 1100px) {
-  .latest-sermon-grid {
+  .service-poster-feature-grid {
     grid-template-columns: 1fr;
-  }
-
-  .service-poster-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .live-section {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .poster-modal-arrow-left {
@@ -349,19 +321,19 @@
 }
 
 @media (max-width: 640px) {
-  .sermons-latest-section {
+  .services-intro-section {
     padding-top: 42px;
   }
 
-  .latest-sermon-image-wrap {
-    height: 430px;
+  .service-poster-feature-image {
+    height: 540px;
   }
 
-  .latest-sermon-content {
+  .service-poster-feature-content {
     padding: 24px;
   }
 
-  .latest-sermon-content .btn {
+  .service-poster-feature-content .btn {
     width: 100%;
   }
 
@@ -378,12 +350,12 @@
     justify-content: center;
   }
 
-  .service-poster-grid {
-    grid-template-columns: 1fr;
+  .weekly-gallery-card {
+    width: 100%;
   }
 
-  .service-poster-image {
-    height: 460px;
+  .weekly-gallery-preview {
+    height: 170px;
   }
 
   .sermons-cta {
@@ -402,7 +374,8 @@
     padding: 18px;
   }
 
-  .poster-modal-card {
+  .poster-modal-card,
+  .gallery-modal-card {
     width: 100%;
   }
 
