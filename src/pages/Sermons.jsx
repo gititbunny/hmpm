@@ -1,29 +1,21 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { servicePosters } from "../data/sermons";
+import { servicePosters, weeklyServiceGallery } from "../data/sermons";
 
 function Sermons() {
   const [activePosterIndex, setActivePosterIndex] = useState(null);
+  const [activeGalleryIndex, setActiveGalleryIndex] = useState(null);
   const [touchStart, setTouchStart] = useState(null);
 
-  const latestSunday = servicePosters.find(
-    (poster) => poster.serviceType === "Sunday Service"
-  );
-
-  const latestWednesday = servicePosters.find(
-    (poster) => poster.serviceType === "Wednesday Service"
-  );
-
-  const featuredServices = [latestSunday, latestWednesday].filter(Boolean);
   const activePoster =
     activePosterIndex !== null ? servicePosters[activePosterIndex] : null;
 
-  function openPoster(index) {
-    setActivePosterIndex(index);
-  }
+  const activeGalleryImage =
+    activeGalleryIndex !== null ? weeklyServiceGallery[activeGalleryIndex] : null;
 
-  function closePoster() {
+  function closeModal() {
     setActivePosterIndex(null);
+    setActiveGalleryIndex(null);
   }
 
   function showPreviousPoster() {
@@ -38,28 +30,45 @@ function Sermons() {
     );
   }
 
-  function handleTouchEnd(event) {
-    if (touchStart === null) {
-      return;
-    }
+  function showPreviousGalleryImage() {
+    setActiveGalleryIndex((currentIndex) =>
+      currentIndex === 0 ? weeklyServiceGallery.length - 1 : currentIndex - 1
+    );
+  }
+
+  function showNextGalleryImage() {
+    setActiveGalleryIndex((currentIndex) =>
+      currentIndex === weeklyServiceGallery.length - 1 ? 0 : currentIndex + 1
+    );
+  }
+
+  function handlePosterTouchEnd(event) {
+    if (touchStart === null) return;
 
     const touchEnd = event.changedTouches[0].clientX;
     const distance = touchStart - touchEnd;
 
-    if (distance > 50) {
-      showNextPoster();
-    }
+    if (distance > 50) showNextPoster();
+    if (distance < -50) showPreviousPoster();
 
-    if (distance < -50) {
-      showPreviousPoster();
-    }
+    setTouchStart(null);
+  }
+
+  function handleGalleryTouchEnd(event) {
+    if (touchStart === null) return;
+
+    const touchEnd = event.changedTouches[0].clientX;
+    const distance = touchStart - touchEnd;
+
+    if (distance > 50) showNextGalleryImage();
+    if (distance < -50) showPreviousGalleryImage();
 
     setTouchStart(null);
   }
 
   return (
     <>
-      <section className="content-section sermons-latest-section">
+      <section className="content-section services-intro-section">
         <div className="section-heading compact-sermon-heading">
           <p className="eyebrow">Services</p>
           <h2>Join us for worship, prayer, and the Word of God.</h2>
@@ -69,51 +78,43 @@ function Sermons() {
           </p>
         </div>
 
-        <div className="latest-sermon-grid">
-          {featuredServices.map((poster) => {
-            const posterIndex = servicePosters.findIndex(
-              (item) => item.id === poster.id
-            );
+        <div className="service-poster-feature-grid">
+          {servicePosters.map((poster, index) => (
+            <article className="service-poster-feature-card" key={poster.id}>
+              <button
+                className="service-poster-feature-image-button"
+                type="button"
+                onClick={() => setActivePosterIndex(index)}
+              >
+                <img
+                  className="service-poster-feature-image"
+                  src={poster.image}
+                  alt={`${poster.title} poster`}
+                />
+              </button>
 
-            return (
-              <article className="latest-sermon-card" key={poster.id}>
-                <button
-                  className="poster-button"
-                  type="button"
-                  onClick={() => openPoster(posterIndex)}
-                >
-                  <div className="latest-sermon-image-wrap poster-image-wrap">
-                    <img
-                      className="latest-sermon-image"
-                      src={poster.image}
-                      alt={`${poster.title} poster`}
-                    />
-                  </div>
-                </button>
-
-                <div className="latest-sermon-content">
-                  <div className="sermon-meta">
-                    <span>{poster.serviceType}</span>
-                    <span>{poster.date}</span>
-                  </div>
-
-                  <h3>{poster.title}</h3>
-                  <p>
-                    Join us for a service filled with worship, prayer, teaching,
-                    and spiritual encouragement.
-                  </p>
-
-                  <button
-                    className="btn btn-primary"
-                    type="button"
-                    onClick={() => openPoster(posterIndex)}
-                  >
-                    View Poster
-                  </button>
+              <div className="service-poster-feature-content">
+                <div className="sermon-meta">
+                  <span>{poster.serviceType}</span>
+                  <span>{poster.time}</span>
                 </div>
-              </article>
-            );
-          })}
+
+                <h3>{poster.title}</h3>
+                <p>
+                  Join us for a service filled with worship, prayer, teaching,
+                  and spiritual encouragement.
+                </p>
+
+                <button
+                  className="btn btn-primary"
+                  type="button"
+                  onClick={() => setActivePosterIndex(index)}
+                >
+                  View Poster
+                </button>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -150,39 +151,35 @@ function Sermons() {
         </div>
       </section>
 
-      <section className="content-section">
+      <section className="content-section weekly-gallery-section">
         <div className="section-heading compact-sermon-heading">
-          <p className="eyebrow">Service Posters</p>
-          <h2>Recent service announcements.</h2>
+          <p className="eyebrow">Service Gallery</p>
+          <h2>This week’s service moments.</h2>
           <p>
-            Click any poster to view it larger. New posters can be added for
-            Sunday and Wednesday services.
+            A glimpse of worship, prayer, fellowship, and service moments from
+            the week.
           </p>
         </div>
 
-        <div className="service-poster-grid">
-          {servicePosters.map((poster, index) => (
-            <article className="service-poster-card" key={poster.id}>
-              <button
-                className="service-poster-image-button"
-                type="button"
-                onClick={() => openPoster(index)}
-              >
-                <img
-                  className="service-poster-image"
-                  src={poster.image}
-                  alt={`${poster.title} poster`}
-                />
-              </button>
+        <button
+          className="weekly-gallery-card"
+          type="button"
+          onClick={() => setActiveGalleryIndex(0)}
+        >
+          {weeklyServiceGallery.slice(0, 4).map((item, index) => {
+            const extraCount = weeklyServiceGallery.length - 4;
 
-              <div className="service-poster-content">
-                <span>{poster.serviceType}</span>
-                <h3>{poster.title}</h3>
-                <p>{poster.date}</p>
+            return (
+              <div className="weekly-gallery-preview" key={item.id}>
+                <img src={item.image} alt={item.alt} />
+
+                {index === 3 && extraCount > 0 && (
+                  <span className="weekly-gallery-more">+{extraCount}</span>
+                )}
               </div>
-            </article>
-          ))}
-        </div>
+            );
+          })}
+        </button>
       </section>
 
       <section className="content-section sermons-cta">
@@ -210,7 +207,7 @@ function Sermons() {
           <button
             className="poster-modal-backdrop"
             type="button"
-            onClick={closePoster}
+            onClick={closeModal}
             aria-label="Close poster preview"
           ></button>
 
@@ -219,12 +216,12 @@ function Sermons() {
             onTouchStart={(event) =>
               setTouchStart(event.changedTouches[0].clientX)
             }
-            onTouchEnd={handleTouchEnd}
+            onTouchEnd={handlePosterTouchEnd}
           >
             <button
               className="poster-modal-close"
               type="button"
-              onClick={closePoster}
+              onClick={closeModal}
               aria-label="Close poster preview"
             >
               ×
@@ -250,6 +247,58 @@ function Sermons() {
               type="button"
               onClick={showNextPoster}
               aria-label="Next poster"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      )}
+
+      {activeGalleryImage && (
+        <div className="poster-modal" role="dialog" aria-modal="true">
+          <button
+            className="poster-modal-backdrop"
+            type="button"
+            onClick={closeModal}
+            aria-label="Close gallery preview"
+          ></button>
+
+          <div
+            className="poster-modal-card gallery-modal-card"
+            onTouchStart={(event) =>
+              setTouchStart(event.changedTouches[0].clientX)
+            }
+            onTouchEnd={handleGalleryTouchEnd}
+          >
+            <button
+              className="poster-modal-close"
+              type="button"
+              onClick={closeModal}
+              aria-label="Close gallery preview"
+            >
+              ×
+            </button>
+
+            <button
+              className="poster-modal-arrow poster-modal-arrow-left"
+              type="button"
+              onClick={showPreviousGalleryImage}
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+
+            <img
+              className="poster-modal-image gallery-modal-image"
+              src={activeGalleryImage.image}
+              alt={activeGalleryImage.alt}
+            />
+
+            <button
+              className="poster-modal-arrow poster-modal-arrow-right"
+              type="button"
+              onClick={showNextGalleryImage}
+              aria-label="Next image"
             >
               ›
             </button>
