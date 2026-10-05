@@ -207,7 +207,7 @@ function Sermons() {
             {weeklyServiceGallery.map((item, index) => (
               <button
                 className={`weekly-gallery-strip-card ${
-                  index === 2 ? "featured-gallery-card" : ""
+                  index === centeredGalleryIndex ? "featured-gallery-card" : ""
                 }`}
                 type="button"
                 key={item.id}
