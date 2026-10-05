@@ -149,7 +149,6 @@
   width: min(100%, 760px);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
   padding: 0;
   border: 0;
   border-radius: var(--radius-lg);
@@ -378,7 +377,8 @@
 
   .poster-modal-card,
   .gallery-modal-card {
-    width: 100%;
+  width: fit-content;
+  max-width: 100%;
   }
 
   .poster-modal-close {
