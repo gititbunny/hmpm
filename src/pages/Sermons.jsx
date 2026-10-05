@@ -163,19 +163,43 @@ function Sermons() {
           </p>
         </div>
 
-        <div className="weekly-gallery-strip" aria-label="Weekly service gallery">
-          {weeklyServiceGallery.map((item, index) => (
-            <button
-              className={`weekly-gallery-strip-card ${
-                index === 1 ? "featured-gallery-card" : ""
-              }`}
-              type="button"
-              key={item.id}
-              onClick={() => setActiveGalleryIndex(index)}
-            >
-              <img src={item.image} alt={item.alt} />
-            </button>
-          ))}
+        <div className="weekly-gallery-carousel">
+          <button
+            className="weekly-gallery-nav weekly-gallery-nav-left"
+            type="button"
+            onClick={() => scrollGallery(-1)}
+            aria-label="Scroll gallery left"
+          >
+            ‹
+          </button>
+
+          <div
+            className="weekly-gallery-strip"
+            ref={galleryStripRef}
+            aria-label="Weekly service gallery"
+          >
+            {weeklyServiceGallery.map((item, index) => (
+              <button
+                className={`weekly-gallery-strip-card ${
+                  index === 2 ? "featured-gallery-card" : ""
+                }`}
+                type="button"
+                key={item.id}
+                onClick={() => setActiveGalleryIndex(index)}
+              >
+                <img src={item.image} alt={item.alt} />
+              </button>
+            ))}
+          </div>
+
+          <button
+            className="weekly-gallery-nav weekly-gallery-nav-right"
+            type="button"
+            onClick={() => scrollGallery(1)}
+            aria-label="Scroll gallery right"
+          >
+            ›
+          </button>
         </div>
       </section>
 
