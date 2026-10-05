@@ -104,14 +104,6 @@ function Sermons() {
                   Join us for a service filled with worship, prayer, teaching,
                   and spiritual encouragement.
                 </p>
-
-                <button
-                  className="btn btn-primary"
-                  type="button"
-                  onClick={() => setActivePosterIndex(index)}
-                >
-                  View Poster
-                </button>
               </div>
             </article>
           ))}
@@ -121,10 +113,10 @@ function Sermons() {
       <section className="content-section live-section">
         <div>
           <p className="eyebrow">Watch Online</p>
-          <h2>Connect with the ministry online.</h2>
+          <h2>Live streaming coming soon.</h2>
           <p>
-            Follow the official Facebook and YouTube pages for ministry updates,
-            service moments, and live broadcasts when available.
+            The ministry will share live services and recent broadcasts here
+            once Facebook Live or YouTube streaming is available.
           </p>
         </div>
 
