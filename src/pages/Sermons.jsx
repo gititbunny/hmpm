@@ -6,6 +6,7 @@ function Sermons() {
   const [activePosterIndex, setActivePosterIndex] = useState(null);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(null);
   const [touchStart, setTouchStart] = useState(null);
+  const galleryStripRef = useRef(null);
 
   const activePoster =
     activePosterIndex !== null ? servicePosters[activePosterIndex] : null;
