@@ -157,7 +157,7 @@ function HeroCarousel() {
 
           <article>
             <span>One-on-One</span>
-            <strong>Every Saturday from 11:30 AM</strong>
+            <strong>Every Saturday from 14:00 PM</strong>
           </article>
         </div>
 
