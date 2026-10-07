@@ -21,7 +21,7 @@ function Home() {
           <p className="eyebrow">Upcoming Service</p>
           <h2>Wednesday Midweek Service</h2>
           <p>
-            Catch up on the latest sermon, scriptures, and service highlights.
+            View the latest Sunday and Wednesday services from House Of Miracles Prophetic Ministries.
           </p>
         </div>
 
