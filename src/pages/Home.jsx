@@ -18,8 +18,8 @@ function Home() {
 
       <section className="home-section latest-service">
         <div className="section-heading">
-          <p className="eyebrow">Latest Service</p>
-          <h2>Sunday Service Highlight</h2>
+          <p className="eyebrow">Upcoming Service</p>
+          <h2>Wednesday Midweek Service</h2>
           <p>
             Catch up on the latest sermon, scriptures, and service highlights.
           </p>
