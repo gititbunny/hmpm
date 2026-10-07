@@ -20,8 +20,8 @@ export const servicePosters = [
   },
   {
     id: 2,
-    serviceType: "Wednesday Service",
-    title: "Wednesday Midweek Service",
+    serviceType: "Wednesday Midweek Service",
+    title: "Wednesday Service",
     date: "Wednesday Service",
     time: "11:30 AM",
     location: "Tzaneen, Sasekani, Vantor Park",
