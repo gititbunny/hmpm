@@ -1,0 +1,506 @@
+/* ================================
+   Services Page - Shared Elements
+================================ */
+
+.sermon-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.sermon-meta span {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: var(--color-cream);
+  color: var(--color-navy);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.compact-sermon-heading {
+  max-width: 760px;
+}
+
+/* ================================
+   Services Page - Featured Posters
+================================ */
+
+.services-intro-section {
+  padding-top: 70px;
+}
+
+.service-poster-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.service-poster-feature-card {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.service-poster-feature-image-button {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.service-poster-feature-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent;
+  transition: transform 0.35s ease;
+}
+
+.service-poster-feature-card:hover .service-poster-feature-image {
+  transform: scale(1.02);
+}
+
+.service-poster-feature-content {
+  padding: 28px;
+}
+
+.service-poster-feature-content h3 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.service-poster-feature-content p {
+  margin: 16px 0 22px;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+/* ================================
+   Services Page - Live Section
+================================ */
+
+.live-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  padding: 34px;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top left, rgba(214, 165, 54, 0.18), transparent 32%),
+    var(--color-navy);
+  color: var(--color-white);
+}
+
+.live-section h2 {
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.live-section p {
+  max-width: 640px;
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+.live-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.live-actions span {
+  display: inline-flex;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-gold-light);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-weight: 900;
+}
+
+.live-actions a {
+  color: inherit;
+}
+
+/* ================================
+   Services Page - Weekly Gallery
+================================ */
+
+.weekly-gallery-section {
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+.weekly-gallery-carousel {
+  position: relative;
+  width: 100%;
+  padding: 0 58px;
+}
+
+.weekly-gallery-carousel::before,
+.weekly-gallery-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 22px;
+  width: 92px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.weekly-gallery-carousel::before {
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color-white),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.weekly-gallery-carousel::after {
+  right: 0;
+  background: linear-gradient(
+    270deg,
+    var(--color-white),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.weekly-gallery-strip {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 0 32px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.weekly-gallery-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.weekly-gallery-strip-card {
+  flex: 0 0 clamp(170px, 15vw, 210px);
+  height: 210px;
+  padding: 0;
+  border: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--color-navy);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  scroll-snap-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.weekly-gallery-strip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
+}
+
+.weekly-gallery-strip-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.featured-gallery-card {
+  flex-basis: clamp(220px, 19vw, 260px);
+  height: 250px;
+  box-shadow: var(--shadow-card);
+}
+
+.weekly-gallery-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(7, 27, 58, 0.12);
+  background: var(--color-white);
+  color: var(--color-navy);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+}
+
+.weekly-gallery-nav-left {
+  left: 8px;
+}
+
+.weekly-gallery-nav-right {
+  right: 8px;
+}
+
+/* ================================
+   Services Page - CTA
+================================ */
+
+.sermons-cta {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 80px;
+  padding: 34px;
+  border-radius: var(--radius-lg);
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.sermons-cta h2 {
+  margin: 0;
+  color: var(--color-white);
+}
+
+.sermons-cta p {
+  margin: 12px 0 0;
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+/* ================================
+   Services Page - Modal
+================================ */
+
+.poster-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.poster-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(3, 12, 28, 0.82);
+  cursor: pointer;
+}
+
+.poster-modal-card {
+  position: relative;
+  width: fit-content;
+  max-width: 92vw;
+  max-height: 92vh;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+
+.gallery-modal-card {
+  width: fit-content;
+  max-width: 92vw;
+}
+
+.poster-modal-image {
+  width: auto;
+  max-width: 92vw;
+  height: auto;
+  max-height: 92vh;
+  object-fit: contain;
+  display: block;
+  border-radius: var(--radius-md);
+  background: transparent;
+  box-shadow: var(--shadow-card);
+}
+
+.gallery-modal-image {
+  width: auto;
+  max-width: 92vw;
+  height: auto;
+  max-height: 88vh;
+  background: transparent;
+}
+.poster-modal-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  z-index: 4;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--color-white);
+  color: var(--color-navy);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.poster-modal-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(7, 27, 58, 0.72);
+  color: var(--color-white);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.poster-modal-arrow-left {
+  left: -70px;
+}
+
+.poster-modal-arrow-right {
+  right: -70px;
+}
+
+/* ================================
+   Services Page - Responsive
+================================ */
+
+@media (max-width: 1100px) {
+  .service-poster-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .poster-modal-arrow-left {
+    left: 12px;
+  }
+
+  .poster-modal-arrow-right {
+    right: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-intro-section {
+    padding-top: 42px;
+  }
+
+  .service-poster-feature-content {
+    padding: 24px;
+  }
+
+  .service-poster-feature-content .btn {
+    width: 100%;
+  }
+
+  .live-section {
+    padding: 24px;
+  }
+
+  .live-actions,
+  .live-actions span {
+    width: 100%;
+  }
+
+  .live-actions span {
+    justify-content: center;
+  }
+
+  .weekly-gallery-carousel {
+    padding: 0 42px;
+  }
+
+  .weekly-gallery-carousel::before,
+  .weekly-gallery-carousel::after {
+    width: 56px;
+  }
+
+  .weekly-gallery-strip {
+    gap: 12px;
+    padding: 18px 0 24px;
+  }
+
+  .weekly-gallery-strip-card {
+    flex-basis: 190px;
+    height: 150px;
+    border-radius: 16px;
+  }
+
+  .featured-gallery-card {
+    flex-basis: 220px;
+    height: 175px;
+  }
+
+  .weekly-gallery-nav {
+    width: 38px;
+    height: 38px;
+    font-size: 1.6rem;
+  }
+
+  .weekly-gallery-nav-left {
+    left: 0;
+  }
+
+  .weekly-gallery-nav-right {
+    right: 0;
+  }
+
+  .sermons-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 56px;
+    padding: 24px;
+  }
+
+  .sermons-cta .btn,
+  .sermons-cta .cta-actions {
+    width: 100%;
+  }
+
+  .poster-modal {
+    padding: 18px;
+  }
+
+  .poster-modal-card,
+  .gallery-modal-card {
+  width: fit-content;
+  max-width: 100%;
+  }
+
+  .poster-modal-close {
+    top: -12px;
+    right: -4px;
+  }
+
+  .poster-modal-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 1.7rem;
+  }
+
+  .poster-modal-arrow-left {
+    left: 8px;
+  }
+
+  .poster-modal-arrow-right {
+    right: 8px;
+  }
+}
