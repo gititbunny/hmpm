@@ -5,7 +5,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Sermons from "./pages/Sermons";
+import Services from "./pages/Services";
 import Testimonies from "./pages/Testimonies";
 import Ministries from "./pages/Ministries";
 import Outreach from "./pages/Outreach";
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/sermons" element={<Sermons />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/testimonies" element={<Testimonies />} />
           <Route path="/media" element={<Testimonies />} />
           <Route path="/ministries" element={<Ministries />} />
