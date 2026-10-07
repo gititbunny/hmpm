@@ -106,7 +106,7 @@ function Sermons() {
       <section className="content-section services-intro-section">
         <div className="section-heading compact-sermon-heading">
           <p className="eyebrow">Services</p>
-          <h2>Join us for worship, prayer, and the Word of God.</h2>
+          <h2>Join us for worship, prophecies, miracles, deliverance, and the Word of God.</h2>
           <p>
             View the latest Sunday and Wednesday services from House Of
             Miracles Prophetic Ministries.
