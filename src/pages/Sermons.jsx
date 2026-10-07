@@ -136,8 +136,7 @@ function Sermons() {
 
                 <h3>{poster.title}</h3>
                 <p>
-                  Join us for a service filled with worship, prayer, teaching,
-                  and spiritual encouragement.
+                  Join us for a service filled with miracles and deliverance.
                 </p>
               </div>
             </article>
