@@ -108,7 +108,7 @@ function Sermons() {
           <p className="eyebrow">Services</p>
           <h2>Join us for worship, prayer, and the Word of God.</h2>
           <p>
-            View the latest Sunday and Wednesday service posters from House Of
+            View the latest Sunday and Wednesday services from House Of
             Miracles Prophetic Ministries.
           </p>
         </div>
