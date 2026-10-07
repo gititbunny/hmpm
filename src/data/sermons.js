@@ -1,5 +1,5 @@
 import sundayServicePoster from "../assets/images/sermons/sunday-service-poster.png";
-import wednesdayServicePoster from "../assets/images/sermons/wednesday-service-poster.png";
+import wednesdayServicePoster from "../assets/images/sermons/wednesday-service-poster.jpg";
 
 import galleryOne from "../assets/images/sermons/sunday-faith-gallery-01.jpg";
 import galleryTwo from "../assets/images/sermons/sunday-faith-gallery-02.jpg";
