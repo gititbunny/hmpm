@@ -35,16 +35,15 @@ function Home() {
           </div>
 
           <div className="latest-card-content">
-            <span className="card-label">Recent Message</span>
-            <h3>Debt Cancellation Sunday Service</h3>
+            <span className="card-label">House Of Miracles welcomes you to</span>
+            <h3>Wednesday Revival Service</h3>
             <p>
-              Read the latest message, key scriptures, prayer points, and notes
-              from Sunday service.
+              Join us for a service filled with miracles, prophecies, and deliverance.
             </p>
  
             <div className="latest-actions">
               <Link className="btn btn-secondary" to="/sermons">
-                View Sermons
+                View Services
               </Link>
               <Link className="btn btn-outline" to="/testimonies">
                 Read Testimonies
