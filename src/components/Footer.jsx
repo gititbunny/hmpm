@@ -33,7 +33,7 @@ function Footer() {
         <div>
           <h3>Quick Links</h3>
           <Link to="/about">About</Link>
-          <Link to="/sermons">Sermons</Link>
+          <Link to="/services">Services</Link>
           <Link to="/testimonies">Testimonies</Link>
           <Link to="/announcements">Announcements</Link>
           <Link to="/booking">One-on-One Booking</Link>
