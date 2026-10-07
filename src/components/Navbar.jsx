@@ -41,8 +41,8 @@ function Navbar() {
             About
           </NavLink>
 
-          <NavLink to="/sermons" onClick={closeMenu}>
-            Sermons
+          <NavLink to="/services" onClick={closeMenu}>
+            Services
           </NavLink>
 
           <NavLink to="/testimonies" onClick={closeMenu}>
