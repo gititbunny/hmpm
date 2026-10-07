@@ -11,7 +11,7 @@ import "./styles/home.css";
 import "./styles/about.css";
 import "./styles/ministries.css";
 import "./styles/booking.css";
-import "./styles/sermons.css";
+import "./styles/services.css";
 import "./styles/sermon-detail.css";
 import "./styles/testimonies.css";
 import "./styles/outreach.css";
