@@ -8,6 +8,7 @@ import ministryMediaImage from "../assets/images/home/ministry-media.jpg";
 import ministryOutreachImage from "../assets/images/home/outreach-preview.jpg";
 import outreachPreviewImage from "../assets/images/home/outreach-preview.jpg";
 import visitPreviewImage from "../assets/images/home/visit-preview.jpg";
+import allNightPrayerImage from "../assets/images/announcements/all-night-prayer.jpg";
 
 function Home() {
   const recentTestimonies = testimonies.slice(0, 3);
