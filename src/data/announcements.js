@@ -88,7 +88,7 @@ export const announcements = [
       "Confirmed programmes and special services will be shared through the church’s official communication channels.",
       "Members and visitors should check this page for important updates.",
     ],
-    actionLabel: "View Sermons",
-    actionLink: "/sermons",
+    actionLabel: "View Services",
+    actionLink: "/services",
   },
 ];
