@@ -44,10 +44,10 @@ function Home() {
  
             <div className="latest-actions">
               <Link className="btn btn-secondary" to="/announcements">
-                View Services
+                More Info
               </Link>
               <Link className="btn btn-outline" to="/testimonies">
-                Read Testimonies
+                View Weekly Services
               </Link>
             </div>
           </div>
