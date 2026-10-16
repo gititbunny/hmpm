@@ -43,7 +43,7 @@ function Home() {
             </p>
  
             <div className="latest-actions">
-              <Link className="btn btn-secondary" to="/services">
+              <Link className="btn btn-secondary" to="/announcements">
                 View Services
               </Link>
               <Link className="btn btn-outline" to="/testimonies">
