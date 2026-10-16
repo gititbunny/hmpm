@@ -36,7 +36,7 @@ function Home() {
 
           <div className="latest-card-content">
             <span className="card-label">House Of Miracles welcomes you to</span>
-            <h3>Wednesday Revival Service</h3>
+            <h3>BIG NIGHT OF JUDGEMENT (Back To The Sender) All-Night Prayer Service</h3>
             <p>
               Join us for a service filled with miracles, prophecies, and deliverance.
             </p>
