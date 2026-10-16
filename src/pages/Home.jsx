@@ -20,7 +20,7 @@ function Home() {
       <section className="home-section latest-service">
         <div className="section-heading">
           <p className="eyebrow">Upcoming Service</p>
-          <h2>Wednesday Midweek Service</h2>
+          <h2>All-Night Prayer Service</h2>
           <p>
             View the upcoming services from House Of Miracles Prophetic Ministries.
           </p>
