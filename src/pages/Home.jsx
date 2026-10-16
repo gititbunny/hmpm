@@ -46,7 +46,7 @@ function Home() {
               <Link className="btn btn-secondary" to="/announcements">
                 More Info
               </Link>
-              <Link className="btn btn-outline" to="/testimonies">
+              <Link className="btn btn-outline" to="/services">
                 View Weekly Services
               </Link>
             </div>
