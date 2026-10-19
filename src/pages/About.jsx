@@ -109,7 +109,7 @@ function About() {
                 alt="Apostle Mashele"
               />
             </div>
-            <h3>Apostle Mashele</h3>
+            <h3>Apostle Pollen Mashele</h3>
             <p>Apostle / Lead Pastor</p>
           </article>
 
