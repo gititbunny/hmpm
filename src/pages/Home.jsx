@@ -61,7 +61,7 @@ function Home() {
           <h2>Stories of faith, prayer, and breakthrough.</h2>
           <p>
             Read what God has done in the lives of people through prayer,
-            worship, and spiritual guidance.
+            worship, and spiritual guidance. 
           </p>
         </div>
 
